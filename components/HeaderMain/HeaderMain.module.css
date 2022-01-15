@@ -1,0 +1,113 @@
+.section_headerMain {
+  background-color: var(--bg-color-1);
+}
+.header_main_container {
+  background: url("../../public/images/bg_header_main.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.left_header_main {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.find_service h1 {
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+}
+
+.find_service h1 span {
+  color: var(--primary-color);
+}
+
+.search_input {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: white;
+  border-radius: 40px;
+  padding: 0 1rem;
+  position: relative;
+  margin: 4rem 0;
+}
+
+.searchIcon {
+  color: rgba(118, 108, 108, 0.5);
+}
+
+.search_input input {
+  background-color: transparent;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  caret-color: var(--primary-color);
+  font-size: 14px;
+  padding: 0.8rem 0.8rem;
+  width: 60%;
+}
+
+.search_input input::placeholder {
+  color: #bab5b5;
+}
+
+.search_input button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  border-radius: 30px;
+  padding: 0.6rem 2rem;
+  height: 100%;
+  color: #fff;
+  background-color: #e2732c;
+  border: 1px solid #e2732c;
+}
+
+.app_download {
+  display: flex;
+  align-items: center;
+}
+
+.app_download_title {
+  margin-bottom: 2rem;
+}
+
+.app_download_title h4 {
+  color: #79869f;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.app_store,
+.play_store {
+  background-color: #0a043c;
+  border-radius: 30px;
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.app_store {
+  margin-right: 1rem;
+}
+
+@media (min-width: 576px) {
+  .find_service h1 {
+    font-size: 40px;
+  }
+  .left_header_main {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+
+  .search_input input {
+    width: 80%;
+  }
+  .search_input button {
+    right: -22px;
+  }
+}

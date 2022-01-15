@@ -1,0 +1,26 @@
+.title {
+  margin-bottom: 1rem;
+}
+
+.title h3 {
+  color: white;
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+  color: #a5b4cb !important;
+  margin: 0.3rem 0;
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .footer_link_col {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,52 @@
+.footer {
+  background-color: #1d1e2c;
+  padding: 3rem 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.footer_divider {
+  border-color: #a6a4a4;
+}
+
+.bottom_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.bottom_footer h4 {
+  color: var(--deep-text-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.social_media a {
+  text-decoration: none;
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.social_media {
+  margin-bottom: 1rem;
+}
+
+.social_icon {
+  font-size: 3rem;
+}
+
+.download_store {
+  display: flex;
+  align-items: center;
+}
+
+.download_store a {
+  text-decoration: none;
+  margin: 0 1rem;
+}

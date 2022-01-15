@@ -1,0 +1,17 @@
+.the_news {
+  background-color: #1d1e2c;
+  padding: 3rem 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  color: white;
+  align-items: center;
+  font-weight: 600;
+}

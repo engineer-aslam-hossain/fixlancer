@@ -26,29 +26,29 @@ a {
 }
 
 .blue h5::before {
-  border-bottom: 3px solid #4b6ac4;
+  border-bottom: 3px solid #4b6ac4 !important;
 }
 
 .orange h5::before {
-  border-bottom: 3px solid #ff8ea6;
+  border-bottom: 3px solid #ff8ea6 !important;
 }
 .sky h5::before {
-  border-bottom: 3px solid #8be1e4;
+  border-bottom: 3px solid #8be1e4 !important;
 }
 
 .verticalTab_faq {
-  position: relative;
-  overflow: visible;
-  border: none;
+  position: relative !important;
+  overflow: visible !important;
+  border: none !important;
 }
 
 .verticalTab_faq .MuiTabs-indicator {
-  background-color: white;
+  background-color: white !important;
   width: 7rem !important;
   height: 5rem !important;
-  right: -2rem;
-  overflow: visible;
-  z-index: 1000000;
+  right: -2rem !important;
+  overflow: visible !important;
+  z-index: 1000000 !important;
   -webkit-clip-path: polygon(
     33% 39%,
     35% 31%,
@@ -62,7 +62,7 @@ a {
     43% 78%,
     34% 69%,
     31% 55%
-  );
+  ) !important;
   clip-path: polygon(
     33% 39%,
     35% 31%,
@@ -76,7 +76,7 @@ a {
     43% 78%,
     34% 69%,
     31% 55%
-  );
+  ) !important;
 }
 
 .activeBtn0 .MuiTabs-indicator {
@@ -92,8 +92,8 @@ a {
 }
 
 .MuiTabs-flexContainer {
-  display: flex;
-  justify-content: space-between;
+  display: flex !important;
+  justify-content: space-between !important;
 }
 
 .MuiTabs-scroller {

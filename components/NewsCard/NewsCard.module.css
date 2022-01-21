@@ -7,7 +7,9 @@
 }
 
 img.newsImg {
-  width: 10rem;
+  object-fit: contain;
+  width: 100% !important;
+  height: unset !important;
 }
 
 .news_card h5 {

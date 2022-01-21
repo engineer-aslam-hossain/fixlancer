@@ -6,7 +6,7 @@ import { Divider } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ReportIcon from "@mui/icons-material/Report";
 import ChatIcon from "@mui/icons-material/Chat";
-import LandingPageHeader from "../../components/LandingPageHeader/LandingPageHeader";
+import LandingPageHeader from "../../../components/LandingPageHeader/LandingPageHeader";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { useState } from "react";
@@ -14,9 +14,9 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Link from "next/link";
 import Flags from "country-flag-icons/react/3x2";
 import AddIcon from "@mui/icons-material/Add";
-import CommonCard from "../../components/Card/Card";
-import Footer from "../../components/Footer/Footer";
-import { categories } from "../../dummy_data/dummy_fixes";
+import CommonCard from "../../../components/Card/Card";
+import Footer from "../../../components/Footer/Footer";
+import { categories } from "../../../dummy_data/dummy_fixes";
 
 const Fix = () => {
   const [value, setValue] = useState(0);

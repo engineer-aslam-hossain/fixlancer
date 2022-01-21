@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import classes from "./LandingPageHeader.module.css";
 import Divider from "@mui/material/Divider";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -15,19 +15,48 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
 import LandingPageHeaderBottom from "../LandingPageHeaderBottom/LandingPageHeaderBottom";
 import LandingPageHeaderSearchDropDown from "../LandingPageHeaderSearchDropDown/LandingPageHeaderSearchDropDown";
+import { useRouter } from "next/router";
 
 const LandingPageHeader = () => {
   const [request, setRequest] = useState("");
   const [finance, setfinance] = useState("");
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  const router = useRouter();
+
   const reqs = [
-    "All Request",
-    "My Request",
-    "Request Buyer",
-    "Search Fix",
-    "Category List",
-    "Notifications",
-    "Edit Offer",
-    "Create Fix",
+    {
+      title: "All Request",
+      route: "/",
+    },
+    {
+      title: "My Request",
+      route: "/",
+    },
+    {
+      title: "Request Buyer",
+      route: "/",
+    },
+    {
+      title: "Search Fix",
+      route: "/",
+    },
+    {
+      title: "Category List",
+      route: "/",
+    },
+    {
+      title: "Notifications",
+      route: "/",
+    },
+    {
+      title: "Edit Offer",
+      route: "/",
+    },
+    {
+      title: "Create Fix",
+      route: "/user/new-fix",
+    },
   ];
 
   const finances = ["Finance", "Order Fix"];
@@ -50,6 +79,11 @@ const LandingPageHeader = () => {
     setFinaceAnchorEl(null);
   };
 
+  useEffect(() => {
+    const winWidth = window.innerWidth;
+    console.log(winWidth);
+    setWindowWidth(winWidth);
+  }, []);
   return (
     <header>
       <Navbar collapseOnSelect expand="lg" className={classes.home_nav}>
@@ -100,11 +134,12 @@ const LandingPageHeader = () => {
                   <MenuItem
                     key={indx}
                     onClick={() => {
-                      setRequest(item);
+                      setRequest(item.title);
                       handleClose();
+                      router.push(item.route);
                     }}
                   >
-                    {item}
+                    {item.title}
                   </MenuItem>
                 ))}
               </Menu>
@@ -175,7 +210,7 @@ const LandingPageHeader = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <LandingPageHeaderBottom />
+      {windowWidth > 1200 && <LandingPageHeaderBottom />}
     </header>
   );
 };

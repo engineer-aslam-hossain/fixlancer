@@ -1,0 +1,100 @@
+.sign_up {
+  height: 100vh;
+}
+.sign_up_container {
+  display: flex;
+}
+.left_col_reg {
+  background-color: var(--bg-color-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.about {
+  color: white;
+  text-align: center;
+  line-height: 25px;
+}
+
+.download {
+  text-align: center;
+  font-weight: 800;
+  color: var(--deep-text-color);
+  margin-top: 2rem;
+}
+
+.download_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download_store {
+  background-color: #0a043c;
+  margin: 1rem 0.5rem;
+  border-radius: 30px;
+  padding: 0.6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg_right_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.sing_up_title {
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.sing_up_title ~ p {
+  color: var(--deep-text-color);
+}
+
+.have_account {
+  text-align: end;
+  font-size: 14px;
+}
+
+.have_account a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  margin-left: 0.3rem;
+}
+
+.input_field {
+  box-shadow: none !important;
+  border: none;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.input_field::placeholder {
+  color: #0a043c;
+  font-weight: 600;
+}
+
+.label {
+  color: #8180a5 !important;
+  font-size: 14px;
+}
+
+.create_account {
+  font-weight: 600;
+  line-height: 27.25px;
+  color: #fff;
+  padding: 0.6rem 3rem;
+  border: 1px solid #e2732c;
+  background-color: #e16f26;
+  box-shadow: 0 0 14px 2px #e16f26;
+  border-radius: 8.33602px;
+  margin-top: 2rem;
+  width: 100%;
+}

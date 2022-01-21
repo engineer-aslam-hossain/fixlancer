@@ -24,10 +24,10 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            <Link href="/?login=true">
+            <Link href="/login">
               <a className={classes.login}>Login</a>
             </Link>
-            <Link href="/register">
+            <Link href="/signup">
               <a className={classes.register}>Register</a>
             </Link>
           </Nav>

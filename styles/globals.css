@@ -36,13 +36,6 @@ a {
   border-bottom: 3px solid #8be1e4;
 }
 
-/* .MuiTabs-indicator {
-  background-color: #0a84ff;
-  width: 3rem !important;
-  height: 4px !important;
-  border-radius: 1rem;
-} */
-
 .verticalTab_faq {
   position: relative;
   overflow: visible;
@@ -55,7 +48,6 @@ a {
   height: 5rem !important;
   right: -2rem;
   overflow: visible;
-  /* top: -1rem !important; */
   z-index: 1000000;
   -webkit-clip-path: polygon(
     33% 39%,
@@ -106,4 +98,9 @@ a {
 
 .MuiTabs-scroller {
   overflow: visible !important;
+}
+
+.forgot_modal .modal-content {
+  border-radius: 30px !important;
+  padding: 0 !important;
 }

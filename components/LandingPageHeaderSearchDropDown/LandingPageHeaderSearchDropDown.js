@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState, window } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Form } from "react-bootstrap";
 import classes from "./LandingPageHeaderSearchDropDown.module.css";
 import SearchIcon from "@mui/icons-material/Search";

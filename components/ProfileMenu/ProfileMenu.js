@@ -4,7 +4,7 @@ import Divider from "@mui/material/Divider";
 import Tooltip from "@mui/material/Tooltip";
 import Logout from "@mui/icons-material/Logout";
 import Avatar from "@mui/material/Avatar";
-
+import SettingsIcon from "@mui/icons-material/Settings";
 import classes from "./ProfileMenu.module.css";
 
 import Image from "next/image";
@@ -87,6 +87,13 @@ export default function ProfileMenu({ dispatch }) {
           >
             <Avatar />
             Profile
+          </button>
+          <button
+            className={classes.logout}
+            onClick={() => router.push("/username/edit_profile")}
+          >
+            <SettingsIcon />
+            Settings
           </button>
           <button className={classes.logout} onClick={logoutHandler}>
             <Logout />

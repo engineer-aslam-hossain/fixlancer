@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap");
 
 html,
 body {
@@ -9,7 +9,10 @@ body {
 :root {
   --bg-color-1: #2e4372;
   --bg-color-2: #5377b1;
+  --secondary-text-color: #33383f;
+  --text-color-gr: #1cc88a;
   --primary-color: #e2732c;
+  --primary-color-light: #feb906;
   --deep-text-color: #a5b4cb;
 }
 
@@ -31,4 +34,73 @@ a {
 }
 .sky h5::before {
   border-bottom: 3px solid #8be1e4;
+}
+
+.verticalTab_faq {
+  position: relative;
+  overflow: visible;
+  border: none;
+}
+
+.verticalTab_faq .MuiTabs-indicator {
+  background-color: white;
+  width: 7rem !important;
+  height: 5rem !important;
+  right: -2rem;
+  overflow: visible;
+  z-index: 1000000;
+  -webkit-clip-path: polygon(
+    33% 39%,
+    35% 31%,
+    42% 23%,
+    79% 15%,
+    100% 0,
+    100% 15%,
+    100% 85%,
+    100% 100%,
+    76% 86%,
+    43% 78%,
+    34% 69%,
+    31% 55%
+  );
+  clip-path: polygon(
+    33% 39%,
+    35% 31%,
+    42% 23%,
+    79% 15%,
+    100% 0,
+    100% 15%,
+    100% 85%,
+    100% 100%,
+    76% 86%,
+    43% 78%,
+    34% 69%,
+    31% 55%
+  );
+}
+
+.activeBtn0 .MuiTabs-indicator {
+  top: -1rem !important;
+}
+
+.activeBtn1 .MuiTabs-indicator {
+  top: 2rem !important;
+}
+
+.activeBtn2 .MuiTabs-indicator {
+  top: 5rem !important;
+}
+
+.MuiTabs-flexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MuiTabs-scroller {
+  overflow: visible !important;
+}
+
+.forgot_modal .modal-content {
+  border-radius: 30px !important;
+  padding: 0 !important;
 }

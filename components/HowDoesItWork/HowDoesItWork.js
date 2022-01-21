@@ -56,7 +56,7 @@ const TabsList = styled(TabsListUnstyled)`
   background-color: #d6d2d4;
   border-radius: 8px;
   margin-bottom: 16px;
-  padding: 0 1rem;
+  padding: 0 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;

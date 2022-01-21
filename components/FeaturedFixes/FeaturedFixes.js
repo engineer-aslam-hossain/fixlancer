@@ -2,59 +2,9 @@ import { Container, Row } from "react-bootstrap";
 import classes from "./FeaturedFixes.module.css";
 import Slider from "react-slick";
 import CommonCard from "../Card/Card";
+import { categories } from "../../dummy_data/dummy_fixes";
 
 const FeaturedFixes = () => {
-  const categories = [
-    {
-      author: "sadically_creative",
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      price: "10,000",
-      img: "/images/fix1.png",
-      ratings: [4.9, 5, 4, 4, 4.7, 3.5, 5],
-      author_img: "/images/author.jpg",
-    },
-    {
-      author: "sadically_creative",
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      price: "10,000",
-      img: "/images/fix2.png",
-      ratings: [4.9, 5, 4, 4, 4.7, 3.5, 5],
-      author_img: "/images/author2.png",
-    },
-    {
-      author: "sadically_creative",
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      price: "10,000",
-      img: "/images/fix3.png",
-      ratings: [4.9, 5, 4, 4, 4.7, 3.5, 5],
-      author_img: "/images/author.jpg",
-    },
-    {
-      author: "sadically_creative",
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      price: "10,000",
-      img: "/images/fix4.png",
-      ratings: [4.9, 5, 4, 4, 4.7, 3.5, 5],
-      author_img: "/images/author2.png",
-    },
-    {
-      author: "sadically_creative",
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      price: "10,000",
-      img: "/images/fix5.png",
-      ratings: [4.9, 5, 4, 4, 4.7, 3.5, 5],
-      author_img: "/images/author2.png",
-    },
-    {
-      author: "sadically_creative",
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      price: "10,000",
-      img: "/images/fix6.png",
-      ratings: [4.9, 5, 4, 4, 4.7, 3.5, 5],
-      author_img: "/images/author.jpg",
-    },
-  ];
-
   const cateslider = {
     dots: false,
     infinite: true,

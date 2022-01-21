@@ -7,7 +7,7 @@ import classes from "./Card.module.css";
 const CommonCard = ({ fx, col }) => {
   return (
     <Col lg={col}>
-      <Link href="/">
+      <Link href="/usename/fix_name_or_title">
         <a className={classes.cardLink}>
           <Card
             className={classes.common_card}

@@ -22,7 +22,7 @@ const Footer = () => {
           title: "How it works",
         },
         {
-          link: "/",
+          link: "/faq",
           title: "FAQs",
         },
         {

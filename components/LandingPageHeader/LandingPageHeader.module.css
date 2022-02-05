@@ -41,7 +41,7 @@
 }
 
 .chat {
-  background: #625c5c;
+  background: #625c5c !important;
   color: white;
   height: 2rem;
   width: 2rem;
@@ -59,7 +59,7 @@
 }
 
 .notification {
-  background-color: #625c5c;
+  background-color: #625c5c !important;
   color: white;
   height: 2rem;
   width: 2rem;

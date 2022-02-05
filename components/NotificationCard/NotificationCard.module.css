@@ -53,7 +53,7 @@
 }
 
 .notification {
-  background: #625c5c;
+  background: #625c5c !important;
   color: white;
   height: 2rem;
   width: 2rem;

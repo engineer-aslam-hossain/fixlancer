@@ -45,7 +45,7 @@
   color: white;
   height: 2rem;
   width: 2rem;
-  margin: 0 01rem;
+  margin: 0 1rem !important;
 }
 
 .chat:hover,

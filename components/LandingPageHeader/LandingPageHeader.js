@@ -95,7 +95,9 @@ const LandingPageHeader = () => {
                   orientation="vertical"
                   className={classes.vertical_divider}
                 />
-                <button>Manage Orders</button>
+                <button onClick={() => router.push("/order/manage-order")}>
+                  Manage Orders
+                </button>
                 <Divider
                   orientation="vertical"
                   className={classes.vertical_divider}

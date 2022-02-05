@@ -41,7 +41,7 @@
 }
 
 .chat {
-  background-color: #625c5c;
+  background: #625c5c;
   color: white;
   height: 2rem;
   width: 2rem;
@@ -53,9 +53,9 @@
   background-color: #625c5c;
 }
 
-.email,
-.bell_icon {
+.email {
   font-size: 1.15rem;
+  color: white;
 }
 
 .notification {

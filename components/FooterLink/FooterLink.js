@@ -4,7 +4,7 @@ import classes from "./FooterLink.module.css";
 
 const FooterLink = ({ info }) => {
   return (
-    <Col lg="3" className={classes.footer_link_col}>
+    <Col lg="12" className={classes.footer_link_col}>
       <div className={classes.title}>
         <h3>{info.title}</h3>
       </div>

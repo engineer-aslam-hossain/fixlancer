@@ -36,12 +36,84 @@ const TheNews = () => {
     <section className={classes.the_news}>
       <Container>
         <Row>
-          <div className={classes.title}>
-            <h1>In The News</h1>
-          </div>
-          {newses.map((news, indx) => (
-            <NewsCard key={indx} indx={indx} news={news} />
-          ))}
+          <Col lg="12">
+            <div className={classes.title}>
+              <h1>In The News</h1>
+            </div>
+          </Col>
+          <Col
+            lg="8 ms-auto"
+            className={classes.col_div_for_news}
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
+          >
+            <div className={classes.text_content}>
+              <div>1</div>
+            </div>
+            <div className={classes.news_content1}>
+              <Image
+                src="/images/news3.png"
+                alt="news_img"
+                width={75}
+                height={50}
+                className={classes.news_img}
+                objectFit="contain"
+              />
+              <p>
+                How tech startup Fixlancer is changing the job market in Nigeria
+              </p>
+            </div>
+          </Col>
+          <Col
+            lg="8 ms-auto"
+            className={classes.col_div_for_news}
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="300"
+          >
+            <div className={classes.text_content}>
+              <div>2</div>
+            </div>
+            <div className={classes.news_content2}>
+              <Image
+                src="/images/news2.png"
+                alt="news_img"
+                width={130}
+                height={50}
+                className={classes.news_img}
+                objectFit="contain"
+              />
+              <p>Efe Ejeba Bags Fixlancer Endorsement Deal</p>
+            </div>
+          </Col>
+          <Col
+            lg="8 ms-auto"
+            className={classes.col_div_for_news}
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="600"
+          >
+            <div
+              className={`${classes.text_content} ${classes.last_text_content}`}
+            >
+              <div>3</div>
+            </div>
+            <div className={classes.news_content3}>
+              <Image
+                src="/images/news1.png"
+                alt="news_img"
+                width={130}
+                height={50}
+                className={classes.news_img}
+                objectFit="contain"
+              />
+              <p>
+                How Nigerian tech startup Fixlancer is changing how jobs get
+                done
+              </p>
+            </div>
+          </Col>
         </Row>
       </Container>
     </section>

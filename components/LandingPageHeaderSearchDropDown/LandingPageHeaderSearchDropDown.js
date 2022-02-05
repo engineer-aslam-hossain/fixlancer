@@ -31,12 +31,11 @@ const SearchbarDropdown = (props) => {
       <div className={`${classes.search_input}`}>
         <SearchIcon className={classes.searchIcon} onClick={handleSubmit} />
         <Form onSubmit={handleSubmit}>
-          <Form.Control
-            size="lg"
+          <input
             type="search"
             ref={inputRef}
             onChange={onInputChange}
-            placeholder="Job title or keyword and location"
+            placeholder="Try ‘logo’"
           />
         </Form>
       </div>

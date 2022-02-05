@@ -32,14 +32,13 @@ export default function ProfileMenu({ dispatch }) {
       <Box>
         <Tooltip title="Account settings">
           <button onClick={handleClick} className={classes.profile_account_btn}>
-            <p>Aslam</p>
             <div className={classes.user_img}>
               <Image
                 src="/images/author.jpg"
                 alt="logoImg"
                 className={classes.selise_logo}
-                width={48}
-                height={48}
+                width={32}
+                height={32}
               />
             </div>
           </button>
@@ -90,7 +89,7 @@ export default function ProfileMenu({ dispatch }) {
           </button>
           <button
             className={classes.logout}
-            onClick={() => router.push("/username/edit_profile")}
+            onClick={() => router.push("/username/edit-profile")}
           >
             <SettingsIcon />
             Settings

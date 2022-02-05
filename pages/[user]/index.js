@@ -3,17 +3,24 @@ import { categories } from "../../dummy_data/dummy_fixes";
 import CommonCard from "../../components/Card/Card";
 import Image from "next/image";
 import StarIcon from "@mui/icons-material/Star";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import CreateIcon from "@mui/icons-material/Create";
 import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
 import classes from "./user.module.css";
+import FooterBottom from "../../components/FooterBottom/FooterBottom";
+import LandingPageHeader from "../../components/LandingPageHeader/LandingPageHeader";
+import Divider from "@mui/material/Divider";
 
 const User = () => {
   return (
     <section className={classes.user}>
       <Container>
         <Row>
-          <Col lg="4">
+          <Col lg="3">
             <div className={classes.user_card}>
+              <div className={classes.active_status}>
+                <div className={classes.dot}></div>
+                <span>Away</span>
+              </div>
               <div className={classes.user_image}>
                 <Image
                   alt="user_img"
@@ -23,7 +30,9 @@ const User = () => {
                 />
               </div>
               <h4>username</h4>
-              <span className={classes.username}>@uidesigner</span>
+              <span className={classes.username}>
+                @uidesigner <CreateIcon className={classes.create_icon} />
+              </span>
               <p>
                 I am a graphics designer with more than 2yrs of experience.
                 Clients satisfaction is a top priority to me. You can contact me
@@ -33,10 +42,7 @@ const User = () => {
                 <div className={classes.small_text}>
                   <StarIcon className={classes.star_icon} /> <span>100%</span>
                 </div>
-                <div className={classes.small_text}>
-                  <LocalPhoneIcon className={classes.phone} />
-                  <span>01784324223</span>
-                </div>
+
                 <div className={classes.small_text}>
                   <DateRangeOutlinedIcon className={classes.date} />
                   <span>
@@ -53,16 +59,22 @@ const User = () => {
               </div>
             </div>
           </Col>
-          <Col lg="8">
+          <Col lg="9">
             <div className={classes.fix_by}>
               <h3>Fix by username</h3>
             </div>
-            <div className="d-flex flex-wrap">
+            <Row>
               {categories.map((item, indx) => (
                 <CommonCard key={indx} fx={item} col={4} />
               ))}
-            </div>
+            </Row>
           </Col>
+        </Row>
+      </Container>
+      <Divider className={classes.bottom_divider} />
+      <Container>
+        <Row>
+          <FooterBottom />
         </Row>
       </Container>
     </section>
@@ -70,3 +82,9 @@ const User = () => {
 };
 
 export default User;
+
+User.getLayout = (page) => (
+  <>
+    <LandingPageHeader /> {page}
+  </>
+);

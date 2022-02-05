@@ -38,9 +38,9 @@ export default function Home() {
       <FeaturedFixes />
       <RecommandedFix />
       <FeelTheBlend />
-      <HowDoesItWork />
+      {/* <HowDoesItWork /> */}
       <TheNews />
-      <FundsProtected />
+      {/* <FundsProtected /> */}
     </>
   );
 }

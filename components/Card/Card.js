@@ -13,28 +13,33 @@ const CommonCard = ({ fx, col }) => {
             className={classes.common_card}
             style={{ margin: col ? "1rem 0" : "1rem 0.6rem" }}
           >
-            <Image src={fx.img} width={300} height={200} alt="card_img" />
+            <Image src={fx.img} width={300} height={150} alt="card_img" />
             <Card.Body>
-              <div className={classes.author}>
-                <Image
-                  src={fx.author_img}
-                  width={50}
-                  height={50}
-                  alt="author_img"
-                />
+              <div className={classes.author_info}>
+                <div className={classes.author}>
+                  <Image
+                    src={fx.author_img}
+                    width={50}
+                    height={50}
+                    alt="author_img"
+                    objectFit="fill"
+                    priority={true}
+                  />
+                </div>
+                <p>elijahTomilawa</p>
               </div>
               <div className={classes.title}>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
               </div>
               <div className={classes.ratings_div}>
                 <div className={classes.rating}>
-                  <span>
+                  <p>
                     <StarIcon className={classes.rating_icon} /> 5.0
-                  </span>
+                  </p>
                   <span> (2444) </span>
                 </div>
                 <div className={classes.card_price}>
-                  <span>N25000</span>
+                  <p>N25000</p>
                 </div>
               </div>
             </Card.Body>

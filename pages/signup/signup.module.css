@@ -5,7 +5,7 @@
   display: flex;
 }
 .left_col_reg {
-  background-color: var(--bg-color-1);
+  background-color: #2e4372;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,7 @@
   color: white;
   text-align: center;
   line-height: 25px;
+  font-size: 14px;
 }
 
 .download {
@@ -23,6 +24,7 @@
   font-weight: 800;
   color: var(--deep-text-color);
   margin-top: 2rem;
+  font-size: 1.1rem;
 }
 
 .download_link {
@@ -33,12 +35,16 @@
 
 .download_store {
   background-color: #0a043c;
-  margin: 1rem 0.5rem;
+  margin: 0.5rem;
   border-radius: 30px;
   padding: 0.6rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.download_store a {
+  display: flex;
 }
 
 .reg_right_col {

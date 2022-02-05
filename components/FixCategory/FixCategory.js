@@ -1,95 +1,102 @@
-import { Container, Row } from "react-bootstrap";
-import CategoryCard from "../CategoryCard/CategoryCard";
+import { Col, Container, Row } from "react-bootstrap";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import classes from "./FixCategory.module.css";
-import Slider from "react-slick";
+import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
+import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
+import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
+import PhotoOutlinedIcon from "@mui/icons-material/PhotoOutlined";
+import AdbIcon from "@mui/icons-material/Adb";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import { useRouter } from "next/router";
 
 const FixCategory = () => {
-  const categories = [
-    {
-      name: "Graphics Design",
-      img: "/images/cat1.png",
-    },
-    {
-      name: "Music & Audio",
-      img: "/images/cat2.png",
-    },
-    {
-      name: "Digital Marketing",
-      img: "/images/cat3.png",
-    },
-    {
-      name: "Writing",
-      img: "/images/cat4.png",
-    },
-    {
-      name: "Video & Animation",
-      img: "/images/cat5.png",
-    },
-    {
-      name: "Graphics Design",
-      img: "/images/example.jpg",
-    },
-  ];
-
-  const cateslider = {
-    dots: false,
-    infinite: true,
-    centerMode: true,
-    centerPadding: "10px",
-    autoplay: true,
-    speed: 200,
-    slidesToShow: 5,
-    swipeToSlide: true,
-    // slidesToScroll: 1,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          swipeToSlide: true,
-          slidesToShow: 3,
-          // slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          swipeToSlide: true,
-          slidesToShow: 2,
-          // slidesToScroll: 1,
-          initialSlide: 1,
-          arrows: false,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          swipeToSlide: true,
-          slidesToShow: 2,
-          // slidesToScroll: 1,
-          arrows: false,
-          dots: false,
-        },
-      },
-    ],
-  };
-
+  const router = useRouter();
   return (
     <section className={classes.fixCategory_section}>
       <Container>
         <Row>
-          <div className={classes.fix_cat_title}>
-            <h2>Fix Category</h2>
-          </div>
-          <Slider {...cateslider}>
-            {categories.map((category, indx) => (
-              <CategoryCard key={indx} category={category} />
-            ))}
-          </Slider>
+          <Col lg="12" className={classes.fix_cat_title}>
+            <h2>Category</h2>
+          </Col>
+        </Row>
+        <Row className="align-items-center">
+          <Col lg="10" className={classes.category_card_col}>
+            <div
+              className={classes.category_card}
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="0"
+            >
+              <h6>Graphics & Design</h6>
+              <div className={classes.category_icon1}>
+                <PhotoOutlinedIcon className={classes.icon} />
+              </div>
+            </div>
+            <div
+              className={classes.category_card}
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="300"
+            >
+              <h6>Writing</h6>
+              <div className={classes.category_icon2}>
+                <BorderColorOutlinedIcon className={classes.icon} />
+              </div>
+            </div>
+            <div
+              className={classes.category_card}
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="400"
+            >
+              <h6>Video & Animation</h6>
+              <div className={classes.category_icon3}>
+                <SubscriptionsIcon className={classes.icon} />
+              </div>
+            </div>
+            <div
+              className={classes.category_card}
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="500"
+            >
+              <h6>Music & Audio</h6>
+              <div className={classes.category_icon4}>
+                <MusicNoteIcon className={classes.icon} />
+              </div>
+            </div>
+            <div
+              className={classes.category_card}
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="600"
+            >
+              <h6>SEO</h6>
+              <div className={classes.category_icon5}>
+                <ImportantDevicesIcon className={classes.icon} />
+              </div>
+            </div>
+            <div
+              className={classes.category_card}
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="700"
+            >
+              <h6>Programming & Tech</h6>
+              <div className={classes.category_icon6}>
+                <AdbIcon className={classes.icon} />
+              </div>
+            </div>
+          </Col>
+          <Col lg="2">
+            <button
+              className={classes.view_all}
+              onClick={() => router.push("/?login=true")}
+            >
+              View All
+              <ArrowForwardIosOutlinedIcon className={classes.right_arr} />
+            </button>
+          </Col>
         </Row>
       </Container>
     </section>

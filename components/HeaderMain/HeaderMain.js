@@ -1,19 +1,6 @@
 import { Col, Container, Form, Row } from "react-bootstrap";
 import Link from "next/link";
 import classes from "./HeaderMain.module.css";
-import IconButton from "@mui/material/IconButton";
-import Input from "@mui/material/Input";
-import FilledInput from "@mui/material/FilledInput";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import InputLabel from "@mui/material/InputLabel";
-import InputAdornment from "@mui/material/InputAdornment";
-import FormHelperText from "@mui/material/FormHelperText";
-import FormControl from "@mui/material/FormControl";
-import TextField from "@mui/material/TextField";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import Image from "next/image";
-import Box from "@mui/material/Box";
 import SearchIcon from "@mui/icons-material/Search";
 
 const HeaderMain = () => {
@@ -24,8 +11,12 @@ const HeaderMain = () => {
           <Col lg="5" className={classes.left_header_main}>
             <div className={classes.find_service}>
               <h1>
-                <span>Find Services</span> For Your Business
+                A <span> Better Way </span> to get <br /> jobs done
               </h1>
+              <p>
+                Fixlancer lets you get jobs done person-to-person in an easy,
+                safe and secured way from anywhere at anytime
+              </p>
             </div>
             <div>
               <div className={classes.search_input}>
@@ -34,41 +25,26 @@ const HeaderMain = () => {
                   size="lg"
                   type="search"
                   onFocus={() => false}
-                  placeholder="Job title or keyword and location"
+                  placeholder="Try ‘logo’"
                 />
                 <button>Search</button>
               </div>
             </div>
             <div>
-              <div className={classes.app_download_title}>
-                <h4>Download Our App</h4>
+              <div className={classes.popular_search}>
+                <button className={classes.popular}>Popular</button>
+                <button className={classes.popular_btn}>Logo</button>
+                <button className={classes.popular_btn}>Website design</button>
+                <button className={classes.popular_btn}>Writing</button>
               </div>
-              <div className={classes.app_download}>
-                <div className={classes.app_store}>
-                  <Link href="/">
-                    <a>
-                      <Image
-                        src="/images/app_store.png"
-                        alt="app_store"
-                        width={127}
-                        height={44}
-                      />
-                    </a>
-                  </Link>
-                </div>
-                <div className={classes.play_store}>
-                  <Link href="/">
-                    <a>
-                      <Image
-                        src="/images/play_store.png"
-                        alt="play_store"
-                        width={160}
-                        height={44}
-                      />
-                    </a>
-                  </Link>
-                </div>
-              </div>
+            </div>
+            <div className={classes.login_register}>
+              <Link href="/login">
+                <a className={classes.login}>Login</a>
+              </Link>
+              <Link href="/signup">
+                <a className={classes.register}> Register</a>
+              </Link>
             </div>
           </Col>
         </Row>

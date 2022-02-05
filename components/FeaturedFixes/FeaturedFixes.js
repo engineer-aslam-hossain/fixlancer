@@ -3,67 +3,17 @@ import classes from "./FeaturedFixes.module.css";
 import Slider from "react-slick";
 import CommonCard from "../Card/Card";
 import { categories } from "../../dummy_data/dummy_fixes";
+import FixSlider from "../FixSlider/FixSlider";
 
 const FeaturedFixes = () => {
-  const cateslider = {
-    dots: false,
-    infinite: true,
-    centerMode: true,
-    centerPadding: "10px",
-    autoplay: false,
-    speed: 200,
-    slidesToShow: 4,
-    swipeToSlide: true,
-    // slidesToScroll: 1,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          swipeToSlide: true,
-          slidesToShow: 3,
-          // slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          swipeToSlide: true,
-          slidesToShow: 2,
-          // slidesToScroll: 1,
-          initialSlide: 1,
-          arrows: false,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          swipeToSlide: true,
-          slidesToShow: 1,
-          // slidesToScroll: 1,
-          arrows: false,
-          dots: false,
-        },
-      },
-    ],
-  };
-
   return (
     <section className={classes.fixCategory_section}>
       <Container>
         <Row>
           <div className={classes.fix_cat_title}>
-            <h2>Featured Fixes</h2>
+            <h2>Featured</h2>
           </div>
-          <Slider {...cateslider}>
-            {categories.map((category, indx) => (
-              <CommonCard key={indx} fx={category} />
-            ))}
-          </Slider>
+          <FixSlider fixes={categories} slide_to_show={4} />
         </Row>
       </Container>
     </section>

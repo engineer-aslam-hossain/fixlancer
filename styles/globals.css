@@ -7,13 +7,15 @@ body {
 }
 
 :root {
-  --bg-color-1: #2e4372;
+  --bg-color-1: #f9f9f9;
   --bg-color-2: #5377b1;
-  --secondary-text-color: #33383f;
+  --secondary-text-color: #808080;
   --text-color-gr: #1cc88a;
+  --title-color: #343434;
   --primary-color: #e2732c;
   --primary-color-light: #feb906;
   --deep-text-color: #a5b4cb;
+  --fontFamily: "Nunito", sans-serif;
 }
 
 a {
@@ -103,4 +105,42 @@ a {
 .forgot_modal .modal-content {
   border-radius: 30px !important;
   padding: 0 !important;
+}
+
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev {
+  position: absolute;
+  z-index: 1000000000 !important;
+  background: #ffffff !important;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  width: 3rem;
+  height: 3rem;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+}
+
+.slick-prev:before {
+  content: url("../public/icons/prev.svg") !important;
+  font-size: 2rem;
+  z-index: 100000;
+}
+.slick-next:before {
+  content: url("../public/icons/next.svg") !important;
+  font-size: 2rem;
+  z-index: 100000;
+}
+
+p#mui-3,
+p.MuiTablePagination-displayedRows.css-levciy-MuiTablePagination-displayedRows {
+  margin-bottom: 0;
 }

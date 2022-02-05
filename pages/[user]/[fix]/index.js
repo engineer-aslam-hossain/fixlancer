@@ -17,6 +17,7 @@ import AddIcon from "@mui/icons-material/Add";
 import CommonCard from "../../../components/Card/Card";
 import Footer from "../../../components/Footer/Footer";
 import { categories } from "../../../dummy_data/dummy_fixes";
+import FooterBottom from "../../../components/FooterBottom/FooterBottom";
 
 const Fix = () => {
   const [value, setValue] = useState(0);
@@ -28,7 +29,7 @@ const Fix = () => {
   return (
     <>
       <section className={classes.fix}>
-        <Container>
+        <Container className={classes.fix_container}>
           <Row>
             <div className={classes.category}>
               <h4>
@@ -78,7 +79,7 @@ const Fix = () => {
                 </Tabs>
               </Col>
             </Col>
-            <div className={classes.tab_value}>
+            <Col lg="8 mx-auto" className={classes.tab_value}>
               {value === 0 ? (
                 <p className={classes.description}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
@@ -99,7 +100,7 @@ const Fix = () => {
                   ))}
                 </div>
               )}
-            </div>
+            </Col>
             <Col lg="8" className={classes.about_seller}>
               <div className={classes.extra_report}>
                 <div className={classes.extra}>
@@ -156,8 +157,10 @@ const Fix = () => {
             <div>
               <div className={classes.total_rating}>
                 <h3>Ratings 5.0</h3>
-                <StarIcon className={classes.star_icon} />
-                <span>( 20 reviews )</span>
+                <div className={classes.review_rating}>
+                  <StarIcon className={classes.star_icon} />
+                  <span>( 20 reviews )</span>
+                </div>
               </div>
             </div>
             <div className={classes.review}>
@@ -221,9 +224,21 @@ const Fix = () => {
             ))}
           </Row>
         </Container>
+        <Divider className={classes.divider_bottom} />
+        <Container>
+          <Row>
+            <FooterBottom />
+          </Row>
+        </Container>
       </section>
     </>
   );
 };
 
 export default Fix;
+
+Fix.getLayout = (page) => (
+  <>
+    <LandingPageHeader /> {page}
+  </>
+);

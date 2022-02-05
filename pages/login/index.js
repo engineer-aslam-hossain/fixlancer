@@ -20,7 +20,7 @@ const Login = () => {
       <Container fluid>
         <Row>
           <Col lg="7" className={classes.left_col_login}>
-            <Col lg="4" className={classes.login_card}>
+            <Col lg="6" className={classes.login_card}>
               <h3 className={classes.title}>Login to your account!</h3>
               <Form onSubmit={submitHandler} noValidate>
                 <div>
@@ -71,9 +71,10 @@ const Login = () => {
                   <a>
                     <Image
                       src="/images/logo.png"
-                      width={375}
-                      height={135}
+                      width={174}
+                      height={64}
                       alt="logo"
+                      objectFit="fill"
                     />
                   </a>
                 </Link>
@@ -89,20 +90,28 @@ const Login = () => {
               </div>
               <div className={classes.download_link}>
                 <div className={classes.download_store}>
-                  <Image
-                    src="/images/app_store.png"
-                    alt="app_store"
-                    width={72}
-                    height={25}
-                  />
+                  <Link href="/">
+                    <a>
+                      <Image
+                        src="/images/app_store.png"
+                        alt="app_store"
+                        width={72}
+                        height={25}
+                      />
+                    </a>
+                  </Link>
                 </div>
                 <div className={classes.download_store}>
-                  <Image
-                    src="/images/play_store.png"
-                    alt="play_store"
-                    width={90}
-                    height={25}
-                  />
+                  <Link href="/">
+                    <a>
+                      <Image
+                        src="/images/play_store.png"
+                        alt="play_store"
+                        width={90}
+                        height={25}
+                      />
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

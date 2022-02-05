@@ -25,6 +25,7 @@
     "react-dropzone": "^11.5.1",
     "react-select": "^5.2.2",
     "react-slick": "^0.28.1",
+    "sass": "^1.49.7",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3"
   },

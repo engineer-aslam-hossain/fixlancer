@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import classes from "./signup.module.css";
@@ -7,6 +8,8 @@ import classes from "./signup.module.css";
 const SignUp = () => {
   const [randNum, setRandNum] = useState({});
   const [newUser, setNewUser] = useState({});
+  const router = useRouter();
+
   useEffect(() => {
     let rand_num_1 = Math.floor(Math.random() * 50);
     let rand_num_2 = Math.floor(Math.random() * 50);
@@ -18,6 +21,8 @@ const SignUp = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    router.push("/users/username/dashboard");
 
     if (randNum.rand1 + randNum.rand2 == newUser.numToCheck) {
       console.log("correct answer");

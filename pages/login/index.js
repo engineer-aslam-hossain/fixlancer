@@ -13,7 +13,7 @@ const Login = () => {
   const handleShow = () => setShow(true);
   const submitHandler = (e) => {
     e.preventDefault();
-    router.push("/?login=true");
+    router.push("/users/username/dashboard");
   };
   return (
     <section>

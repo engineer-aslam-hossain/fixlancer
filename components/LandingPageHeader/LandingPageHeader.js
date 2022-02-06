@@ -12,6 +12,7 @@ import LandingPageHeaderSearchDropDown from "../LandingPageHeaderSearchDropDown/
 import ViewAllCategory from "../ViewAllCategory/ViewAllCategory";
 import NotificationCard from "../NotificationCard/NotificationCard";
 import { useRouter } from "next/router";
+import JobRequestDropdown from "../JobRequestDropdown/JobRequestDropdown";
 
 const LandingPageHeader = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -72,25 +73,34 @@ const LandingPageHeader = () => {
             <ViewAllCategory />
             <Col lg="9">
               <div className={classes.header_bottom_right_btn_div}>
-                <button>Home</button>
-                <Divider
-                  orientation="vertical"
-                  className={classes.vertical_divider}
-                />
-                <button onClick={() => router.push("/job-request")}>
-                  Job Request
+                <button
+                  onClick={() => router.push("/users/username/dashboard")}
+                >
+                  Home
                 </button>
                 <Divider
                   orientation="vertical"
                   className={classes.vertical_divider}
                 />
-                <button>Start Selling</button>
+                {/* <button onClick={() => router.push("/job-request")}>
+                  Job Request
+                </button> */}
+                <JobRequestDropdown />
+                <Divider
+                  orientation="vertical"
+                  className={classes.vertical_divider}
+                />
+                <button onClick={() => router.push("/username/new-fix")}>
+                  Start Selling
+                </button>
                 <Divider
                   orientation="vertical"
                   className={classes.vertical_divider}
                 />
 
-                <button>Manage Sales</button>
+                <button onClick={() => router.push("/order/manage-order")}>
+                  Manage Sales
+                </button>
                 <Divider
                   orientation="vertical"
                   className={classes.vertical_divider}
@@ -102,7 +112,9 @@ const LandingPageHeader = () => {
                   orientation="vertical"
                   className={classes.vertical_divider}
                 />
-                <button>Finance</button>
+                <button onClick={() => router.push("/username/finance")}>
+                  Finance
+                </button>
               </div>
             </Col>
           </Row>

@@ -94,7 +94,7 @@ export default function ProfileMenu({ dispatch }) {
             <SettingsIcon />
             Settings
           </button>
-          <button className={classes.logout} onClick={logoutHandler}>
+          <button className={classes.logout} onClick={() => router.push("/")}>
             <Logout />
             logout
           </button>

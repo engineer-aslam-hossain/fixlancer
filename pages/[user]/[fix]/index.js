@@ -4,7 +4,6 @@ import classes from "./fix.module.css";
 import StarIcon from "@mui/icons-material/Star";
 import { Divider } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import ReportIcon from "@mui/icons-material/Report";
 import ChatIcon from "@mui/icons-material/Chat";
 import LandingPageHeader from "../../../components/LandingPageHeader/LandingPageHeader";
 import Tabs from "@mui/material/Tabs";
@@ -14,13 +13,14 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Link from "next/link";
 import Flags from "country-flag-icons/react/3x2";
 import AddIcon from "@mui/icons-material/Add";
-import CommonCard from "../../../components/Card/Card";
-import Footer from "../../../components/Footer/Footer";
 import { categories } from "../../../dummy_data/dummy_fixes";
 import FooterBottom from "../../../components/FooterBottom/FooterBottom";
+import FixSlider from "../../../components/FixSlider/FixSlider";
+import { useRouter } from "next/router";
 
 const Fix = () => {
   const [value, setValue] = useState(0);
+  const router = useRouter();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -93,9 +93,20 @@ const Fix = () => {
                 <div className={classes.work_samples}>
                   {[1, 2, 3, 4, 5].map((num, indx) => (
                     <div className={classes.sample} key={indx}>
-                      <Link href="/">
-                        <a>www.worksamplesexsample.com</a>
-                      </Link>
+                      <div
+                        className={`${classes.link_number} ${
+                          indx === [1, 2, 3, 4, 5].length - 1
+                            ? classes.last_number_link
+                            : ""
+                        }`}
+                      >
+                        <span>{num} </span>
+                      </div>
+                      <div>
+                        <p onClick={() => router.push("/")}>
+                          www.worksamplesexsample.com
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -107,14 +118,13 @@ const Fix = () => {
                   <CheckCircleIcon className={classes.circle_icon} />
                   <p>For extra fast delivery in less than 8 hours for N1,000</p>
                 </div>
-                <div className={classes.report}>
-                  <ReportIcon className={classes.report_icon} />
-                  <p>For extra fast delivery in less than 8 hours for N1,000</p>
-                </div>
               </div>
 
               <div className={classes.chat_order}>
-                <button className={classes.chat_btn}>
+                <button
+                  className={classes.chat_btn}
+                  onClick={() => router.push("/inbox/dev_aslam")}
+                >
                   <ChatIcon className={classes.chat_icon} />
                   <span> Chat</span>
                 </button>
@@ -147,7 +157,12 @@ const Fix = () => {
                       <span>5.0</span>
                     </div>
                   </div>
-                  <button className={classes.order_btn}>Contact me</button>
+                  <button
+                    className={classes.order_btn}
+                    onClick={() => router.push("/inbox/dev_aslam")}
+                  >
+                    Contact me
+                  </button>
                 </div>
               </div>
             </Col>
@@ -211,17 +226,16 @@ const Fix = () => {
             <div className={classes.more_fix}>
               <h1>More fixes by the seller</h1>
             </div>
-            {categories.map((item, indx) => (
+            {/* {categories.map((item, indx) => (
               <CommonCard fx={item} key={indx} col={3} />
-            ))}
+            ))} */}
+            <FixSlider fixes={categories} slide_to_show={4} />
           </Row>
           <Row>
             <div className={classes.more_fix}>
               <h1>Recommanded for you</h1>
             </div>
-            {categories.map((item, indx) => (
-              <CommonCard fx={item} key={indx} col={3} />
-            ))}
+            <FixSlider fixes={categories} slide_to_show={4} />
           </Row>
         </Container>
         <Divider className={classes.divider_bottom} />

@@ -4,19 +4,13 @@ import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Grow from "@mui/material/Grow";
 import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
-import MenuList from "@mui/material/MenuList";
 import classes from "./ViewAllCategory.module.css";
-import Link from "next/link";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import StarBorder from "@mui/icons-material/StarBorder";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { category_data } from "../../dummy_data/category_data";
 import { useRouter } from "next/router";
@@ -95,25 +89,6 @@ const ViewAllCategory = () => {
           >
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
-                {/* <MenuList
-                  autoFocusItem={open}
-                  id="composition-menu"
-                  aria-labelledby="composition-button"
-                  onKeyDown={handleListKeyDown}
-                  className={classes.menu_list}
-                >
-                  {categories.map((item, indx) => (
-                    <Link href="/" key={indx}>
-                      <a
-                        onClick={handleClose}
-                        key={indx}
-                        className={classes.menu_item}
-                      >
-                        {item.title}
-                      </a>
-                    </Link>
-                  ))}
-                </MenuList> */}
                 <List
                   sx={{
                     width: "100%",

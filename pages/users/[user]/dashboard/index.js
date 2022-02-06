@@ -24,9 +24,12 @@ import FooterBottom from "../../../../components/FooterBottom/FooterBottom";
 import FeaturedFixes from "../../../../components/FeaturedFixes/FeaturedFixes";
 import FixSlider from "../../../../components/FixSlider/FixSlider";
 import ViewAllCategory from "../../../../components/ViewAllCategory/ViewAllCategory";
+import { useRouter } from "next/router";
+import NotificationCard from "../../../../components/NotificationCard/NotificationCard";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   const handleClick = () => {
     setOpen(!open);
@@ -57,16 +60,18 @@ const Dashboard = () => {
                 color="primary"
                 component="span"
                 className={classes.chat}
+                onClick={() => router.push("/inbox")}
               >
                 <EmailIcon className={classes.email} />
               </IconButton>
-              <IconButton
+              {/* <IconButton
                 color="primary"
                 component="span"
                 className={classes.notification}
               >
                 <NotificationsIcon className={classes.bell_icon} />
-              </IconButton>
+              </IconButton> */}
+              <NotificationCard />
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -104,7 +109,10 @@ const Dashboard = () => {
                       />
                     </div>
                     <p>amanda</p>
-                    <button className={classes.edit_profile}>
+                    <button
+                      className={classes.edit_profile}
+                      onClick={() => router.push("/username/edit-profile")}
+                    >
                       <CreateOutlinedIcon className={classes.pen_icon} /> Edit
                       Profile
                     </button>
@@ -112,7 +120,10 @@ const Dashboard = () => {
                 </ListSubheader>
               }
             >
-              <ListItemButton className={classes.list_btn}>
+              <ListItemButton
+                className={classes.list_btn}
+                onClick={() => router.push("/")}
+              >
                 <ListItemIcon className={classes.list_icon_btn}>
                   <Image
                     src="/icons/home.svg"
@@ -148,7 +159,11 @@ const Dashboard = () => {
               </ListItemButton>
               <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                  <ListItemButton sx={{ pl: 7 }} className={classes.list_btn}>
+                  <ListItemButton
+                    sx={{ pl: 7 }}
+                    className={classes.list_btn}
+                    onClick={() => router.push("/job-request")}
+                  >
                     <ListItemIcon className={classes.list_icon_btn}>
                       <Image
                         src="/icons/bag.svg"
@@ -163,7 +178,11 @@ const Dashboard = () => {
                       className={classes.list_item_text}
                     />
                   </ListItemButton>
-                  <ListItemButton sx={{ pl: 7 }} className={classes.list_btn}>
+                  <ListItemButton
+                    sx={{ pl: 7 }}
+                    className={classes.list_btn}
+                    onClick={() => router.push("/my-request")}
+                  >
                     <ListItemIcon className={classes.list_icon_btn}>
                       <Image
                         src="/icons/req.svg"
@@ -178,7 +197,11 @@ const Dashboard = () => {
                       className={classes.list_item_text}
                     />
                   </ListItemButton>
-                  <ListItemButton sx={{ pl: 7 }} className={classes.list_btn}>
+                  <ListItemButton
+                    sx={{ pl: 7 }}
+                    className={classes.list_btn}
+                    onClick={() => router.push("/username/new-job-request")}
+                  >
                     <ListItemIcon className={classes.list_icon_btn}>
                       <Image
                         src="/icons/pen.svg"
@@ -195,7 +218,10 @@ const Dashboard = () => {
                   </ListItemButton>
                 </List>
               </Collapse>
-              <ListItemButton className={classes.list_btn}>
+              <ListItemButton
+                className={classes.list_btn}
+                onClick={() => router.push("/username/new-fix")}
+              >
                 <ListItemIcon className={classes.list_icon_btn}>
                   <Image
                     src="/icons/cart.svg"
@@ -210,7 +236,10 @@ const Dashboard = () => {
                   className={classes.list_item_text}
                 />
               </ListItemButton>
-              <ListItemButton className={classes.list_btn}>
+              <ListItemButton
+                className={classes.list_btn}
+                onClick={() => router.push("/order/manage-sales")}
+              >
                 <ListItemIcon className={classes.list_icon_btn}>
                   <Image
                     src="/icons/time.svg"
@@ -225,7 +254,10 @@ const Dashboard = () => {
                   className={classes.list_item_text}
                 />
               </ListItemButton>
-              <ListItemButton className={classes.list_btn}>
+              <ListItemButton
+                className={classes.list_btn}
+                onClick={() => router.push("/order/manage-order")}
+              >
                 <ListItemIcon className={classes.list_icon_btn}>
                   <Image
                     src="/icons/order.svg"
@@ -240,7 +272,10 @@ const Dashboard = () => {
                   className={classes.list_item_text}
                 />
               </ListItemButton>
-              <ListItemButton className={classes.list_btn}>
+              <ListItemButton
+                className={classes.list_btn}
+                onClick={() => router.push("/username/finance")}
+              >
                 <ListItemIcon className={classes.list_icon_btn}>
                   <Image
                     src="/icons/finance.svg"
@@ -255,7 +290,10 @@ const Dashboard = () => {
                   className={classes.list_item_text}
                 />
               </ListItemButton>
-              <ListItemButton className={`mt-4 ${classes.list_btn}`}>
+              <ListItemButton
+                className={`mt-4 ${classes.list_btn}`}
+                onClick={() => router.push("/faq")}
+              >
                 <ListItemIcon className={classes.list_icon_btn}>
                   <Image
                     src="/icons/bookmark.svg"
@@ -300,7 +338,10 @@ const Dashboard = () => {
                   className={classes.list_item_text}
                 />
               </ListItemButton>
-              <ListItemButton className={`mt-4 mb-5 ${classes.list_btn}`}>
+              <ListItemButton
+                className={`mt-4 mb-5 ${classes.list_btn}`}
+                onClick={() => router.push("/login")}
+              >
                 <ListItemIcon className={classes.list_icon_btn}>
                   <Image
                     src="/icons/logout.svg"
@@ -321,17 +362,16 @@ const Dashboard = () => {
             <Row>
               <Col lg="4">
                 <div className={classes.find}>
-                  <p>Find what your business need</p>
-                  <Divider className={classes.divider} />
                   <div className={classes.search_div}>
                     <SearchIcon className={classes.search_icon} />
                     <input type="text" placeholder="Try ‘logo’" />
                   </div>
                 </div>
                 <div className={classes.find}>
-                  <p>Post a job request and select from different bid prices</p>
-                  <Divider className={classes.divider} />
-                  <button className={classes.post_job}>
+                  <button
+                    className={classes.post_job}
+                    onClick={() => router.push("/username/new-job-request")}
+                  >
                     Post a Job Request
                   </button>
                 </div>
@@ -342,8 +382,8 @@ const Dashboard = () => {
                     <Image
                       src="/icons/cl_red.svg"
                       alt="cl_red"
-                      width={67}
-                      height={67}
+                      width={50}
+                      height={50}
                       objectFit="fill"
                     />
                     <div className={classes.sales_details}>
@@ -355,8 +395,8 @@ const Dashboard = () => {
                     <Image
                       src="/icons/cl_orange.svg"
                       alt="cl_red"
-                      width={67}
-                      height={67}
+                      width={50}
+                      height={50}
                       objectFit="fill"
                     />
                     <div className={classes.sales_details}>

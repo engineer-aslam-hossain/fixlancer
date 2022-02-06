@@ -188,7 +188,7 @@
   border: 1px solid #dddddd;
   box-sizing: border-box;
   border-radius: 20px;
-  padding: 3rem;
+  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: 1fr;
@@ -198,7 +198,7 @@
 .card_item {
   display: flex;
   width: 100%;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 20px;
@@ -211,10 +211,12 @@
 .sales_details p {
   text-transform: capitalize;
   color: var(--secondary-text-color);
+  margin-bottom: 0.5rem;
 }
 
 .sales_details h5 {
   font-weight: 600;
+  margin-bottom: 0;
 }
 
 .title {

@@ -113,8 +113,8 @@ a {
   z-index: 1000000000 !important;
   background: #ffffff !important;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -130,14 +130,26 @@ a {
 }
 
 .slick-prev:before {
-  content: url("../public/icons/prev.svg") !important;
-  font-size: 2rem;
+  content: "" !important;
+  background-image: url("../public/icons/prev.svg") !important;
+  font-size: 1rem;
   z-index: 100000;
+  height: 1rem;
+  width: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .slick-next:before {
-  content: url("../public/icons/next.svg") !important;
-  font-size: 2rem;
+  content: "" !important;
+  background-image: url("../public/icons/next.svg") !important;
+  font-size: 1rem;
   z-index: 100000;
+  height: 1rem;
+  width: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 p#mui-3,

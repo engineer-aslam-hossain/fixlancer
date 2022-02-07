@@ -356,12 +356,14 @@ const Dashboard = () => {
             <Row>
               <Col lg="4">
                 <div className={classes.find}>
+                  <p>Find what your business need</p>
                   <div className={classes.search_div}>
                     <SearchIcon className={classes.search_icon} />
                     <input type="text" placeholder="Try ‘logo’" />
                   </div>
                 </div>
                 <div className={classes.find}>
+                  <p>Post a job request and select from different bid prices</p>
                   <button
                     className={classes.post_job}
                     onClick={() => router.push("/username/new-job-request")}

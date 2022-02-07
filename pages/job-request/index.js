@@ -35,7 +35,7 @@ const JobRequest = () => {
                   I want my ui design done asap with with with immediate
                   immeadite effect right now!
                 </h6>
-                <h5>N5000</h5>
+                <h5>&#x20A6;5000</h5>
               </div>
               <div className="d-flex">
                 <div className="d-flex me-4 align-items-center">
@@ -68,7 +68,7 @@ const JobRequest = () => {
                   I want my ui design done asap with with with immediate
                   immeadite effect right now!
                 </h6>
-                <h5>N5000</h5>
+                <h5>&#x20A6;5000</h5>
               </div>
               <div className="d-flex">
                 <div className="d-flex me-4 align-items-center">
@@ -101,7 +101,7 @@ const JobRequest = () => {
                   I want my ui design done asap with with with immediate
                   immeadite effect right now!
                 </h6>
-                <h5>N5000</h5>
+                <h5>&#x20A6;5000</h5>
               </div>
               <div className="d-flex">
                 <div className="d-flex me-4 align-items-center">

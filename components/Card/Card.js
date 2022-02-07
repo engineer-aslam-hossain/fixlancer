@@ -39,7 +39,7 @@ const CommonCard = ({ fx, col }) => {
                   <span> (2444) </span>
                 </div>
                 <div className={classes.card_price}>
-                  <p>N25000</p>
+                  <p>&#x20A6;25000</p>
                 </div>
               </div>
             </Card.Body>

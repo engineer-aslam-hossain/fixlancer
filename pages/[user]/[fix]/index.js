@@ -63,7 +63,7 @@ const Fix = () => {
                   </div>
                 </div>
                 <div className={classes.price_span}>
-                  <span>n15000</span>
+                  <span>&#8358;15000</span>
                 </div>
               </Col>
               <Divider />
@@ -116,7 +116,10 @@ const Fix = () => {
               <div className={classes.extra_report}>
                 <div className={classes.extra}>
                   <CheckCircleIcon className={classes.circle_icon} />
-                  <p>For extra fast delivery in less than 8 hours for N1,000</p>
+                  <p>
+                    For extra fast delivery in less than 8 hours for
+                    &#x20A6;1,000
+                  </p>
                 </div>
               </div>
 
@@ -128,7 +131,9 @@ const Fix = () => {
                   <ChatIcon className={classes.chat_icon} />
                   <span> Chat</span>
                 </button>
-                <button className={classes.order_btn}>Order Now N5,000</button>
+                <button className={classes.order_btn}>
+                  Order Now &#x20A6;5,000
+                </button>
               </div>
 
               <div className={classes.seller_info}>

@@ -189,7 +189,7 @@ const Inbox = ({ person }) => {
                               </div>
                               <div className={classes.offer_price_days}>
                                 <p>1 Day(s) delivery</p>
-                                <h6>N5,000</h6>
+                                <h6>&#x20A6;5,000</h6>
                               </div>
                               <div>
                                 <button

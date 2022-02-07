@@ -39,7 +39,7 @@ const MyRequest = () => {
                   </h4>
                 </div>
                 <div>
-                  <h5>N5000</h5>
+                  <h5>&#x20A6;5000</h5>
                 </div>
               </div>
 
@@ -82,7 +82,7 @@ const MyRequest = () => {
                   </h4>
                 </div>
                 <div>
-                  <h5>N5000</h5>
+                  <h5>&#x20A6;5000</h5>
                 </div>
               </div>
 
@@ -121,7 +121,7 @@ const MyRequest = () => {
                   </h4>
                 </div>
                 <div>
-                  <h5>N5000</h5>
+                  <h5>&#x20A6;5000</h5>
                 </div>
               </div>
 

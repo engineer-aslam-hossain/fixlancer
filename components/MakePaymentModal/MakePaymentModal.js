@@ -173,7 +173,7 @@ function MyVerticallyCenteredModal(props) {
             <div>
               <div className={classes.summary_key_value_pair}>
                 <p>Amount</p>
-                <p>N5,650</p>
+                <p>&#x20A6;5,650</p>
               </div>
               <div className={classes.summary_key_value_pair}>
                 <p>Account Name</p>

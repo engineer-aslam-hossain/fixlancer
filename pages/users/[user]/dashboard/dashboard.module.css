@@ -20,7 +20,7 @@
 }
 
 .chat {
-  background-color: #625c5c;
+  background-color: #625c5c !important;
   color: white;
   height: 2rem;
   width: 2rem;
@@ -35,6 +35,7 @@
 .email,
 .bell_icon {
   font-size: 1.15rem;
+  color: white !important;
 }
 
 .notification {
@@ -227,6 +228,6 @@
 
 @media (min-width: 992px) {
   .chat {
-    margin: 0 1rem;
+    margin: 0 1rem !important;
   }
 }

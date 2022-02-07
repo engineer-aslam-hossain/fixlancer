@@ -93,11 +93,11 @@ const OrderDetails = () => {
                   <h6>Summary</h6>
                   <div className={classes.summary_key_value_pair}>
                     <p>Available Balance</p>
-                    <p>N72,000</p>
+                    <p>&#x20A6;72,000</p>
                   </div>
                   <div className={classes.summary_key_value_pair}>
                     <p>Fix Price</p>
-                    <p>N5,000</p>
+                    <p>&#x20A6;5,000</p>
                   </div>
                   <div className={classes.summary_key_value_pair}>
                     <p>Discount</p>
@@ -108,11 +108,11 @@ const OrderDetails = () => {
                   </div>
                   <div className={classes.summary_key_value_pair}>
                     <p>Fee</p>
-                    <p>N72,000</p>
+                    <p>&#x20A6;72,000</p>
                   </div>
                   <div className={classes.summary_key_value_pair}>
                     <p>Total</p>
-                    <p>N72,000</p>
+                    <p>&#x20A6;72,000</p>
                   </div>
                   <div className={classes.payment}>
                     <button>Pay Now (Instant)</button>

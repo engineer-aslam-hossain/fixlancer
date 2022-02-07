@@ -42,7 +42,7 @@ const ManageOrder = () => {
       Seller: "Geofrey Fernando",
       Fix: "I can do your logo design work",
       "Due In": "23/5/2020",
-      Total: "N3,500",
+      Total: "3,500",
       Status: "ongoing",
     },
     {
@@ -50,7 +50,7 @@ const ManageOrder = () => {
       Seller: "Geofrey Fernando",
       Fix: "I can do your logo design work",
       "Due In": "23/5/2020",
-      Total: "N3,500",
+      Total: "3,500",
       Status: "ongoing",
     },
     {
@@ -58,7 +58,7 @@ const ManageOrder = () => {
       Seller: "Geofrey Fernando",
       Fix: "I can do your logo design work",
       "Due In": "23/5/2020",
-      Total: "N3,500",
+      Total: "3,500",
       Status: "ongoing",
     },
     {
@@ -66,7 +66,7 @@ const ManageOrder = () => {
       Seller: "Geofrey Fernando",
       Fix: "I can do your logo design work",
       "Due In": "23/5/2020",
-      Total: "N3,500",
+      Total: "3,500",
       Status: "delivered",
     },
     {
@@ -74,7 +74,7 @@ const ManageOrder = () => {
       Seller: "Geofrey Fernando",
       Fix: "I can do your logo design work",
       "Due In": "23/5/2020",
-      Total: "N3,500",
+      Total: "3,500",
       Status: "delivered",
     },
     {
@@ -82,7 +82,7 @@ const ManageOrder = () => {
       Seller: "Geofrey Fernando",
       Fix: "I can do your logo design work",
       "Due In": "23/5/2020",
-      Total: "N3,500",
+      Total: "3,500",
       Status: "completed",
       rating: 5,
     },
@@ -91,7 +91,7 @@ const ManageOrder = () => {
       Seller: "Geofrey Fernando",
       Fix: "I can do your logo design work",
       "Due In": "23/5/2020",
-      Total: "N3,500",
+      Total: "3,500",
       Status: "completed",
       rating: 4.9,
     },
@@ -100,7 +100,7 @@ const ManageOrder = () => {
       Seller: "Geofrey Fernando",
       Fix: "I can do your logo design work",
       "Due In": "23/5/2020",
-      Total: "N3,500",
+      Total: "3,500",
       Status: "cancelled",
     },
     {
@@ -108,7 +108,7 @@ const ManageOrder = () => {
       Seller: "Geofrey Fernando",
       Fix: "I can do your logo design work",
       "Due In": "23/5/2020",
-      Total: "N3,500",
+      Total: "3,500",
       Status: "cancelled",
     },
   ];
@@ -252,7 +252,9 @@ const ManageOrder = () => {
                                                   className={classes.star_icon}
                                                 />
                                               ) : null}
-
+                                              {cl_itm === "Total" && (
+                                                <>&#x20A6;</>
+                                              )}
                                               {cl_itm === "Status" &&
                                               activeBtn === "completed"
                                                 ? item["rating"]

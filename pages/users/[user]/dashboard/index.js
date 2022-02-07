@@ -39,7 +39,7 @@ const Dashboard = () => {
       <Navbar collapseOnSelect expand="lg" className={classes.home_nav}>
         <Container>
           <div className={classes.balance}>
-            <h6>N500000</h6>
+            <h6>&#x20A6;500000</h6>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -64,13 +64,7 @@ const Dashboard = () => {
               >
                 <EmailIcon className={classes.email} />
               </IconButton>
-              {/* <IconButton
-                color="primary"
-                component="span"
-                className={classes.notification}
-              >
-                <NotificationsIcon className={classes.bell_icon} />
-              </IconButton> */}
+
               <NotificationCard />
             </Nav>
           </Navbar.Collapse>

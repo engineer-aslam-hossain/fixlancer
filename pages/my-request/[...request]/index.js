@@ -45,9 +45,9 @@ const SingleRequest = ({ params }) => {
                   Normal bulk SMS messaging <br /> 2 Normal bulk voice messaging{" "}
                   <br />
                   3. Normal bulk email messaging <br /> 4 Online payment using
-                  cashenvoy and Luno wallet <br /> 5 Up to N500 Referral bonus
-                  system <br /> 6 Up to N100 Sign up bonus <br /> 7 Sms, Voice
-                  and email advert
+                  cashenvoy and Luno wallet <br /> 5 Up to &#x20A6;500 Referral
+                  bonus system <br /> 6 Up to &#x20A6;100 Sign up bonus <br /> 7
+                  Sms, Voice and email advert
                   <br /> 8 Credit Transfer to other users <br /> 9 N200 bonus
                   for every N3000 credit purchase <br /> 10 Shortcode purchase
                   and manager <br /> 11 Can upload contct either by typing in
@@ -69,7 +69,7 @@ const SingleRequest = ({ params }) => {
                   </div>
                 </div>
                 <div>
-                  <h5>N5000</h5>
+                  <h5>&#x20A6;5000</h5>
                 </div>
               </div>
             </div>
@@ -110,9 +110,9 @@ const SingleRequest = ({ params }) => {
                       <br /> 1 Normal bulk SMS messaging <br /> 2 Normal bulk
                       voice messaging <br />
                       3. Normal bulk email messaging <br /> 4 Online payment
-                      using cashenvoy and Luno wallet <br /> 5 Up to N500
-                      Referral bonus system <br /> 6 Up to N100 Sign up bonus{" "}
-                      <br /> 7 Sms, Voice and email advert
+                      using cashenvoy and Luno wallet <br /> 5 Up to &#x20A6;500
+                      Referral bonus system <br /> 6 Up to &#x20A6;100 Sign up
+                      bonus <br /> 7 Sms, Voice and email advert
                       <br /> 8 Credit Transfer to other users <br /> 9 N200
                       bonus for every N3000 credit purchase <br /> 10 Shortcode
                       purchase and manager <br /> 11 Can upload contct either by
@@ -139,7 +139,7 @@ const SingleRequest = ({ params }) => {
                       </div>
                     </div>
                     <div>
-                      <h5>N5000</h5>
+                      <h5>&#x20A6;5000</h5>
                     </div>
                   </div>
                 </div>
@@ -186,9 +186,9 @@ const SingleRequest = ({ params }) => {
                       <br /> 1 Normal bulk SMS messaging <br /> 2 Normal bulk
                       voice messaging <br />
                       3. Normal bulk email messaging <br /> 4 Online payment
-                      using cashenvoy and Luno wallet <br /> 5 Up to N500
-                      Referral bonus system <br /> 6 Up to N100 Sign up bonus{" "}
-                      <br /> 7 Sms, Voice and email advert
+                      using cashenvoy and Luno wallet <br /> 5 Up to &#x20A6;500
+                      Referral bonus system <br /> 6 Up to &#x20A6;100 Sign up
+                      bonus <br /> 7 Sms, Voice and email advert
                       <br /> 8 Credit Transfer to other users <br /> 9 N200
                       bonus for every N3000 credit purchase <br /> 10 Shortcode
                       purchase and manager <br /> 11 Can upload contct either by
@@ -215,7 +215,7 @@ const SingleRequest = ({ params }) => {
                       </div>
                     </div>
                     <div>
-                      <h5>N5000</h5>
+                      <h5>&#x20A6;5000</h5>
                     </div>
                   </div>
                 </div>
@@ -262,9 +262,9 @@ const SingleRequest = ({ params }) => {
                       <br /> 1 Normal bulk SMS messaging <br /> 2 Normal bulk
                       voice messaging <br />
                       3. Normal bulk email messaging <br /> 4 Online payment
-                      using cashenvoy and Luno wallet <br /> 5 Up to N500
-                      Referral bonus system <br /> 6 Up to N100 Sign up bonus{" "}
-                      <br /> 7 Sms, Voice and email advert
+                      using cashenvoy and Luno wallet <br /> 5 Up to &#x20A6;500
+                      Referral bonus system <br /> 6 Up to &#x20A6;100 Sign up
+                      bonus <br /> 7 Sms, Voice and email advert
                       <br /> 8 Credit Transfer to other users <br /> 9 N200
                       bonus for every N3000 credit purchase <br /> 10 Shortcode
                       purchase and manager <br /> 11 Can upload contct either by
@@ -291,7 +291,7 @@ const SingleRequest = ({ params }) => {
                       </div>
                     </div>
                     <div>
-                      <h5>N5000</h5>
+                      <h5>&#x20A6;5000</h5>
                     </div>
                   </div>
                 </div>
@@ -338,9 +338,9 @@ const SingleRequest = ({ params }) => {
                       <br /> 1 Normal bulk SMS messaging <br /> 2 Normal bulk
                       voice messaging <br />
                       3. Normal bulk email messaging <br /> 4 Online payment
-                      using cashenvoy and Luno wallet <br /> 5 Up to N500
-                      Referral bonus system <br /> 6 Up to N100 Sign up bonus{" "}
-                      <br /> 7 Sms, Voice and email advert
+                      using cashenvoy and Luno wallet <br /> 5 Up to &#x20A6;500
+                      Referral bonus system <br /> 6 Up to &#x20A6;100 Sign up
+                      bonus <br /> 7 Sms, Voice and email advert
                       <br /> 8 Credit Transfer to other users <br /> 9 N200
                       bonus for every N3000 credit purchase <br /> 10 Shortcode
                       purchase and manager <br /> 11 Can upload contct either by
@@ -367,7 +367,7 @@ const SingleRequest = ({ params }) => {
                       </div>
                     </div>
                     <div>
-                      <h5>N5000</h5>
+                      <h5>&#x20A6;5000</h5>
                     </div>
                   </div>
                 </div>

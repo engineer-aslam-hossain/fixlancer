@@ -13,6 +13,7 @@ import { makeStyles } from "@mui/styles";
 import { Fragment, useState } from "react";
 import Image from "next/image";
 import StarIcon from "@mui/icons-material/Star";
+import { useRouter } from "next/router";
 
 const useStyles = makeStyles({
   root: {
@@ -35,6 +36,7 @@ const ManageOrder = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [activeBtn, setActiveBtn] = useState("ongoing");
+  const router = useRouter();
 
   let data = [
     {
@@ -211,6 +213,7 @@ const ManageOrder = () => {
                                     role="checkbox"
                                     tabIndex={-1}
                                     key={indx}
+                                    onClick={() => router.push("/order/chat")}
                                   >
                                     {columns.map((cl_itm, cl_indx) => (
                                       <Fragment key={cl_indx}>

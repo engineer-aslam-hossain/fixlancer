@@ -4,9 +4,15 @@ import LandingPageHeader from "../../../../components/LandingPageHeader/LandingP
 import { categories } from "../../../../dummy_data/dummy_fixes";
 import classes from "./subcategory.module.css";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import Pagination from "@mui/material/Pagination";
+import { useState } from "react";
 
 const SubCateGory = ({ params }) => {
   let { category, subcategory } = params;
+  const [page, setPage] = useState(1);
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
 
   return (
     <section className={classes.sub_category}>
@@ -24,6 +30,15 @@ const SubCateGory = ({ params }) => {
             <CommonCard key={indx} fx={item} col={3} />
           ))}
         </Row>
+        <div className={classes.pagination_div}>
+          <Pagination
+            count={10}
+            variant="outlined"
+            shape="rounded"
+            page={page}
+            onChange={handleChange}
+          />
+        </div>
       </Container>
     </section>
   );

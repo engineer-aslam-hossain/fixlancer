@@ -131,7 +131,10 @@ const Fix = () => {
                   <ChatIcon className={classes.chat_icon} />
                   <span> Chat</span>
                 </button>
-                <button className={classes.order_btn}>
+                <button
+                  className={classes.order_btn}
+                  onClick={() => router.push("/order-details")}
+                >
                   Order Now &#x20A6;5,000
                 </button>
               </div>

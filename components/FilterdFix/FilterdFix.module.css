@@ -139,3 +139,47 @@
     height: 105px;
   }
 }
+
+.dialog_body {
+  min-width: 30rem;
+}
+
+.filter_card_body {
+  padding: 1rem 2rem;
+}
+
+.close_icon_button {
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+}
+
+.close_icon {
+  font-size: 2rem;
+}
+
+.filter_card_body h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.maximum {
+  margin-left: 1rem;
+}
+
+.filter_btn {
+  background: #1cc88a;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  padding: 0.6rem 3rem;
+  border: none;
+  text-transform: capitalize;
+  margin: 2rem;
+}
+
+.checkbox label {
+  font-size: 12px;
+}

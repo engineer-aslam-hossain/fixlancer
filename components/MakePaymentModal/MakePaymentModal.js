@@ -214,7 +214,7 @@ function MyVerticallyCenteredModal(props) {
                     <input
                       type="file"
                       id="file_input"
-                      placeholder="Attach File"
+                      placeholder="  File"
                       name="file"
                       onChange={handleInputChange}
                     />

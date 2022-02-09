@@ -2,10 +2,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import LandingPageHeader from "../../../components/LandingPageHeader/LandingPageHeader";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
-import { useState } from "react";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
-import Select from "react-select";
 import CircleIcon from "@mui/icons-material/Circle";
 import StarIcon from "@mui/icons-material/Star";
 import Image from "next/image";
@@ -14,6 +10,7 @@ import { useRouter } from "next/router";
 
 const SingleRequest = ({ params }) => {
   let param = params.request[0];
+  const router = useRouter();
 
   return (
     <section className={classes.request}>
@@ -144,15 +141,10 @@ const SingleRequest = ({ params }) => {
                   </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <button
-                    className={classes.message}
-                    onClick={() => setModalShow(true)}
-                  >
-                    Message
-                  </button>
+                  <button className={classes.message}>Message</button>
                   <button
                     className={classes.send_offer}
-                    onClick={() => setModalShow(true)}
+                    onClick={() => router.push("/order-details")}
                   >
                     Order Now
                   </button>
@@ -220,15 +212,10 @@ const SingleRequest = ({ params }) => {
                   </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <button
-                    className={classes.message}
-                    onClick={() => setModalShow(true)}
-                  >
-                    Message
-                  </button>
+                  <button className={classes.message}>Message</button>
                   <button
                     className={classes.send_offer}
-                    onClick={() => setModalShow(true)}
+                    onClick={() => router.push("/order-details")}
                   >
                     Order Now
                   </button>
@@ -296,15 +283,10 @@ const SingleRequest = ({ params }) => {
                   </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <button
-                    className={classes.message}
-                    onClick={() => setModalShow(true)}
-                  >
-                    Message
-                  </button>
+                  <button className={classes.message}>Message</button>
                   <button
                     className={classes.send_offer}
-                    onClick={() => setModalShow(true)}
+                    onClick={() => router.push("/order-details")}
                   >
                     Order Now
                   </button>
@@ -372,15 +354,10 @@ const SingleRequest = ({ params }) => {
                   </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <button
-                    className={classes.message}
-                    onClick={() => setModalShow(true)}
-                  >
-                    Message
-                  </button>
+                  <button className={classes.message}>Message</button>
                   <button
                     className={classes.send_offer}
-                    onClick={() => setModalShow(true)}
+                    onClick={() => router.push("/order-details")}
                   >
                     Order Now
                   </button>

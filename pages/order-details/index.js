@@ -6,8 +6,10 @@ import Link from "next/link";
 import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
 import RadioButtonCheckedOutlinedIcon from "@mui/icons-material/RadioButtonCheckedOutlined";
 import MakePaymentModal from "../../components/MakePaymentModal/MakePaymentModal";
+import { useRouter } from "next/router";
 
 const OrderDetails = () => {
+  const router = useRouter();
   return (
     <section className={classes.order_details}>
       <Container>
@@ -115,8 +117,14 @@ const OrderDetails = () => {
                     <p>&#x20A6;72,000</p>
                   </div>
                   <div className={classes.payment}>
-                    <button>Pay Now (Instant)</button>
-                    {/* <button>Pay Now (Bank Transfer)</button> */}
+                    <button
+                      onClick={() =>
+                        router.push("/order-details/submit-requirements")
+                      }
+                    >
+                      Pay Now (Instant)
+                    </button>
+
                     <MakePaymentModal />
                   </div>
                 </div>

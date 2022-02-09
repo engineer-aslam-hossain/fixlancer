@@ -20,6 +20,10 @@ import ReportIcon from "@mui/icons-material/Report";
 import Divider from "@mui/material/Divider";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import CheckIcon from "@mui/icons-material/Check";
+import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
+import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
+import SettingsIcon from "@mui/icons-material/Settings";
+import DoDisturbOffOutlinedIcon from "@mui/icons-material/DoDisturbOffOutlined";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -39,9 +43,17 @@ const Chat = () => {
   const [activeToggle, setActiveToggle] = useState("chat");
   const [open, setOpen] = useState(false);
   const [cancelOrderOpen, setCancelOrderOpen] = useState(false);
+  const [cancelOrder, setCancelOrder] = useState(false);
+  const [declineCancelOrder, setDeclineCancelOrder] = useState(false);
   const [disputeOpen, setDisputeOpen] = useState(false);
   const [deliveryOpen, setDeliveryOpen] = useState(false);
+  const [completeOpen, setCompleteOpen] = useState(false);
+  const [extrasOpen, setExtrasOpen] = useState(false);
+  const [deliverOrder, setDeliverOrder] = useState(false);
   const [orderDispute, setOrderDispute] = useState(false);
+  const [rated, setRated] = useState(false);
+  const [modification, setModification] = useState(false);
+  const [starNumber, setStarNumber] = useState(0);
 
   const [timerDays, setTimerDays] = useState("00");
   const [timerHours, setTimerHours] = useState("00");
@@ -158,6 +170,25 @@ const Chat = () => {
       },
     ],
   };
+  const deliveryDays = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "10",
+    "15",
+    "30",
+    "45",
+    "60",
+    "90",
+  ];
+
+  const mouseOverHandler = (num) => {
+    setStarNumber(num);
+  };
 
   return (
     <section className={classes.chat}>
@@ -243,6 +274,171 @@ const Chat = () => {
                         <GavelOutlinedIcon className={classes.gavel_icon} />
                         <h6>Under Dispute</h6>
                       </div>
+                    </div>
+                  )}
+
+                  {activeToggle === "chat" && deliverOrder && (
+                    <div className={classes.deliver_work_div}>
+                      <Col lg="5" className={`${classes.deliver_work}`}>
+                        <p>
+                          Good afternoon Mr. Gloria Emeka. Thanks for contacting
+                          me.
+                        </p>
+                        <div>
+                          <FileDownloadIcon
+                            className={classes.file_download_icon}
+                          />
+                        </div>
+                      </Col>
+                    </div>
+                  )}
+
+                  {activeToggle === "chat" && deliverOrder && (
+                    <div className={classes.deliver_work_div}>
+                      <Col lg="5" className={classes.order_delivery}>
+                        <div className="d-flex flex-column align-items-start">
+                          <div className={classes.deliver_chip}>
+                            <div>order delivered</div>
+                          </div>
+                          <p>
+                            Good afternoon Mr. Orlando Efe. Thanks for
+                            contacting me.
+                          </p>
+                        </div>
+
+                        <div className={classes.download_grid}>
+                          <div className={`${classes.downLoad_file}`}>
+                            <div></div>
+                            <div>
+                              <FileDownloadIcon
+                                className={classes.file_download_icon}
+                              />
+                            </div>
+                          </div>
+                          <div className={`${classes.downLoad_file}`}>
+                            <div></div>
+                            <div>
+                              <FileDownloadIcon
+                                className={classes.file_download_icon}
+                              />
+                            </div>
+                          </div>
+                          <div className={`${classes.downLoad_file}`}>
+                            <div></div>
+                            <div>
+                              <FileDownloadIcon
+                                className={classes.file_download_icon}
+                              />
+                            </div>
+                          </div>
+                          <div className={`${classes.downLoad_file}`}>
+                            <div></div>
+                            <div>
+                              <FileDownloadIcon
+                                className={classes.file_download_icon}
+                              />
+                            </div>
+                          </div>
+                          <div className={`${classes.downLoad_file}`}>
+                            <div></div>
+                            <div>
+                              <FileDownloadIcon
+                                className={classes.file_download_icon}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </Col>
+                    </div>
+                  )}
+
+                  {activeToggle === "chat" && deliverOrder && !rated && (
+                    <div className={classes.complete_or_modification}>
+                      <div>
+                        <button
+                          className={classes.modification}
+                          onClick={() => setModification(true)}
+                        >
+                          Request Modification
+                        </button>
+                        <button
+                          className={classes.complete}
+                          onClick={() => setCompleteOpen(true)}
+                        >
+                          Mark As Complete
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                  {activeToggle === "chat" && modification && (
+                    <div className="d-flex justify-content-center">
+                      <div className={classes.modification_card}>
+                        <SettingsIcon className={classes.settings_icon} />
+                        <div>
+                          <h6>Modification Requested</h6>
+                          <p>The buyer requested for modifications</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {activeToggle === "chat" && cancelOrder && (
+                    <div className="d-flex justify-content-center">
+                      <div className={classes.modification_card}>
+                        <CancelOutlinedIcon className={classes.cancel_icon} />
+                        <div>
+                          <h6>Order Cancellation</h6>
+                          <p>
+                            You have requested a mutual cancellation for this
+                            order
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {activeToggle === "chat" && declineCancelOrder && (
+                    <div className="d-flex justify-content-center">
+                      <div className={classes.modification_card}>
+                        <DoDisturbOffOutlinedIcon
+                          className={classes.cancel_icon}
+                        />
+                        <div>
+                          <h6>Order Denied</h6>
+                          <p>Mutual Cancellation of the Order was rejected.</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {activeToggle === "chat" &&
+                    cancelOrder &&
+                    !declineCancelOrder && (
+                      <div className={classes.complete_or_modification}>
+                        <div>
+                          <button
+                            className={classes.modification}
+                            // onClick={() => setModification(true)}
+                          >
+                            Accept
+                          </button>
+                          <button
+                            className={classes.complete}
+                            onClick={() => setDeclineCancelOrder(true)}
+                          >
+                            Reject
+                          </button>
+                        </div>
+                      </div>
+                    )}
+
+                  {activeToggle === "chat" && rated && (
+                    <div className={classes.deliver_work_div}>
+                      <Col lg="5" className={`${classes.reted_div}`}>
+                        <StarOutlinedIcon className={classes.rating_icon} />{" "}
+                        <span>4.5</span>
+                        <div className={classes.rating_text}>
+                          Excellent job again, thanks
+                        </div>
+                      </Col>
                     </div>
                   )}
 
@@ -373,7 +569,21 @@ const Chat = () => {
                     </div>
                   )}
                 </div>
-                {activeToggle === "chat" && (
+
+                {activeToggle === "chat" && rated && (
+                  <div className={classes.order_completed}>
+                    <div>
+                      <p>
+                        Your order is completed. You may contact the seller via
+                        <Link href="/inbox">
+                          <a>Inbox</a>
+                        </Link>
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {activeToggle === "chat" && !rated && (
                   <div className={classes.bottom_input}>
                     <div className={classes.input_fields}>
                       <input
@@ -433,7 +643,14 @@ const Chat = () => {
             </IconButton>
 
             <div className={classes.offer_extras_div}>
-              <button>Offer Extras</button>
+              <button
+                onClick={() => {
+                  handleClose();
+                  setExtrasOpen(true);
+                }}
+              >
+                Offer Extras
+              </button>
               <button
                 onClick={() => {
                   handleClose();
@@ -484,7 +701,13 @@ const Chat = () => {
                 >
                   Back
                 </button>
-                <button className={classes.cancel_order_btn}>
+                <button
+                  className={classes.cancel_order_btn}
+                  onClick={() => {
+                    setCancelOrderOpen(false);
+                    setCancelOrder(true);
+                  }}
+                >
                   Cancel Order
                 </button>
               </div>
@@ -572,10 +795,173 @@ const Chat = () => {
                   className={classes.send_dispute_btn}
                   onClick={() => {
                     setDeliveryOpen(false);
-                    // setDeliveryOpen(true);
+                    setDeliverOrder(true);
                   }}
                 >
                   Deliver Work
+                </button>
+              </div>
+            </div>
+          </DialogContent>
+        </BootstrapDialog>{" "}
+        <BootstrapDialog
+          onClose={() => setCompleteOpen(false)}
+          aria-labelledby="customized-dialog-title"
+          open={completeOpen}
+        >
+          <DialogContent dividers className={classes.dialog_body}>
+            <div className={classes.dispute_body}>
+              <h5 className="text-center">Mark as complete</h5>
+              <div className="d-flex align-items-center ">
+                <ReportIcon className={classes.report_icon} />
+                <p className="mb-0">
+                  Only Mark as Complete when you are satisified & all files have
+                  been deliverd.
+                </p>
+              </div>
+              <div className="d-flex justify-content-center mb-3">
+                {starNumber >= 1 ? (
+                  <StarOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(1)}
+                  />
+                ) : (
+                  <StarBorderOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(1)}
+                    onClick={() => setStarNumber(1)}
+                  />
+                )}
+                {starNumber >= 2 ? (
+                  <StarOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(2)}
+                  />
+                ) : (
+                  <StarBorderOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(2)}
+                    onClick={() => setStarNumber(2)}
+                  />
+                )}
+                {starNumber >= 3 ? (
+                  <StarOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(3)}
+                  />
+                ) : (
+                  <StarBorderOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(3)}
+                    onClick={() => setStarNumber(3)}
+                  />
+                )}
+                {starNumber >= 4 ? (
+                  <StarOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(4)}
+                  />
+                ) : (
+                  <StarBorderOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(4)}
+                    onClick={() => setStarNumber(4)}
+                  />
+                )}
+                {starNumber >= 5 ? (
+                  <StarOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(5)}
+                  />
+                ) : (
+                  <StarBorderOutlinedIcon
+                    className={classes.star_icon}
+                    onMouseOver={() => mouseOverHandler(5)}
+                    onClick={() => setStarNumber(5)}
+                  />
+                )}
+              </div>
+              <Form.Control
+                as="textarea"
+                rows={8}
+                className={classes.text_area}
+                placeholder="Add your review!"
+              />
+
+              <div className={classes.dispute_btns}>
+                <button
+                  className={classes.cancel_dispute_btn}
+                  onClick={() => setCompleteOpen(false)}
+                >
+                  Cancel
+                </button>
+                <button
+                  className={classes.send_dispute_btn}
+                  onClick={() => {
+                    setCompleteOpen(false);
+                    setRated(true);
+                  }}
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </DialogContent>
+        </BootstrapDialog>{" "}
+        <BootstrapDialog
+          onClose={() => setExtrasOpen(false)}
+          aria-labelledby="customized-dialog-title"
+          open={extrasOpen}
+        >
+          <DialogContent dividers className={classes.dialog_body}>
+            <div className={classes.dispute_body}>
+              <h5 className="text-center">Extras</h5>
+
+              <div className={classes.whats_offering}>
+                <h6>What you are offering</h6>
+                <Form.Control
+                  as="textarea"
+                  rows={4}
+                  className={classes.text_area}
+                  placeholder="E.g Additional logo"
+                />
+              </div>
+
+              <div className={classes.extras_input}>
+                <label htmlFor="delivery">
+                  Delivery Time
+                  <Form.Select
+                    className={classes.input_field}
+                    // value={price}
+                    // onChange={(e) => setPrice(e.target.value)}
+                  >
+                    {deliveryDays.map((item, indx) => (
+                      <option value={item} key={indx}>
+                        {item} days
+                      </option>
+                    ))}
+                  </Form.Select>
+                </label>
+                <label htmlFor="amount">
+                  Amount
+                  <input type="text" id="amount" placeholder="200000" />
+                </label>
+              </div>
+              <div className={classes.dispute_btns}>
+                <button
+                  className={classes.cancel_dispute_btn}
+                  onClick={() => setExtrasOpen(false)}
+                >
+                  Cancel
+                </button>
+                <button
+                  className={classes.send_dispute_btn}
+                  onClick={() => {
+                    setExtrasOpen(false);
+                    // setRated(true);
+                  }}
+                >
+                  Send
                 </button>
               </div>
             </div>

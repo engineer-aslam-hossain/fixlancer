@@ -22,3 +22,8 @@
   margin-bottom: 1.5rem;
   text-transform: capitalize;
 }
+.pagination_div {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}

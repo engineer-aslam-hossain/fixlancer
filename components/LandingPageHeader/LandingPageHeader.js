@@ -27,8 +27,21 @@ const LandingPageHeader = () => {
     <header className={classes.header}>
       <Navbar collapseOnSelect expand="lg py-0" className={classes.home_nav}>
         <Container>
-          <div>
+          <div className={classes.landing_page_header}>
             <LandingPageHeaderSearchDropDown />
+          </div>
+          <div className={classes.brand_logo}>
+            <Link href="/">
+              <a className={classes.brandlogo}>
+                <Image
+                  src="/images/logo2.png"
+                  width={174}
+                  height={64}
+                  alt="Fixlancer"
+                  className={classes.logo}
+                />
+              </a>
+            </Link>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -45,7 +58,7 @@ const LandingPageHeader = () => {
                 </a>
               </Link>
             </Nav>
-            <Nav className="align-items-center">
+            <Nav className={classes.nav_right}>
               <ProfileMenu />
               <IconButton
                 color="primary"
@@ -57,6 +70,9 @@ const LandingPageHeader = () => {
               </IconButton>
 
               <NotificationCard />
+              <div className={classes.mobile_search}>
+                <LandingPageHeaderSearchDropDown />
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -98,7 +114,7 @@ const LandingPageHeader = () => {
                   className={classes.vertical_divider}
                 />
 
-                <button onClick={() => router.push("/order/manage-order")}>
+                <button onClick={() => router.push("/order/manage-sales")}>
                   Manage Sales
                 </button>
                 <Divider

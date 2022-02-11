@@ -12,6 +12,7 @@
 
 .logo {
   display: flex;
+  justify-content: flex-end;
 }
 
 .bottom_divider {
@@ -226,8 +227,22 @@
   color: var(--title-color);
 }
 
+.brand_logo {
+  margin: 0 auto;
+}
+
+.chat_and_notification {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 1rem;
+}
+
 @media (min-width: 992px) {
   .chat {
     margin: 0 1rem !important;
+  }
+
+  .chat_and_notification {
+    margin-right: 0;
   }
 }

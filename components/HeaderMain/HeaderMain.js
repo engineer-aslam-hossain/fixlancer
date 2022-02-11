@@ -2,8 +2,10 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import Link from "next/link";
 import classes from "./HeaderMain.module.css";
 import SearchIcon from "@mui/icons-material/Search";
+import { useRouter } from "next/router";
 
 const HeaderMain = () => {
+  const router = useRouter();
   return (
     <section className={classes.section_headerMain}>
       <Container className={classes.header_main_container}>
@@ -32,10 +34,30 @@ const HeaderMain = () => {
             </div>
             <div>
               <div className={classes.popular_search}>
-                <button className={classes.popular}>Popular</button>
-                <button className={classes.popular_btn}>Logo</button>
-                <button className={classes.popular_btn}>Website design</button>
-                <button className={classes.popular_btn}>Writing</button>
+                <button
+                  className={classes.popular}
+                  onClick={() => router.push("/?login=true")}
+                >
+                  Popular
+                </button>
+                <button
+                  className={classes.popular_btn}
+                  onClick={() => router.push("/?login=true")}
+                >
+                  Logo
+                </button>
+                <button
+                  className={classes.popular_btn}
+                  onClick={() => router.push("/?login=true")}
+                >
+                  Website design
+                </button>
+                <button
+                  className={classes.popular_btn}
+                  onClick={() => router.push("/?login=true")}
+                >
+                  Writing
+                </button>
               </div>
             </div>
             <div className={classes.login_register}>

@@ -40,7 +40,10 @@ const Inbox = ({ person }) => {
     <section className={classes.inbox_section}>
       <Container>
         <Row>
-          <Col lg="3" className={classes.chat_col}>
+          <Col
+            lg="3"
+            className={`${classes.chat_col} ${classes.mobile_chat_col}`}
+          >
             <div className={classes.chat_box_header}>
               <h5 className={classes.header_title}>Messages</h5>
               <SearchIcon />
@@ -101,7 +104,14 @@ const Inbox = ({ person }) => {
               ))}
             </div>
           </Col>
-          <Col lg="9">
+          <Col
+            lg="9"
+            className={`${classes.chat_body_col} ${
+              person && person.username
+                ? classes.mobile_chatbody_show
+                : classes.mobile_chatbody_hide
+            }`}
+          >
             <Row>
               {person && person.username ? (
                 <>
@@ -132,7 +142,7 @@ const Inbox = ({ person }) => {
                         </div>
                       </div>
                     </div>
-                    <div>
+                    <div className={classes.mobile_messages_body}>
                       {person &&
                         person.chat.map((ch, indx) => (
                           <Fragment key={indx}>
@@ -269,7 +279,10 @@ const Inbox = ({ person }) => {
                       </div>
                     </div>
                   </Col>
-                  <Col lg="4" className={classes.about_col}>
+                  <Col
+                    lg="4"
+                    className={`${classes.about_col} ${classes.mobile_about_col}`}
+                  >
                     <div>
                       <div>
                         <h5 className={classes.about_title}>About </h5>

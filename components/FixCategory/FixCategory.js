@@ -4,6 +4,7 @@ import classes from "./FixCategory.module.css";
 import { useRouter } from "next/router";
 import { view_all_category_data } from "../../dummy_data/category_data";
 import ViewAllCategoryCardDropdown from "../ViewAllCategoryCard/ViewAllCategoryCard";
+import ViewAllCategory from "../ViewAllCategory/ViewAllCategory";
 
 const FixCategory = () => {
   const router = useRouter();
@@ -25,15 +26,7 @@ const FixCategory = () => {
               />
             ))}
           </Col>
-          <Col lg="2">
-            <button
-              className={classes.view_all}
-              onClick={() => router.push("/?login=true")}
-            >
-              View All
-              <ArrowForwardIosOutlinedIcon className={classes.right_arr} />
-            </button>
-          </Col>
+          <ViewAllCategory col="2" land_cat={"landing"} />
         </Row>
       </Container>
     </section>

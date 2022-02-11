@@ -17,9 +17,12 @@ import { categories } from "../../../dummy_data/dummy_fixes";
 import FooterBottom from "../../../components/FooterBottom/FooterBottom";
 import FixSlider from "../../../components/FixSlider/FixSlider";
 import { useRouter } from "next/router";
+import IconButton from "@mui/material/IconButton";
 
 const Fix = () => {
   const [value, setValue] = useState(0);
+  const [check, setCheck] = useState(false);
+
   const router = useRouter();
 
   const handleChange = (event, newValue) => {
@@ -115,7 +118,19 @@ const Fix = () => {
             <Col lg="8" className={classes.about_seller}>
               <div className={classes.extra_report}>
                 <div className={classes.extra}>
-                  <CheckCircleIcon className={classes.circle_icon} />
+                  <IconButton
+                    color="primary"
+                    component="span"
+                    className={classes.chat}
+                    onClick={() => setCheck(!check)}
+                  >
+                    <CheckCircleIcon
+                      className={
+                        check ? classes.circle_icon : classes.not_check_circle
+                      }
+                    />
+                  </IconButton>
+
                   <p>
                     For extra fast delivery in less than 8 hours for
                     &#x20A6;1,000

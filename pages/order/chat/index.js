@@ -50,6 +50,8 @@ const Chat = () => {
   const [completeOpen, setCompleteOpen] = useState(false);
   const [extrasOpen, setExtrasOpen] = useState(false);
   const [deliverOrder, setDeliverOrder] = useState(false);
+  const [offerExtra, setOfferExtra] = useState(false);
+  const [acceptExtraOpen, setAcceptExtraOpen] = useState(false);
   const [orderDispute, setOrderDispute] = useState(false);
   const [rated, setRated] = useState(false);
   const [modification, setModification] = useState(false);
@@ -276,7 +278,6 @@ const Chat = () => {
                       </div>
                     </div>
                   )}
-
                   {activeToggle === "chat" && deliverOrder && (
                     <div className={classes.deliver_work_div}>
                       <Col lg="5" className={`${classes.deliver_work}`}>
@@ -292,7 +293,6 @@ const Chat = () => {
                       </Col>
                     </div>
                   )}
-
                   {activeToggle === "chat" && deliverOrder && (
                     <div className={classes.deliver_work_div}>
                       <Col lg="5" className={classes.order_delivery}>
@@ -351,7 +351,6 @@ const Chat = () => {
                       </Col>
                     </div>
                   )}
-
                   {activeToggle === "chat" && deliverOrder && !rated && (
                     <div className={classes.complete_or_modification}>
                       <div>
@@ -368,6 +367,24 @@ const Chat = () => {
                           Mark As Complete
                         </button>
                       </div>
+                    </div>
+                  )}
+                  {activeToggle === "chat" && offerExtra && (
+                    <div className={classes.deliver_work_div}>
+                      <Col lg="5" className={`${classes.offer_extra_div}`}>
+                        <div>
+                          <h6>Extras</h6>
+                          <p>Fast Delivery (+1day)</p>
+                          <span>N1000</span>
+                        </div>
+                        <button
+                          onClick={() => {
+                            setAcceptExtraOpen(true);
+                          }}
+                        >
+                          accept offer
+                        </button>
+                      </Col>
                     </div>
                   )}
                   {activeToggle === "chat" && modification && (
@@ -408,7 +425,6 @@ const Chat = () => {
                       </div>
                     </div>
                   )}
-
                   {activeToggle === "chat" &&
                     cancelOrder &&
                     !declineCancelOrder && (
@@ -429,7 +445,6 @@ const Chat = () => {
                         </div>
                       </div>
                     )}
-
                   {activeToggle === "chat" && rated && (
                     <div className={classes.deliver_work_div}>
                       <Col lg="5" className={`${classes.reted_div}`}>
@@ -440,12 +455,11 @@ const Chat = () => {
                         </div>
                       </Col>
                     </div>
-                  )}
-
+                  )}{" "}
                   {activeToggle === "order" && (
                     <div className="pt-5">
                       <div>
-                        <div className="d-flex">
+                        <div className={classes.order_item_top}>
                           <Col lg="2">
                             <div className={classes.order_img}></div>
                           </Col>
@@ -459,7 +473,11 @@ const Chat = () => {
                                 <div className="d-flex">
                                   <div className={classes.offer_by}>
                                     <div className={classes.circle}></div>
-                                    <span>Tboy25</span>
+                                    <Link href="/username">
+                                      <a className="text-decoration-none">
+                                        <span>username23</span>
+                                      </a>
+                                    </Link>
                                   </div>
                                   <div className={classes.delivery_date}>
                                     <DateRangeOutlinedIcon
@@ -494,7 +512,7 @@ const Chat = () => {
                             </div>
                           </Col>
                         </div>
-                        <div className="d-flex justify-content-center my-5">
+                        <div className={classes.timer_div}>
                           <h1 className={classes.time_ticking}>{timerDays}</h1>
                           <h1 className={classes.time_ticking_colon}>:</h1>
                           <h1 className={classes.time_ticking}>{timerHours}</h1>
@@ -958,12 +976,49 @@ const Chat = () => {
                   className={classes.send_dispute_btn}
                   onClick={() => {
                     setExtrasOpen(false);
-                    // setRated(true);
+                    setOfferExtra(true);
                   }}
                 >
                   Send
                 </button>
               </div>
+            </div>
+          </DialogContent>
+        </BootstrapDialog>
+        <BootstrapDialog
+          onClose={() => setAcceptExtraOpen(false)}
+          aria-labelledby="customized-dialog-title"
+          open={acceptExtraOpen}
+        >
+          <DialogContent dividers className={classes.dialog_body}>
+            <div className={classes.pay_extra_body}>
+              <h5 className="text-center">Pay for Extra</h5>
+              <div className={classes.amount_row1}>
+                <p>Available Balance</p>
+                <p>&#x20A6;72,000</p>
+              </div>
+              <Divider />
+              <div className={classes.amount_row}>
+                <p>Fast delivery</p>
+                <p>&#x20A6;1,000</p>
+              </div>
+              <div className={classes.amount_row}>
+                <p>Fee</p>
+                <p>&#x20A6;0</p>
+              </div>
+              <div className={classes.amount_row}>
+                <p>Total</p>
+                <p>&#x20A6;72,000</p>
+              </div>
+              <button
+                onClick={() => {
+                  setAcceptExtraOpen(false);
+                  setModification(true);
+                }}
+              >
+                Pay Now
+              </button>
+              <p>Your payment will be processed and cannot be undone</p>
             </div>
           </DialogContent>
         </BootstrapDialog>

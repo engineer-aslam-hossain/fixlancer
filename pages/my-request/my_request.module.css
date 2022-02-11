@@ -53,6 +53,7 @@
 
 .approve {
   color: #0c9229;
+  margin-bottom: 0;
 }
 
 .pending {
@@ -61,4 +62,25 @@
 
 .declined {
   color: #ff0000;
+}
+
+.card_content_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .card_content {
+    padding: 1rem;
+  }
+  .card_content h4 {
+    font-size: 1rem;
+  }
+  .card_content h5 {
+    font-size: 1rem;
+  }
+  .card_content_top {
+    align-items: flex-start;
+  }
 }

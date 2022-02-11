@@ -39,7 +39,7 @@ const OrderDetails = () => {
           <Col lg="9 mx-auto">
             <Row className={classes.payment_card_row}>
               <Col lg="7">
-                <div className="d-flex">
+                <div className="d-flex flex-wrap">
                   <div>
                     <div className={classes.sqare}></div>
                   </div>
@@ -50,7 +50,11 @@ const OrderDetails = () => {
                     <div className="d-flex">
                       <div className={classes.offer_by}>
                         <div className={classes.circle}></div>
-                        <span>Tboy25</span>
+                        <Link href="/username">
+                          <a className="text-decoration-none">
+                            <span>username23</span>
+                          </a>
+                        </Link>
                       </div>
                       <div className={classes.delivery_date}>
                         <DateRangeOutlinedIcon className={classes.date_range} />

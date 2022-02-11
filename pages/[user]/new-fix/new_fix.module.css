@@ -138,5 +138,6 @@
   }
   .edit_profile_card {
     padding: 0 1rem;
+    border-radius: 1rem;
   }
 }

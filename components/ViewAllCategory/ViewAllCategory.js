@@ -15,7 +15,7 @@ import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { category_data } from "../../dummy_data/category_data";
 import { useRouter } from "next/router";
 
-const ViewAllCategory = () => {
+const ViewAllCategory = ({ land_cat, col }) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
   const [listOpen, setListOpen] = useState(null);
@@ -57,14 +57,16 @@ const ViewAllCategory = () => {
     prevOpen.current = open;
   }, [open]);
 
+  // console.log(land_cat);
+
   return (
-    <Col lg="3">
+    <Col lg={col !== undefined ? col : "3"}>
       <button
-        className={classes.view_all}
+        className={`${classes.view_all}  ${classes[land_cat]}`}
         onClick={handleToggle}
         ref={anchorRef}
       >
-        View All Categories
+        {land_cat !== undefined ? "View All" : "View All Categories"}
         <ArrowForwardIosOutlinedIcon
           className={`${!open ? classes.arrow_fr : classes.arrow_down}`}
         />

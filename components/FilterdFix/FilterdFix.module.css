@@ -183,3 +183,24 @@
 .checkbox label {
   font-size: 12px;
 }
+
+@media (max-width: 992px) {
+  .dialog_body {
+    min-width: 20rem;
+  }
+
+  .filter_card_body h3 {
+    font-size: 1.3rem;
+  }
+
+  .close_icon_button {
+    top: 1.3rem;
+  }
+
+  .searchResult h3 {
+    font-size: 1rem;
+  }
+  .filter_card_body {
+    padding: 0;
+  }
+}

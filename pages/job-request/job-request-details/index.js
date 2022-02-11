@@ -10,6 +10,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Select from "react-select";
 import CircleIcon from "@mui/icons-material/Circle";
 import StarIcon from "@mui/icons-material/Star";
+import Link from "next/link";
 
 const JobRequestDetails = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -126,10 +127,14 @@ const JobRequestDetails = () => {
                   </p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <div className="d-flex">
+                  <div className="d-flex flex-wrap">
                     <div className="d-flex me-4 align-items-center">
                       <CircleIcon className={classes.circle_icon} />
-                      <span>username23</span>
+                      <Link href="/username">
+                        <a className="text-decoration-none">
+                          <span>username23</span>
+                        </a>
+                      </Link>
                     </div>
                     <div className="d-flex me-4  align-items-center">
                       <DateRangeOutlinedIcon className={classes.books_icon} />

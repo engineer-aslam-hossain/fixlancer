@@ -12,14 +12,19 @@
   margin-bottom: 3rem;
 }
 
+.history_grid {
+  display: grid;
+  grid-template-columns: 1fr 14fr;
+}
+
 .order_details {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .order_details h6 {
   font-size: 1rem;
-  margin-bottom: 1rem;
   display: flex;
   align-items: flex-start;
   color: #1e262f;
@@ -47,6 +52,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  margin-right: 1rem;
 }
 
 .withdraw_arr {

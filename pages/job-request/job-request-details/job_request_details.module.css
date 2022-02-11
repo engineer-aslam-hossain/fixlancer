@@ -108,7 +108,8 @@
 .user_info {
   background: #eeeeef;
   padding: 3rem 2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 11fr;
 }
 
 .modal_user {
@@ -196,4 +197,28 @@
   font-size: 14px;
   border-radius: 2px;
   padding: 0.2rem 0.5rem;
+}
+
+@media (max-width: 992px) {
+  .card_content {
+    padding: 1rem;
+  }
+  .card_content h4 {
+    font-size: 1rem;
+  }
+
+  .select_fix {
+    padding: 0.5rem 1rem;
+  }
+  .user_info {
+    padding: 1rem;
+  }
+
+  .request_text p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .radio_input {
+    margin-left: 1rem;
+  }
 }

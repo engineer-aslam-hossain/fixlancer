@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Col, Container, Row } from "react-bootstrap";
 import NewsCard from "../NewsCard/NewsCard";
 import classes from "./TheNews.module.css";
 
 const TheNews = () => {
+  const router = useRouter();
+
   const newses = [
     {
       img: "/images/news1.png",
@@ -47,6 +50,11 @@ const TheNews = () => {
             data-aos="fade-up"
             data-aos-duration="500"
             data-aos-delay="0"
+            onClick={() =>
+              router.push(
+                "https://disrupt-africa.com/2020/05/06/how-nigerian-tech-startup-fixlancer-is-changing-how-jobs-get-done/"
+              )
+            }
           >
             <div className={classes.text_content}>
               <div>1</div>
@@ -71,6 +79,11 @@ const TheNews = () => {
             data-aos="fade-up"
             data-aos-duration="500"
             data-aos-delay="300"
+            onClick={() =>
+              router.push(
+                "https://www.nairaland.com/5285913/efe-ejeba-bags-fixlancer-endorsement/"
+              )
+            }
           >
             <div className={classes.text_content}>
               <div>2</div>
@@ -93,6 +106,11 @@ const TheNews = () => {
             data-aos="fade-up"
             data-aos-duration="500"
             data-aos-delay="600"
+            onClick={() =>
+              router.push(
+                "https://techpoint.africa/2020/05/11/how-tech-startup-fixlancer-is-changing-the-job-market-in-nigeria/"
+              )
+            }
           >
             <div
               className={`${classes.text_content} ${classes.last_text_content}`}

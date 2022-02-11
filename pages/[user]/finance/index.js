@@ -16,7 +16,7 @@ const Finance = () => {
           <Col lg="11 mx-auto">
             <h1 className={classes.title}>Finance</h1>
           </Col>
-          <Col lg="6 mx-auto">
+          <Col lg="7 mx-auto">
             <div className={classes.earning_row}>
               <div className={`${classes.revenue_card} ${classes.card}`}>
                 <span className={classes.tag}>Revenue</span>
@@ -119,12 +119,6 @@ const Finance = () => {
               </button>
             </div>
           </Col>
-        </Row>
-      </Container>
-
-      <Container>
-        <Row>
-          <FooterBottom />
         </Row>
       </Container>
     </section>

@@ -54,3 +54,12 @@
   color: #625c5c;
   font-size: 14px;
 }
+
+@media (max-width: 992px) {
+  .card_content h6 {
+    font-size: 14px;
+  }
+  .card_content h5 {
+    font-size: 14px;
+  }
+}

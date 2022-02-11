@@ -145,3 +145,20 @@
   margin: 0 0.3rem;
   font-size: 2rem;
 }
+
+@media (max-width: 992px) {
+  .contact_mail {
+    margin: 1rem 0;
+  }
+
+  .faq_title_text h1 {
+    font-size: 2rem;
+  }
+
+  .faq_title_text p {
+    font-size: 1rem;
+  }
+  .connect {
+    margin-top: 2rem;
+  }
+}

@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 0.9rem;
 }
 
 .pending_card {
@@ -129,4 +130,14 @@
   padding: 0.6rem;
   color: #808080;
   font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .title {
+    margin-left: 1rem;
+  }
+
+  .button_div {
+    margin-bottom: 2rem;
+  }
 }

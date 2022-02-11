@@ -92,6 +92,19 @@
   min-width: 2rem !important;
 }
 
+.landing {
+  background: #2c4765;
+  border-radius: 40px;
+  padding: 1.5rem 1.5rem;
+  border: none;
+  outline: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
 @media (min-width: 992px) {
   .drop_down_menu {
     width: 19rem;

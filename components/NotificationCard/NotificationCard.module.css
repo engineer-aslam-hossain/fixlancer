@@ -125,3 +125,12 @@
   color: #a8a6a6;
   margin-left: 0.5rem;
 }
+
+@media (max-width: 992px) {
+  .drop_down_menu {
+    z-index: 1000000;
+    width: 20rem;
+    inset: 50px 0px auto auto !important;
+    transform: none !important;
+  }
+}

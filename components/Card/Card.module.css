@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.author_info a {
+  text-decoration: none;
+}
+
 .author_info p {
   color: var(--title-color);
   margin-left: 1rem;

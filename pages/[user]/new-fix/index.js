@@ -100,7 +100,7 @@ const NewFix = () => {
   return (
     <section className={classes.edit_profile}>
       <Container>
-        <Row>
+        <Row className={classes.new_fix_row}>
           <Col lg="10" className={`mx-auto`}>
             <div className={classes.edit_profile_card}>
               <Col lg="11" className={`mx-auto`}>

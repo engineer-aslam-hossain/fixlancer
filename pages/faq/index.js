@@ -227,7 +227,7 @@ const Faq = () => {
           </Row>
           <Col
             lg="8"
-            className={`d-flex justify-content-around align-items-center mx-auto ${classes.connect}`}
+            className={`d-flex justify-content-around align-items-center mx-auto flex-wrap ${classes.connect}`}
           >
             <div>
               <div className={classes.contact_mail}>

@@ -43,7 +43,7 @@ const Dashboard = () => {
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
+            <Nav className={classes.brand_logo}>
               <Link href="/">
                 <a className={classes.logo}>
                   <Image
@@ -55,7 +55,7 @@ const Dashboard = () => {
                 </a>
               </Link>
             </Nav>
-            <Nav>
+            <Nav className={classes.chat_and_notification}>
               <IconButton
                 color="primary"
                 component="span"
@@ -114,24 +114,6 @@ const Dashboard = () => {
                 </ListSubheader>
               }
             >
-              <ListItemButton
-                className={classes.list_btn}
-                onClick={() => router.push("/")}
-              >
-                <ListItemIcon className={classes.list_icon_btn}>
-                  <Image
-                    src="/icons/home.svg"
-                    alt="job_req"
-                    className={classes.list_btn_icon}
-                    height={24}
-                    width={24}
-                  />
-                </ListItemIcon>
-                <ListItemText
-                  primary="Home"
-                  className={classes.list_item_text}
-                />
-              </ListItemButton>
               <ListItemButton
                 className={classes.list_btn}
                 onClick={handleClick}

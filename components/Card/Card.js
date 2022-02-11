@@ -26,7 +26,11 @@ const CommonCard = ({ fx, col }) => {
                     priority={true}
                   />
                 </div>
-                <p>elijahTomilawa</p>
+                <Link href="/username">
+                  <a>
+                    <p>elijahTomilawa</p>
+                  </a>
+                </Link>
               </div>
               <div className={classes.title}>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>

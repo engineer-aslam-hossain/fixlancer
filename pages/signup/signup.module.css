@@ -80,6 +80,7 @@
   border-bottom: 1px solid grey;
   border-radius: 0;
   padding-left: 0;
+  font-size: 14px;
 }
 
 .input_field::placeholder {
@@ -103,4 +104,14 @@
   border-radius: 8.33602px;
   margin-top: 2rem;
   width: 100%;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .left_col_reg {
+    display: none;
+  }
+  .reg_right_col {
+    padding: 2rem;
+  }
 }

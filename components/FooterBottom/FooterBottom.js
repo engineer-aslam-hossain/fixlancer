@@ -34,7 +34,7 @@ const FooterBottom = () => {
               <Link href="/">
                 <a className={classes.media_icon}>
                   <Image
-                    src="/icons/facebook.svg"
+                    src="/icons/facebook.png"
                     alt="fb"
                     width={25}
                     height={25}
@@ -46,7 +46,7 @@ const FooterBottom = () => {
               <Link href="/">
                 <a className={classes.media_icon}>
                   <Image
-                    src="/icons/twitter.svg"
+                    src="/icons/twitter.png"
                     width={25}
                     height={25}
                     alt="twitter"
@@ -58,7 +58,7 @@ const FooterBottom = () => {
               <Link href="/">
                 <a className={classes.media_icon}>
                   <Image
-                    src="/icons/instagram.svg"
+                    src="/icons/instagram.png"
                     width={25}
                     height={25}
                     alt="insta"

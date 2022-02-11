@@ -189,6 +189,11 @@
   font-size: 2.5rem;
 }
 
+.not_check_circle {
+  font-size: 2.5rem;
+  color: #808080;
+}
+
 .extra p,
 .report p {
   margin-bottom: 0;
@@ -374,4 +379,10 @@
   font-weight: 500;
   font-size: 1.8rem;
   color: var(--title-color);
+}
+
+@media (max-width: 992px) {
+  .reviewer {
+    width: 15rem;
+  }
 }

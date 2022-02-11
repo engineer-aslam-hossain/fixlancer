@@ -7,6 +7,7 @@ import StarIcon from "@mui/icons-material/Star";
 import Image from "next/image";
 import classes from "./request.module.css";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const SingleRequest = ({ params }) => {
   let param = params.request[0];
@@ -55,7 +56,7 @@ const SingleRequest = ({ params }) => {
                 </p>
               </div>
               <div className="d-flex justify-content-between">
-                <div className="d-flex">
+                <div className="d-flex flex-wrap">
                   <div className="d-flex me-4 align-items-center">
                     <LibraryBooksIcon className={classes.books_icon} />
                     <span>0 offer</span>
@@ -120,10 +121,14 @@ const SingleRequest = ({ params }) => {
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <div className="d-flex">
+                    <div className="d-flex flex-wrap">
                       <div className="d-flex me-4 align-items-center">
                         <CircleIcon className={classes.circle_icon} />
-                        <span>username23</span>
+                        <Link href="/username">
+                          <a className="text-decoration-none">
+                            <span>username23</span>
+                          </a>
+                        </Link>
                       </div>
                       <div className="d-flex me-4  align-items-center">
                         <DateRangeOutlinedIcon className={classes.books_icon} />
@@ -140,7 +145,7 @@ const SingleRequest = ({ params }) => {
                     </div>
                   </div>
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center align-items-center">
                   <button className={classes.message}>Message</button>
                   <button
                     className={classes.send_offer}
@@ -191,10 +196,14 @@ const SingleRequest = ({ params }) => {
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <div className="d-flex">
+                    <div className="d-flex flex-wrap">
                       <div className="d-flex me-4 align-items-center">
                         <CircleIcon className={classes.circle_icon} />
-                        <span>username23</span>
+                        <Link href="/username">
+                          <a className="text-decoration-none">
+                            <span>username23</span>
+                          </a>
+                        </Link>
                       </div>
                       <div className="d-flex me-4  align-items-center">
                         <DateRangeOutlinedIcon className={classes.books_icon} />
@@ -211,7 +220,7 @@ const SingleRequest = ({ params }) => {
                     </div>
                   </div>
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center align-items-center">
                   <button className={classes.message}>Message</button>
                   <button
                     className={classes.send_offer}
@@ -262,10 +271,14 @@ const SingleRequest = ({ params }) => {
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <div className="d-flex">
+                    <div className="d-flex flex-wrap">
                       <div className="d-flex me-4 align-items-center">
                         <CircleIcon className={classes.circle_icon} />
-                        <span>username23</span>
+                        <Link href="/username">
+                          <a className="text-decoration-none">
+                            <span>username23</span>
+                          </a>
+                        </Link>
                       </div>
                       <div className="d-flex me-4  align-items-center">
                         <DateRangeOutlinedIcon className={classes.books_icon} />
@@ -282,7 +295,7 @@ const SingleRequest = ({ params }) => {
                     </div>
                   </div>
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center align-items-center">
                   <button className={classes.message}>Message</button>
                   <button
                     className={classes.send_offer}
@@ -333,10 +346,14 @@ const SingleRequest = ({ params }) => {
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <div className="d-flex">
+                    <div className="d-flex flex-wrap">
                       <div className="d-flex me-4 align-items-center">
                         <CircleIcon className={classes.circle_icon} />
-                        <span>username23</span>
+                        <Link href="/username">
+                          <a className="text-decoration-none">
+                            <span>username23</span>
+                          </a>
+                        </Link>
                       </div>
                       <div className="d-flex me-4  align-items-center">
                         <DateRangeOutlinedIcon className={classes.books_icon} />
@@ -353,7 +370,7 @@ const SingleRequest = ({ params }) => {
                     </div>
                   </div>
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center align-items-center">
                   <button className={classes.message}>Message</button>
                   <button
                     className={classes.send_offer}

@@ -42,7 +42,7 @@ const Login = () => {
                       className={classes.input_field}
                     />
                   </Form.Group>
-                  <div>
+                  <div className={classes.forget_password_div}>
                     <button
                       className={classes.forget_password}
                       type="button"

@@ -62,11 +62,6 @@ const WithdrawalRequest = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
-        <Row>
-          <FooterBottom />
-        </Row>
-      </Container>
     </section>
   );
 };

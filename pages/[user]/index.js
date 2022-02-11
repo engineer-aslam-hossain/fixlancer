@@ -9,8 +9,10 @@ import classes from "./user.module.css";
 import FooterBottom from "../../components/FooterBottom/FooterBottom";
 import LandingPageHeader from "../../components/LandingPageHeader/LandingPageHeader";
 import Divider from "@mui/material/Divider";
+import { useRouter } from "next/router";
 
 const User = () => {
+  const router = useRouter();
   return (
     <section className={classes.user}>
       <Container>
@@ -55,7 +57,12 @@ const User = () => {
                 </div>
               </div>
               <div>
-                <button className={classes.contact_me}>contact me</button>
+                <button
+                  className={classes.contact_me}
+                  onClick={() => router.push("/inbox/dev_aslam")}
+                >
+                  contact me
+                </button>
               </div>
             </div>
           </Col>

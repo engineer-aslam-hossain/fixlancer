@@ -50,3 +50,14 @@
   background-color: transparent;
   color: var(--primary-color);
 }
+
+@media (max-width: 992px) {
+  .request_row {
+    padding: 0 1rem;
+  }
+  .card_container {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+  }
+}

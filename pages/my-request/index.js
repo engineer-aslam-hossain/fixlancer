@@ -23,7 +23,7 @@ const MyRequest = () => {
             onClick={() => router.push("/my-request/2offer")}
           >
             <div className={classes.card_content}>
-              <div className="d-flex align-items-center justify-content-between  mb-4">
+              <div className={classes.card_content_top}>
                 <div className="d-flex align-items-center">
                   <div className={classes.user_img}>
                     <Image
@@ -66,7 +66,7 @@ const MyRequest = () => {
             onClick={() => router.push("/my-request/norequest")}
           >
             <div className={classes.card_content}>
-              <div className="d-flex align-items-center justify-content-between  mb-4">
+              <div className={classes.card_content_top}>
                 <div className="d-flex align-items-center">
                   <div className={classes.user_img}>
                     <Image
@@ -105,7 +105,7 @@ const MyRequest = () => {
             onClick={() => router.push("/my-request/norequest")}
           >
             <div className={classes.card_content}>
-              <div className="d-flex align-items-center justify-content-between  mb-4">
+              <div className={classes.card_content_top}>
                 <div className="d-flex align-items-center">
                   <div className={classes.user_img}>
                     <Image

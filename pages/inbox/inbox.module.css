@@ -452,3 +452,29 @@
 .check_icon {
   color: #1cc88a;
 }
+
+@media (max-width: 992px) {
+  .chat_body_col {
+    /* display: none; */
+  }
+
+  .mobile_chatbody_hide {
+    display: none;
+  }
+
+  .mobile_chat_col {
+    display: none;
+  }
+
+  .appbar {
+    justify-content: center;
+  }
+
+  .mobile_about_col {
+    display: none;
+  }
+
+  .mobile_messages_body {
+    padding: 0 1rem;
+  }
+}

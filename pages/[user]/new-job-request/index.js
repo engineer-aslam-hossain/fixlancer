@@ -39,7 +39,7 @@ const NewJobRequest = () => {
   return (
     <section>
       <Container>
-        <Row>
+        <Row className={classes.request_row}>
           <Col lg="8 mx-auto" className={classes.card_container}>
             <Col lg="6 mx-auto">
               <Form onSubmit={submitHandler} noValidate>

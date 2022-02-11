@@ -61,6 +61,76 @@ const Chat = () => {
   const [timerHours, setTimerHours] = useState("00");
   const [timerMinutes, setTimerMinutes] = useState("00");
   const [timerSeconds, setTimerSeconds] = useState("00");
+  const inputRef = useRef();
+
+  const [personData, setPersonData] = useState({
+    username: "dev_aslam",
+    description:
+      "I am a graphics designer with more than 2yrs of experience. Clients satisfaction is a top priority to me. You can contact me anytime. I am always...",
+    img: "/images/author.jpg",
+    chat: [
+      {
+        by: "him",
+        msg: "Good morning, I want to boost my telegram channel in three weeks to help sponsor my new single I would be releasing",
+        time: "2022/01/28 15:33:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, I want to boost my telegram channel in three weeks to help sponsor my new single I would be releasing",
+        time: "2022/01/28 15:37:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost",
+        time: "2022/01/28 15:39:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost my telegram channel in three",
+        time: "2022/01/28 15:42:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, I want to boost my telegram channel in three weeks to help sponsor my new single I would be releasing",
+        time: "2022/01/28 15:45:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost fsadf  fsadf sf  fas fs d  fsa",
+        time: "2022/01/28 15:49:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, brother kemon acho tumi",
+        time: "2022/01/28 15:59:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost",
+        time: "2022/01/28 15:39:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost my telegram channel in three",
+        time: "2022/01/28 15:42:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, I want to boost my telegram channel in three weeks to help sponsor my new single I would be releasing",
+        time: "2022/01/28 15:45:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost fsadf  fsadf sf  fas fs d  fsa",
+        time: "2022/01/28 15:49:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, brother kemon acho tumi",
+        time: "2022/01/28 15:59:12",
+      },
+    ],
+  });
 
   let interval = useRef();
 
@@ -247,8 +317,8 @@ const Chat = () => {
                     </div>
                   )}
                   {activeToggle === "chat" &&
-                    person &&
-                    person.chat.map((ch, indx) => (
+                    personData &&
+                    personData.chat.map((ch, indx) => (
                       <Fragment key={indx}>
                         {ch.by === "him" ? (
                           <div className={classes.from_msg_box}>
@@ -608,6 +678,24 @@ const Chat = () => {
                         type="text"
                         className={classes.text_input}
                         placeholder="Type a messages"
+                        ref={inputRef}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") {
+                            setPersonData({
+                              ...personData,
+                              chat: [
+                                ...personData.chat,
+                                {
+                                  by: "me",
+                                  msg: inputRef.current.value,
+                                  time: new Date(),
+                                },
+                              ],
+                            });
+
+                            inputRef.current.value = "";
+                          }
+                        }}
                       />
                     </div>
                     <div className="d-flex justify-content-between align-items-center">
@@ -641,7 +729,26 @@ const Chat = () => {
                         />
                       </div>
                       <div>
-                        <button className={classes.send_btn}>Send</button>
+                        <button
+                          className={classes.send_btn}
+                          onClick={() => {
+                            setPersonData({
+                              ...personData,
+                              chat: [
+                                ...personData.chat,
+                                {
+                                  by: "me",
+                                  msg: inputRef.current.value,
+                                  time: new Date(),
+                                },
+                              ],
+                            });
+
+                            inputRef.current.value = "";
+                          }}
+                        >
+                          Send
+                        </button>
                       </div>
                     </div>
                   </div>

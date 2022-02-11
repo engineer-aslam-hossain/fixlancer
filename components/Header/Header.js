@@ -2,6 +2,8 @@ import { Container, Navbar } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
 import classes from "./Header.module.css";
+import MenuDrawer from "../MenuDrawer/MenuDrawer";
+import SwipeableTemporaryDrawer from "../MenuDrawer/MenuDrawer";
 
 const Header = () => {
   return (
@@ -20,7 +22,8 @@ const Header = () => {
           </Link>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        {/* <MenuDrawer /> */}
+        <SwipeableTemporaryDrawer />
       </Container>
     </Navbar>
   );

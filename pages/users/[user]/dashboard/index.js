@@ -26,6 +26,7 @@ import FixSlider from "../../../../components/FixSlider/FixSlider";
 import ViewAllCategory from "../../../../components/ViewAllCategory/ViewAllCategory";
 import { useRouter } from "next/router";
 import NotificationCard from "../../../../components/NotificationCard/NotificationCard";
+import SwipeableTemporaryDrawer from "../../../../components/MenuDrawer/MenuDrawer";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
@@ -41,7 +42,8 @@ const Dashboard = () => {
           <div className={classes.balance}>
             <h6>&#x20A6;500000</h6>
           </div>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+          <SwipeableTemporaryDrawer />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className={classes.brand_logo}>
               <Link href="/">
@@ -75,7 +77,7 @@ const Dashboard = () => {
           <ViewAllCategory />
         </Row>
         <Row>
-          <Col lg="3">
+          <Col lg="3" className={classes.dashboard_sidebar}>
             <List
               sx={{
                 width: "100%",

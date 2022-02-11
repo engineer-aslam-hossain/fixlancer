@@ -13,6 +13,7 @@ import ViewAllCategory from "../ViewAllCategory/ViewAllCategory";
 import NotificationCard from "../NotificationCard/NotificationCard";
 import { useRouter } from "next/router";
 import JobRequestDropdown from "../JobRequestDropdown/JobRequestDropdown";
+import SwipeableTemporaryDrawer from "../MenuDrawer/MenuDrawer";
 
 const LandingPageHeader = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -26,7 +27,7 @@ const LandingPageHeader = () => {
   return (
     <header className={classes.header}>
       <Navbar collapseOnSelect expand="lg py-0" className={classes.home_nav}>
-        <Container>
+        <Container className={classes.nav_container}>
           <div className={classes.landing_page_header}>
             <LandingPageHeaderSearchDropDown />
           </div>
@@ -43,38 +44,36 @@ const LandingPageHeader = () => {
               </a>
             </Link>
           </div>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
-              <Link href="/">
-                <a className={classes.logo}>
-                  <Image
-                    src="/images/logo2.png"
-                    width={174}
-                    height={64}
-                    alt="Fixlancer"
-                    className={classes.logo}
-                  />
-                </a>
-              </Link>
-            </Nav>
-            <Nav className={classes.nav_right}>
-              <ProfileMenu />
-              <IconButton
-                color="primary"
-                component="span"
-                className={classes.chat}
-                onClick={() => router.push("/inbox")}
-              >
-                <EmailIcon className={classes.email} />
-              </IconButton>
 
-              <NotificationCard />
-              <div className={classes.mobile_search}>
-                <LandingPageHeaderSearchDropDown />
-              </div>
-            </Nav>
-          </Navbar.Collapse>
+          <Nav className="mx-auto">
+            <Link href="/">
+              <a className={classes.logo}>
+                <Image
+                  src="/images/logo2.png"
+                  width={174}
+                  height={64}
+                  alt="Fixlancer"
+                  className={classes.logo}
+                />
+              </a>
+            </Link>
+          </Nav>
+          <Nav className={classes.nav_right}>
+            <SwipeableTemporaryDrawer />
+            <ProfileMenu />
+            <IconButton
+              color="primary"
+              component="span"
+              className={classes.chat}
+              onClick={() => router.push("/inbox")}
+            >
+              <EmailIcon className={classes.email} />
+            </IconButton>
+            <NotificationCard />
+            {/* <div className={classes.mobile_search}>
+              <LandingPageHeaderSearchDropDown />
+            </div> */}
+          </Nav>
         </Container>
       </Navbar>
       {windowWidth > 1200 && (

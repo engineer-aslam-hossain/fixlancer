@@ -20,42 +20,35 @@ const Finance = () => {
             <div className={classes.earning_row}>
               <div className={`${classes.revenue_card} ${classes.card}`}>
                 <span className={classes.tag}>Revenue</span>
-                <Image
-                  src="/icons/fi1.png"
-                  alt="logo_img"
-                  width={50}
-                  height={50}
-                />
+
+                <div
+                  className={classes.img_div}
+                  style={{ backgroundImage: `url(/icons/fi1.png)` }}
+                ></div>
                 <h5 className={classes.amount}>&#x20A6;872,000.0</h5>
               </div>
               <div className={`${classes.pending_card} ${classes.card}`}>
                 <span className={classes.tag}>Pending</span>
-                <Image
-                  src="/icons/fi2.png"
-                  alt="logo_img"
-                  width={50}
-                  height={50}
-                />
+                <div
+                  className={classes.img_div}
+                  style={{ backgroundImage: `url(/icons/fi2.png)` }}
+                ></div>
                 <h5 className={classes.amount}>&#x20A6;45,000.0</h5>
               </div>
               <div className={`${classes.refund_card} ${classes.card}`}>
                 <span className={classes.tag}>Refund</span>
-                <Image
-                  src="/icons/fi3.png"
-                  alt="logo_img"
-                  width={50}
-                  height={50}
-                />
+                <div
+                  className={classes.img_div}
+                  style={{ backgroundImage: `url(/icons/fi3.png)` }}
+                ></div>
                 <h5 className={classes.amount}>&#x20A6;50,000.0</h5>
               </div>
               <div className={`${classes.deposit_card} ${classes.card}`}>
                 <span className={classes.tag}>Deposit</span>
-                <Image
-                  src="/icons/fi4.png"
-                  alt="logo_img"
-                  width={50}
-                  height={50}
-                />
+                <div
+                  className={classes.img_div}
+                  style={{ backgroundImage: `url(/icons/fi4.png)` }}
+                ></div>
                 <h5 className={classes.amount}>&#x20A6;0.0</h5>
               </div>
             </div>

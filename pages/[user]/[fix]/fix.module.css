@@ -385,4 +385,16 @@
   .reviewer {
     width: 15rem;
   }
+
+  .chat_btn {
+    width: 7rem;
+    height: 3rem;
+    font-size: 14px;
+  }
+
+  .order_btn {
+    height: 3rem;
+    width: 10rem;
+    font-size: 14px;
+  }
 }

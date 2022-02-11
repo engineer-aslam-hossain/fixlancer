@@ -39,7 +39,7 @@ const OrderDetails = () => {
           <Col lg="9 mx-auto">
             <Row className={classes.payment_card_row}>
               <Col lg="7">
-                <div className="d-flex flex-wrap">
+                <div className={classes.order_page_top}>
                   <div>
                     <div className={classes.sqare}></div>
                   </div>
@@ -61,36 +61,6 @@ const OrderDetails = () => {
                         <span>2 days delivery</span>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className={classes.tips}>
-                  <h6>Tips: </h6>
-                  <div className={classes.tips_content}>
-                    <RadioButtonCheckedOutlinedIcon
-                      className={classes.radio_btn1}
-                    />
-                    <span>
-                      Your funds are held on escrow and not sent directly to the
-                      seller.
-                    </span>
-                  </div>
-                  <div className={classes.tips_content}>
-                    <RadioButtonCheckedOutlinedIcon
-                      className={classes.radio_btn2}
-                    />
-                    <span>
-                      Seller can only receive funds when you release it upon
-                      satisfaction with the work done.
-                    </span>
-                  </div>
-                  <div className={classes.tips_content}>
-                    <RadioButtonCheckedOutlinedIcon
-                      className={classes.radio_btn3}
-                    />
-                    <span>
-                      100% Money Back Guarantee if you are not satisfied with
-                      the work done.
-                    </span>
                   </div>
                 </div>
               </Col>
@@ -139,6 +109,38 @@ const OrderDetails = () => {
                       <a>Contact Us</a>
                     </Link>
                   </p>
+                </div>
+              </Col>
+              <Col>
+                <div className={classes.tips}>
+                  <h6>Tips: </h6>
+                  <div className={classes.tips_content}>
+                    <RadioButtonCheckedOutlinedIcon
+                      className={classes.radio_btn1}
+                    />
+                    <span>
+                      Your funds are held on escrow and not sent directly to the
+                      seller.
+                    </span>
+                  </div>
+                  <div className={classes.tips_content}>
+                    <RadioButtonCheckedOutlinedIcon
+                      className={classes.radio_btn2}
+                    />
+                    <span>
+                      Seller can only receive funds when you release it upon
+                      satisfaction with the work done.
+                    </span>
+                  </div>
+                  <div className={classes.tips_content}>
+                    <RadioButtonCheckedOutlinedIcon
+                      className={classes.radio_btn3}
+                    />
+                    <span>
+                      100% Money Back Guarantee if you are not satisfied with
+                      the work done.
+                    </span>
+                  </div>
                 </div>
               </Col>
             </Row>

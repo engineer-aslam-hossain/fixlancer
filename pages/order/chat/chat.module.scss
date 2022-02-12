@@ -1155,6 +1155,17 @@
       font-size: 14px;
     }
   }
+  .chat {
+    padding: 0;
+  }
+  .from_msg_box {
+    width: 70%;
+    margin-right: auto;
+  }
+  .to_msg_box {
+    width: 70%;
+    margin-left: auto;
+  }
   .order_item_details_grid {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr 1fr;

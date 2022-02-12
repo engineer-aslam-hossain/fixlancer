@@ -7,7 +7,7 @@ import Divider from "@mui/material/Divider";
 import WarningIcon from "@mui/icons-material/Warning";
 import ForumIcon from "@mui/icons-material/Forum";
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { dummy_persons } from "../../dummy_data/dummy_persons";
 import CustomOfferModal from "../../components/CustomOfferModal/CustomOfferModal";
 import InfoIcon from "@mui/icons-material/Info";
@@ -19,7 +19,75 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const Inbox = ({ person }) => {
   const [visited, setVisited] = useState("");
   const [createOffer, setCreateOffer] = useState(false);
-
+  const [personData, setPersonData] = useState({
+    username: "dev_aslam",
+    description:
+      "I am a graphics designer with more than 2yrs of experience. Clients satisfaction is a top priority to me. You can contact me anytime. I am always...",
+    img: "/images/author.jpg",
+    chat: [
+      {
+        by: "him",
+        msg: "Good morning, I want to boost my telegram channel in three weeks to help sponsor my new single I would be releasing",
+        time: "2022/01/28 15:33:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, I want to boost my telegram channel in three weeks to help sponsor my new single I would be releasing",
+        time: "2022/01/28 15:37:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost",
+        time: "2022/01/28 15:39:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost my telegram channel in three",
+        time: "2022/01/28 15:42:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, I want to boost my telegram channel in three weeks to help sponsor my new single I would be releasing",
+        time: "2022/01/28 15:45:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost fsadf  fsadf sf  fas fs d  fsa",
+        time: "2022/01/28 15:49:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, brother kemon acho tumi",
+        time: "2022/01/28 15:59:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost",
+        time: "2022/01/28 15:39:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost my telegram channel in three",
+        time: "2022/01/28 15:42:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, I want to boost my telegram channel in three weeks to help sponsor my new single I would be releasing",
+        time: "2022/01/28 15:45:12",
+      },
+      {
+        by: "him",
+        msg: "Good morning, I want to boost fsadf  fsadf sf  fas fs d  fsa",
+        time: "2022/01/28 15:49:12",
+      },
+      {
+        by: "me",
+        msg: "Good morning, brother kemon acho tumi",
+        time: "2022/01/28 15:59:12",
+      },
+    ],
+  });
+  const inputRef = useRef();
   const router = useRouter();
 
   let hour;
@@ -151,8 +219,8 @@ const Inbox = ({ person }) => {
                       </div>
                     </div>
                     <div className={classes.mobile_messages_body}>
-                      {person &&
-                        person.chat.map((ch, indx) => (
+                      {personData &&
+                        personData.chat.map((ch, indx) => (
                           <Fragment key={indx}>
                             {ch.by === "him" ? (
                               <div className={classes.from_msg_box}>
@@ -265,6 +333,24 @@ const Inbox = ({ person }) => {
                           type="text"
                           className={classes.text_input}
                           placeholder="Type a messages"
+                          ref={inputRef}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                              setPersonData({
+                                ...personData,
+                                chat: [
+                                  ...personData.chat,
+                                  {
+                                    by: "me",
+                                    msg: inputRef.current.value,
+                                    time: new Date(),
+                                  },
+                                ],
+                              });
+
+                              inputRef.current.value = "";
+                            }
+                          }}
                         />
                         <div>
                           <label

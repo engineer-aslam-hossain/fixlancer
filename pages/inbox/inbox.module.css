@@ -461,8 +461,19 @@
 }
 
 @media (max-width: 992px) {
+  .inbox_section {
+    padding: 0;
+  }
   .empty_inbox {
     display: none;
+  }
+  .from_msg_box {
+    width: 70%;
+    margin-right: auto;
+  }
+  .to_msg_box {
+    width: 70%;
+    margin-left: auto;
   }
 
   .appbar {

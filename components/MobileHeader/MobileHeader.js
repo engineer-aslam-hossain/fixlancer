@@ -6,6 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import NotificationCard from "../NotificationCard/NotificationCard";
 import { useRouter } from "next/router";
 import SwipeableTemporaryDrawer from "../MenuDrawer/MenuDrawer";
+import Image from "next/image";
 
 const MobileHeader = () => {
   const router = useRouter();
@@ -27,8 +28,6 @@ const MobileHeader = () => {
 
           <Nav className="ms-auto"></Nav>
           <div className="d-flex align-items-center">
-            <SwipeableTemporaryDrawer />
-
             <IconButton
               color="primary"
               component="span"
@@ -38,6 +37,7 @@ const MobileHeader = () => {
               <EmailIcon className={classes.email} />
             </IconButton>
             <NotificationCard />
+            <SwipeableTemporaryDrawer login={true} />
           </div>
         </Container>
       </Navbar>

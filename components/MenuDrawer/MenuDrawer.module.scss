@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #f2f2f2;
-
+  padding-bottom: 1rem;
   p {
     font-size: 14px;
     margin-bottom: 0;
@@ -56,7 +56,8 @@
 
 .menu_drawer_btn {
   background: #625c5c !important;
-  padding: 0.25rem;
+  padding: 0.1rem;
+  margin-left: 0.5rem;
 }
 
 .list_item_text span {

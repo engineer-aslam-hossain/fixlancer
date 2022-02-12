@@ -15,9 +15,9 @@ const FeaturedFixes = () => {
             <h2>Featured</h2>
           </div>
           <FixSlider fixes={categories} slide_to_show={4} />
-          <MobileSlider fixes={categories} slide_to_show={4} />
         </Row>
       </Container>
+      <MobileSlider fixes={categories} slide_to_show={4} />
     </section>
   );
 };

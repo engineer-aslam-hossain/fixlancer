@@ -249,13 +249,17 @@
   }
 
   .offer_details {
-    margin-left: 0;
-    margin-top: 1rem;
+    margin-left: 1rem;
+    /* margin-top: 1rem; */
+  }
+
+  .offer_details h6 {
+    font-size: 14px;
   }
 
   .order_page_top {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
   }
 
   .tips h6 {

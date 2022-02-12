@@ -2,6 +2,7 @@ import { Container, Navbar } from "react-bootstrap";
 import Link from "next/link";
 import classes from "./Header.module.css";
 import SwipeableTemporaryDrawer from "../MenuDrawer/MenuDrawer";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -18,7 +19,7 @@ const Header = () => {
           </Link>
         </Navbar.Brand>
 
-        <SwipeableTemporaryDrawer />
+        <SwipeableTemporaryDrawer login={false} />
       </Container>
     </Navbar>
   );

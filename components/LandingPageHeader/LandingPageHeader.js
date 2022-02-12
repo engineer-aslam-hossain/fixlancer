@@ -12,7 +12,6 @@ import ViewAllCategory from "../ViewAllCategory/ViewAllCategory";
 import NotificationCard from "../NotificationCard/NotificationCard";
 import { useRouter } from "next/router";
 import JobRequestDropdown from "../JobRequestDropdown/JobRequestDropdown";
-import SwipeableTemporaryDrawer from "../MenuDrawer/MenuDrawer";
 import MobileHeader from "../MobileHeader/MobileHeader";
 
 const LandingPageHeader = () => {
@@ -45,7 +44,6 @@ const LandingPageHeader = () => {
                 </Link>
               </Nav>
               <Nav className={classes.nav_right}>
-                <SwipeableTemporaryDrawer />
                 <ProfileMenu />
                 <IconButton
                   color="primary"

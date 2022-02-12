@@ -17,7 +17,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import CloseIcon from "@mui/icons-material/Close";
 
-export default function SwipeableTemporaryDrawer() {
+export default function SwipeableTemporaryDrawer({ login }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
@@ -41,7 +41,7 @@ export default function SwipeableTemporaryDrawer() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 350 }}
       role="presentation"
     >
       <List
@@ -55,13 +55,6 @@ export default function SwipeableTemporaryDrawer() {
         }}
         component="nav"
         aria-labelledby="nested-list-subheader"
-        subheader={
-          <ListSubheader
-            component="div"
-            id="nested-list-subheader"
-            className="p-0"
-          ></ListSubheader>
-        }
       >
         <div className={classes.close_btn}>
           <IconButton
@@ -73,228 +66,336 @@ export default function SwipeableTemporaryDrawer() {
             <CloseIcon className={classes.close_icon} />
           </IconButton>
         </div>
-        <div className={classes.dashboard_header}>
-          <div className={classes.user_img}>
-            <Image src="/images/author.jpg" alt="user" width={40} height={40} />
+        {login && (
+          <div className={classes.dashboard_header}>
+            <div className="d-flex align-items-center">
+              <div
+                className={classes.user_img}
+                onClick={() => {
+                  setState({ left: false });
+                  router.push("/username");
+                }}
+              >
+                <Image
+                  src="/images/author.jpg"
+                  alt="user"
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <p>amanda</p>
+            </div>
+            <button
+              className={classes.edit_profile}
+              onClick={() => {
+                setState({ left: false });
+                router.push("/username/edit-profile");
+              }}
+            >
+              <CreateOutlinedIcon className={classes.pen_icon} /> Edit Profile
+            </button>
           </div>
-          <p>amanda</p>
-          <button
-            className={classes.edit_profile}
-            onClick={() => router.push("/username/edit-profile")}
-          >
-            <CreateOutlinedIcon className={classes.pen_icon} /> Edit Profile
-          </button>
-        </div>
+        )}
 
-        <ListItemButton className={classes.list_btn} onClick={handleClick}>
-          <ListItemIcon className={classes.list_icon_btn}>
-            <Image
-              src="/icons/job_req.svg"
-              alt="job_req"
-              className={classes.list_btn_icon}
-              height={20}
-              width={24}
-            />
-          </ListItemIcon>
-          <ListItemText
-            primary="Job Request"
-            className={classes.list_item_text}
-          />
-          {open ? <ExpandLess /> : <ExpandMore />}
-        </ListItemButton>
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
+        {!login && (
+          <>
             <ListItemButton
-              sx={{ pl: 5 }}
               className={classes.list_btn}
-              onClick={() => router.push("/job-request")}
+              onClick={() => {
+                router.push("/login");
+                setState({ left: false });
+              }}
             >
-              <ListItemIcon className={classes.list_icon_btn}>
-                <Image
-                  src="/icons/bag.svg"
-                  alt="job_req"
-                  className={classes.list_btn_icon}
-                  height={15}
-                  width={15}
-                />
-              </ListItemIcon>
               <ListItemText
-                primary="All Request"
+                primary="Login"
                 className={classes.list_item_text}
               />
             </ListItemButton>
             <ListItemButton
-              sx={{ pl: 5 }}
               className={classes.list_btn}
-              onClick={() => router.push("/my-request")}
+              onClick={() => {
+                router.push("/signup");
+                setState({ left: false });
+              }}
             >
-              <ListItemIcon className={classes.list_icon_btn}>
-                <Image
-                  src="/icons/req.svg"
-                  alt="job_req"
-                  className={classes.list_btn_icon}
-                  height={17}
-                  width={18}
-                />
-              </ListItemIcon>
               <ListItemText
-                primary="My Request"
+                primary="Register"
                 className={classes.list_item_text}
               />
             </ListItemButton>
+          </>
+        )}
+
+        {login && (
+          <>
             <ListItemButton
-              sx={{ pl: 5 }}
               className={classes.list_btn}
-              onClick={() => router.push("/username/new-job-request")}
+              onClick={() => {
+                setState({ left: false });
+                router.push("/users/username/dashboard");
+              }}
             >
               <ListItemIcon className={classes.list_icon_btn}>
                 <Image
-                  src="/icons/pen.svg"
+                  src="/icons/home.svg"
                   alt="job_req"
                   className={classes.list_btn_icon}
                   height={16}
-                  width={18}
+                  width={24}
+                />
+              </ListItemIcon>
+              <ListItemText primary="Home" className={classes.list_item_text} />
+            </ListItemButton>
+            <ListItemButton className={classes.list_btn} onClick={handleClick}>
+              <ListItemIcon className={classes.list_icon_btn}>
+                <Image
+                  src="/icons/job_req.svg"
+                  alt="job_req"
+                  className={classes.list_btn_icon}
+                  height={20}
+                  width={24}
                 />
               </ListItemIcon>
               <ListItemText
-                primary="Post New Request"
+                primary="Job Request"
+                className={classes.list_item_text}
+              />
+              {open ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  className={classes.list_btn}
+                  onClick={() => {
+                    setState({ left: false });
+                    router.push("/job-request");
+                  }}
+                >
+                  <ListItemIcon className={classes.list_icon_btn}>
+                    <Image
+                      src="/icons/bag.svg"
+                      alt="job_req"
+                      className={classes.list_btn_icon}
+                      height={15}
+                      width={15}
+                    />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="All Request"
+                    className={classes.list_item_text}
+                  />
+                </ListItemButton>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  className={classes.list_btn}
+                  onClick={() => {
+                    setState({ left: false });
+                    router.push("/my-request");
+                  }}
+                >
+                  <ListItemIcon className={classes.list_icon_btn}>
+                    <Image
+                      src="/icons/req.svg"
+                      alt="job_req"
+                      className={classes.list_btn_icon}
+                      height={17}
+                      width={18}
+                    />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="My Request"
+                    className={classes.list_item_text}
+                  />
+                </ListItemButton>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  className={classes.list_btn}
+                  onClick={() => {
+                    setState({ left: false });
+                    router.push("/username/new-job-request");
+                  }}
+                >
+                  <ListItemIcon className={classes.list_icon_btn}>
+                    <Image
+                      src="/icons/pen.svg"
+                      alt="job_req"
+                      className={classes.list_btn_icon}
+                      height={16}
+                      width={18}
+                    />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Post New Request"
+                    className={classes.list_item_text}
+                  />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <ListItemButton
+              className={classes.list_btn}
+              onClick={() => {
+                setState({ left: false });
+                router.push("/username/new-fix");
+              }}
+            >
+              <ListItemIcon className={classes.list_icon_btn}>
+                <Image
+                  src="/icons/cart.svg"
+                  alt="job_req"
+                  className={classes.list_btn_icon}
+                  height={16}
+                  width={24}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary="Start Selling"
                 className={classes.list_item_text}
               />
             </ListItemButton>
-          </List>
-        </Collapse>
-        <ListItemButton
-          className={classes.list_btn}
-          onClick={() => router.push("/username/new-fix")}
-        >
-          <ListItemIcon className={classes.list_icon_btn}>
-            <Image
-              src="/icons/cart.svg"
-              alt="job_req"
-              className={classes.list_btn_icon}
-              height={16}
-              width={24}
-            />
-          </ListItemIcon>
-          <ListItemText
-            primary="Start Selling"
-            className={classes.list_item_text}
-          />
-        </ListItemButton>
-        <ListItemButton
-          className={classes.list_btn}
-          onClick={() => router.push("/order/manage-sales")}
-        >
-          <ListItemIcon className={classes.list_icon_btn}>
-            <Image
-              src="/icons/time.svg"
-              alt="job_req"
-              className={classes.list_btn_icon}
-              height={24}
-              width={24}
-            />
-          </ListItemIcon>
-          <ListItemText
-            primary="Manage Sales"
-            className={classes.list_item_text}
-          />
-        </ListItemButton>
-        <ListItemButton
-          className={classes.list_btn}
-          onClick={() => router.push("/order/manage-order")}
-        >
-          <ListItemIcon className={classes.list_icon_btn}>
-            <Image
-              src="/icons/order.svg"
-              alt="job_req"
-              className={classes.list_btn_icon}
-              height={24}
-              width={24}
-            />
-          </ListItemIcon>
-          <ListItemText
-            primary="Manage Orders"
-            className={classes.list_item_text}
-          />
-        </ListItemButton>
-        <ListItemButton
-          className={classes.list_btn}
-          onClick={() => router.push("/username/finance")}
-        >
-          <ListItemIcon className={classes.list_icon_btn}>
-            <Image
-              src="/icons/finance.svg"
-              alt="job_req"
-              className={classes.list_btn_icon}
-              height={24}
-              width={24}
-            />
-          </ListItemIcon>
-          <ListItemText primary="Finance" className={classes.list_item_text} />
-        </ListItemButton>
-        <ListItemButton
-          className={`mt-4 ${classes.list_btn}`}
-          onClick={() => router.push("/faq")}
-        >
-          <ListItemIcon className={classes.list_icon_btn}>
-            <Image
-              src="/icons/bookmark.svg"
-              alt="job_req"
-              className={classes.list_btn_icon}
-              height={24}
-              width={24}
-            />
-          </ListItemIcon>
-          <ListItemText
-            primary="How it Works"
-            className={classes.list_item_text}
-          />
-        </ListItemButton>
-        <ListItemButton className={classes.list_btn}>
-          <ListItemIcon className={classes.list_icon_btn}>
-            <Image
-              src="/icons/terms.svg"
-              alt="job_req"
-              className={classes.list_btn_icon}
-              height={24}
-              width={24}
-            />
-          </ListItemIcon>
-          <ListItemText
-            primary="Terms of Service"
-            className={classes.list_item_text}
-          />
-        </ListItemButton>
-        <ListItemButton className={classes.list_btn}>
-          <ListItemIcon className={classes.list_icon_btn}>
-            <Image
-              src="/icons/heart.svg"
-              alt="job_req"
-              className={`mr-2 ${classes.list_btn_icon}`}
-              height={24}
-              width={24}
-            />
-          </ListItemIcon>
-          <ListItemText
-            primary="Contact Us"
-            className={classes.list_item_text}
-          />
-        </ListItemButton>
-        <ListItemButton
-          className={`mt-4 mb-5 ${classes.list_btn}`}
-          onClick={() => router.push("/login")}
-        >
-          <ListItemIcon className={classes.list_icon_btn}>
-            <Image
-              src="/icons/logout.svg"
-              alt="job_req"
-              className={classes.list_btn_icon}
-              height={14}
-              width={26}
-            />
-          </ListItemIcon>
-          <ListItemText primary="Logout" className={classes.list_item_text} />
-        </ListItemButton>
+            <ListItemButton
+              className={classes.list_btn}
+              onClick={() => {
+                router.push("/order/manage-sales");
+                setState({ left: false });
+              }}
+            >
+              <ListItemIcon className={classes.list_icon_btn}>
+                <Image
+                  src="/icons/time.svg"
+                  alt="job_req"
+                  className={classes.list_btn_icon}
+                  height={24}
+                  width={24}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary="Manage Sales"
+                className={classes.list_item_text}
+              />
+            </ListItemButton>
+            <ListItemButton
+              className={classes.list_btn}
+              onClick={() => {
+                setState({ left: false });
+                router.push("/order/manage-order");
+              }}
+            >
+              <ListItemIcon className={classes.list_icon_btn}>
+                <Image
+                  src="/icons/order.svg"
+                  alt="job_req"
+                  className={classes.list_btn_icon}
+                  height={24}
+                  width={24}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary="Manage Orders"
+                className={classes.list_item_text}
+              />
+            </ListItemButton>
+            <ListItemButton
+              className={classes.list_btn}
+              onClick={() => {
+                setState({ left: false });
+                router.push("/username/finance");
+              }}
+            >
+              <ListItemIcon className={classes.list_icon_btn}>
+                <Image
+                  src="/icons/finance.svg"
+                  alt="job_req"
+                  className={classes.list_btn_icon}
+                  height={24}
+                  width={24}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary="Finance"
+                className={classes.list_item_text}
+              />
+            </ListItemButton>
+            <ListItemButton
+              className={`mt-4 ${classes.list_btn}`}
+              onClick={() => {
+                setState({ left: false });
+                router.push("/faq");
+              }}
+            >
+              <ListItemIcon className={classes.list_icon_btn}>
+                <Image
+                  src="/icons/bookmark.svg"
+                  alt="job_req"
+                  className={classes.list_btn_icon}
+                  height={24}
+                  width={24}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary="How it Works"
+                className={classes.list_item_text}
+              />
+            </ListItemButton>
+            <ListItemButton
+              className={classes.list_btn}
+              onClick={toggleDrawer("left", false)}
+            >
+              <ListItemIcon className={classes.list_icon_btn}>
+                <Image
+                  src="/icons/terms.svg"
+                  alt="job_req"
+                  className={classes.list_btn_icon}
+                  height={24}
+                  width={24}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary="Terms of Service"
+                className={classes.list_item_text}
+              />
+            </ListItemButton>
+            <ListItemButton
+              className={classes.list_btn}
+              onClick={toggleDrawer("left", false)}
+            >
+              <ListItemIcon className={classes.list_icon_btn}>
+                <Image
+                  src="/icons/heart.svg"
+                  alt="job_req"
+                  className={`mr-2 ${classes.list_btn_icon}`}
+                  height={24}
+                  width={24}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary="Contact Us"
+                className={classes.list_item_text}
+              />
+            </ListItemButton>
+            <ListItemButton
+              className={`mt-4 mb-5 ${classes.list_btn}`}
+              onClick={() => {
+                setState({ left: false });
+                router.push("/login");
+              }}
+            >
+              <ListItemIcon className={classes.list_icon_btn}>
+                <Image
+                  src="/icons/logout.svg"
+                  alt="job_req"
+                  className={classes.list_btn_icon}
+                  height={14}
+                  width={26}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary="Logout"
+                className={classes.list_item_text}
+              />
+            </ListItemButton>
+          </>
+        )}
       </List>
     </Box>
   );

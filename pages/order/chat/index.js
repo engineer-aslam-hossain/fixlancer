@@ -557,27 +557,31 @@ const Chat = () => {
                                   </div>
                                 </div>
                               </div>
-                              <div>
-                                <p className={classes.order_other_title}>ID</p>
-                                <p>#65</p>
-                              </div>
-                              <div>
-                                <p className={classes.order_other_title}>
-                                  Total
-                                </p>
-                                <p>&#x20A6;5,150</p>
-                              </div>
-                              <div>
-                                <p className={classes.order_other_title}>
-                                  To Deliver
-                                </p>
-                                <p>21 May 2020</p>
-                              </div>
-                              <div>
-                                <p className={classes.order_other_title}>
-                                  Seller
-                                </p>
-                                <p>Demouser</p>
+                              <div className={classes.order_item_details_grid}>
+                                <div>
+                                  <p className={classes.order_other_title}>
+                                    ID
+                                  </p>
+                                  <p>#65</p>
+                                </div>
+                                <div>
+                                  <p className={classes.order_other_title}>
+                                    Total
+                                  </p>
+                                  <p>&#x20A6;5,150</p>
+                                </div>
+                                <div>
+                                  <p className={classes.order_other_title}>
+                                    To Deliver
+                                  </p>
+                                  <p>21 May 2020</p>
+                                </div>
+                                <div>
+                                  <p className={classes.order_other_title}>
+                                    Seller
+                                  </p>
+                                  <p>Demouser</p>
+                                </div>
                               </div>
                             </div>
                           </Col>

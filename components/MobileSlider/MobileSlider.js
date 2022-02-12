@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card, Col } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import StarIcon from "@mui/icons-material/Star";
 import classes from "./MobileSlider.module.css";
@@ -17,6 +17,7 @@ const MobileSlider = ({ fixes, slide_to_show }) => {
     swipeToSlide: true,
     slidesToScroll: slide_to_show,
     arrows: false,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
@@ -42,9 +43,11 @@ const MobileSlider = ({ fixes, slide_to_show }) => {
         breakpoint: 480,
         settings: {
           swipeToSlide: true,
-          slidesToShow: 1.5,
+          slidesToShow: 1,
           dots: false,
           slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "20%",
         },
       },
     ],

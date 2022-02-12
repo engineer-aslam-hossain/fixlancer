@@ -13,6 +13,8 @@ import CustomOfferModal from "../../components/CustomOfferModal/CustomOfferModal
 import InfoIcon from "@mui/icons-material/Info";
 import CheckIcon from "@mui/icons-material/Check";
 import { useRouter } from "next/router";
+import IconButton from "@mui/material/IconButton";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const Inbox = ({ person }) => {
   const [visited, setVisited] = useState("");
@@ -116,6 +118,15 @@ const Inbox = ({ person }) => {
                 <>
                   <Col lg="12" className={classes.appbar}>
                     <Col lg="8">
+                      <IconButton
+                        color="primary"
+                        aria-label="upload picture"
+                        component="span"
+                        className={classes.back_btn}
+                        onClick={() => router.push("/inbox")}
+                      >
+                        <ArrowBackIosIcon className={classes.arrow_back} />
+                      </IconButton>
                       <div className={classes.selected_person}>
                         <h6>{person.username}</h6>
                         <div className={classes.status}>

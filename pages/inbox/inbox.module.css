@@ -278,7 +278,7 @@
   box-shadow: none;
   width: 100%;
   background-color: transparent;
-  font-size: 14px;
+  font-size: 16px !important;
 }
 
 .text_input::placeholder {
@@ -453,6 +453,10 @@
   color: #1cc88a;
 }
 
+.back_btn {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .empty_inbox {
     display: none;
@@ -460,6 +464,7 @@
 
   .appbar {
     justify-content: center;
+    position: relative;
   }
 
   .mobile_about_col {
@@ -480,5 +485,16 @@
 
   .mobile_chatbody_show {
     display: none;
+  }
+
+  .back_btn {
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .arrow_back {
+    color: #1cc88a;
   }
 }

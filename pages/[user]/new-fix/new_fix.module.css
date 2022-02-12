@@ -114,6 +114,12 @@
   align-items: center;
 }
 
+.extra_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
 @media (max-width: 992px) {
   .form_row {
     flex-direction: column;

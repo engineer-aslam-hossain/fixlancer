@@ -1,8 +1,6 @@
 import { Container, Navbar } from "react-bootstrap";
 import Link from "next/link";
-import Image from "next/image";
 import classes from "./Header.module.css";
-import MenuDrawer from "../MenuDrawer/MenuDrawer";
 import SwipeableTemporaryDrawer from "../MenuDrawer/MenuDrawer";
 
 const Header = () => {
@@ -12,17 +10,14 @@ const Header = () => {
         <Navbar.Brand>
           <Link href="/">
             <a className={classes.logo}>
-              <Image
-                src="/images/logo2.png"
-                width={174}
-                height={64}
-                alt="Fixlancer"
-              />
+              <div
+                className={classes.logo_img_div}
+                style={{ backgroundImage: `url(/images/logo2.png)` }}
+              ></div>
             </a>
           </Link>
         </Navbar.Brand>
 
-        {/* <MenuDrawer /> */}
         <SwipeableTemporaryDrawer />
       </Container>
     </Navbar>

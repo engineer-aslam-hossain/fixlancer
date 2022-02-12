@@ -23,10 +23,11 @@ import Divider from "@mui/material/Divider";
 import FooterBottom from "../../../../components/FooterBottom/FooterBottom";
 import FeaturedFixes from "../../../../components/FeaturedFixes/FeaturedFixes";
 import FixSlider from "../../../../components/FixSlider/FixSlider";
+import MobileSlider from "../../../../components/MobileSlider/MobileSlider";
 import ViewAllCategory from "../../../../components/ViewAllCategory/ViewAllCategory";
 import { useRouter } from "next/router";
 import NotificationCard from "../../../../components/NotificationCard/NotificationCard";
-import SwipeableTemporaryDrawer from "../../../../components/MenuDrawer/MenuDrawer";
+import MobileHeader from "../../../../components/MobileHeader/MobileHeader";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
@@ -42,8 +43,7 @@ const Dashboard = () => {
           <div className={classes.balance}>
             <h6>&#x20A6;500000</h6>
           </div>
-          {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
-          <SwipeableTemporaryDrawer />
+
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className={classes.brand_logo}>
               <Link href="/">
@@ -72,8 +72,9 @@ const Dashboard = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <MobileHeader />
       <Container>
-        <Row className="mb-3">
+        <Row className={`mb-3 ${classes.view_all_cat}`}>
           <ViewAllCategory />
         </Row>
         <Row>
@@ -389,6 +390,7 @@ const Dashboard = () => {
               <div className="my-5">
                 <h3 className={classes.title}>My Fixes</h3>
                 <FixSlider fixes={categories} slide_to_show={3} />
+                <MobileSlider fixes={categories} slide_to_show={3} />
               </div>
               <Row className="mb-5">
                 <h3 className={classes.title}>Featured</h3>

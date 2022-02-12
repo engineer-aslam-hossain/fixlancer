@@ -4,10 +4,11 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import PhotoOutlinedIcon from "@mui/icons-material/PhotoOutlined";
 import AdbIcon from "@mui/icons-material/Adb";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import classes from "../components/ViewAllCategoryCard/ViewAllCategoryCardDropdown.module.css";
 
 export const view_all_category_data = [
   {
-    icon: <PhotoOutlinedIcon />,
+    icon: <PhotoOutlinedIcon className={classes.cat_icon} />,
     title: "Graphic & Design",
     cat: [
       "Logo Design",
@@ -23,7 +24,7 @@ export const view_all_category_data = [
 
   {
     title: "Writing",
-    icon: <BorderColorOutlinedIcon />,
+    icon: <BorderColorOutlinedIcon className={classes.cat_icon} />,
     cat: [
       "Translation",
       "Cover Latter",
@@ -38,7 +39,7 @@ export const view_all_category_data = [
   },
   {
     title: "Video & Animation",
-    icon: <SubscriptionsIcon />,
+    icon: <SubscriptionsIcon className={classes.cat_icon} />,
     cat: [
       "video Editing",
       "Visual Effects",
@@ -52,7 +53,7 @@ export const view_all_category_data = [
   },
   {
     title: "Music & Audio",
-    icon: <MusicNoteIcon />,
+    icon: <MusicNoteIcon className={classes.cat_icon} />,
     cat: [
       "Voice Over",
       "Song Writter",
@@ -66,7 +67,7 @@ export const view_all_category_data = [
   },
   {
     title: "SEO",
-    icon: <ImportantDevicesIcon />,
+    icon: <ImportantDevicesIcon className={classes.cat_icon} />,
     cat: [
       "Voice Over",
       "Song Writter",
@@ -80,7 +81,7 @@ export const view_all_category_data = [
   },
   {
     title: "Programming & Tech",
-    icon: <AdbIcon />,
+    icon: <AdbIcon className={classes.cat_icon} />,
     cat: [
       "Wordpress",
       "E-commerce",

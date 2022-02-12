@@ -5,6 +5,7 @@ import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
 import classes from "./my_request.module.css";
 import FixSlider from "../../components/FixSlider/FixSlider";
+import MobileSlider from "../../components/MobileSlider/MobileSlider";
 import { categories } from "../../dummy_data/dummy_fixes";
 import { useRouter } from "next/router";
 
@@ -143,6 +144,7 @@ const MyRequest = () => {
           <div className={classes.fix_cat_title}>
             <h4>Recommended for You</h4>
           </div>
+          <MobileSlider fixes={categories} slide_to_show={4} />
           <FixSlider fixes={categories} slide_to_show={4} />
         </Row>
       </Container>

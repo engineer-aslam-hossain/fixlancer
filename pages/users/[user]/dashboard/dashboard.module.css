@@ -240,6 +240,13 @@
 .dashboard_sidebar {
   display: none;
 }
+.view_all_cat {
+  display: none;
+}
+
+.home_nav {
+  display: none;
+}
 
 @media (min-width: 992px) {
   .chat {
@@ -251,6 +258,14 @@
   }
 
   .dashboard_sidebar {
+    display: block;
+  }
+
+  .view_all_cat {
+    display: block;
+  }
+
+  .home_nav {
     display: block;
   }
 }

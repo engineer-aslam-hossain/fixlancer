@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import CommonCard from "../Card/Card";
+import classes from "./FixSlider.module.css";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -71,7 +72,7 @@ const FixSlider = ({ fixes, slide_to_show }) => {
   };
 
   return (
-    <Slider {...cateslider}>
+    <Slider {...cateslider} className={classes.fix_slider}>
       {fixes.map((category, indx) => (
         <CommonCard key={indx} fx={category} col={11} />
       ))}

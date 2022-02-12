@@ -3,6 +3,7 @@
   overflow: hidden;
   /* margin: 1rem 0.6rem !important; */
   border: 1px solid #f1f1f1;
+  cursor: pointer;
 }
 
 .cardLink {
@@ -156,6 +157,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0.6rem 0;
+  align-items: center;
 }
 
 .offer_by {
@@ -181,11 +183,14 @@
 }
 
 .circle {
-  height: 0.8rem;
-  width: 0.8rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
-  background: #c4c4c4;
+  background-color: #c4c4c4;
   margin-right: 0.4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @media (max-width: 992px) {

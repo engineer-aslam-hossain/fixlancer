@@ -111,43 +111,26 @@
   display: none;
 }
 
+.search_container {
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.logo_img_div {
+  height: 64px;
+  width: 174px;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 992px) {
   .header {
-    margin: 1rem 0;
-  }
-
-  .chat {
-    margin: 0.5rem 0 !important;
-  }
-
-  .nav_right {
-    align-items: flex-end;
-    margin-right: 1rem;
-  }
-
-  .logo {
     display: none;
   }
 
-  .brandlogo {
-    display: flex;
-  }
-
-  .brand_logo {
+  .search_container {
+    margin-bottom: 1rem;
     display: block;
-  }
-
-  .landing_page_header {
-    display: none;
-  }
-  .mobile_search {
-    display: block;
-    margin-top: 1rem;
-  }
-  .nav_container {
-    width: 100%;
-    /* background-color: red; */
-    flex-wrap: nowrap !important;
-    align-items: flex-start !important;
   }
 }

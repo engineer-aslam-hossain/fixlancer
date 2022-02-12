@@ -378,7 +378,11 @@ function MyVerticallyCenteredModal(props) {
           </div>
           <div className={classes.select_fix}>
             <p>Delivery Days</p>
-            <Select options={deliveryDays} isSearchable={true} />
+            <Select
+              options={deliveryDays}
+              isSearchable={true}
+              className={classes.delivery_days_select}
+            />
           </div>
           <div className={classes.select_fix}>
             <p>Price</p>

@@ -16,6 +16,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { categories } from "../../../dummy_data/dummy_fixes";
 import FooterBottom from "../../../components/FooterBottom/FooterBottom";
 import FixSlider from "../../../components/FixSlider/FixSlider";
+import MobileSlider from "../../../components/MobileSlider/MobileSlider";
 import { useRouter } from "next/router";
 import IconButton from "@mui/material/IconButton";
 
@@ -253,12 +254,14 @@ const Fix = () => {
               <CommonCard fx={item} key={indx} col={3} />
             ))} */}
             <FixSlider fixes={categories} slide_to_show={4} />
+            <MobileSlider fixes={categories} slide_to_show={4} />
           </Row>
           <Row>
             <div className={classes.more_fix}>
               <h1>Recommanded for you</h1>
             </div>
             <FixSlider fixes={categories} slide_to_show={4} />
+            <MobileSlider fixes={categories} slide_to_show={4} />
           </Row>
         </Container>
         <Divider className={classes.divider_bottom} />

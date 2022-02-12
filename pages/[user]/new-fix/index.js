@@ -369,8 +369,8 @@ const NewFix = () => {
                       <h3 className={classes.inputLabel}>Extra</h3>
                     </Col>
                     <Col lg="8">
-                      <Row>
-                        <Col lg="7">
+                      <div className={classes.extra_grid}>
+                        <Col>
                           <Form.Control
                             type="text"
                             placeholder="Extra description"
@@ -382,7 +382,7 @@ const NewFix = () => {
                             className={`${classes.input_field} mb-3`}
                           />
                         </Col>
-                        <Col lg="5">
+                        <Col>
                           <Form.Control
                             type="number"
                             placeholder="Amount"
@@ -394,7 +394,7 @@ const NewFix = () => {
                             placeholder="Amount"
                           />
                         </Col>
-                      </Row>
+                      </div>
                     </Col>
                   </div>{" "}
                   <Col lg="8 ms-auto mb-4">

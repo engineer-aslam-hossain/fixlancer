@@ -43,15 +43,32 @@
 }
 
 .close_icon {
-  color: grey;
+  color: #625c5c;
+}
+
+.drawer_menu_icon {
+  color: white;
 }
 
 .drawer_menu_btn_div {
   display: none;
 }
 
+.menu_drawer_btn {
+  background: #625c5c !important;
+  padding: 0.25rem;
+}
+
+.list_item_text span {
+  font-size: 14px;
+  font-family: var(--fontFamily);
+}
+
 @media (max-width: 992px) {
   .drawer_menu_btn_div {
     display: block;
+  }
+  .list_item_text {
+    font-family: var(--fontFamily) !important;
   }
 }

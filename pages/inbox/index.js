@@ -48,7 +48,13 @@ const Inbox = ({ person }) => {
               <h5 className={classes.header_title}>Messages</h5>
               <SearchIcon />
             </div>
-            <div className={classes.messages_list}>
+            <div
+              className={`${classes.messages_list} ${
+                person && person.username
+                  ? classes.mobile_chatbody_show
+                  : classes.mobile_chatbody_hide
+              }`}
+            >
               {dummy_persons.map((person, indx) => (
                 <Link href={`/inbox/${person.username}`} key={indx}>
                   <a
@@ -104,14 +110,7 @@ const Inbox = ({ person }) => {
               ))}
             </div>
           </Col>
-          <Col
-            lg="9"
-            className={`${classes.chat_body_col} ${
-              person && person.username
-                ? classes.mobile_chatbody_show
-                : classes.mobile_chatbody_hide
-            }`}
-          >
+          <Col lg="9" className={`${classes.chat_body_col}`}>
             <Row>
               {person && person.username ? (
                 <>

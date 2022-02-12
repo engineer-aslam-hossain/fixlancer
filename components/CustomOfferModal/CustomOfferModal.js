@@ -153,6 +153,7 @@ const CustomOfferModal = ({ setCreateOffer }) => {
                 options={fixes}
                 isSearchable={true}
                 placeholder="Select your Fix"
+                className={classes.select_dropdown}
               />
             </div>
             <div className={classes.delivery_price}>
@@ -170,6 +171,7 @@ const CustomOfferModal = ({ setCreateOffer }) => {
                   options={prices}
                   onInputChange={handleInputChange}
                   placeholder="Price"
+                  className={classes.select_dropdown}
                 />
               </div>
             </div>

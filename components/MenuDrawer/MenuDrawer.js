@@ -1,13 +1,7 @@
 import Box from "@mui/material/Box";
-import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import ListSubheader from "@mui/material/ListSubheader";
@@ -22,7 +16,6 @@ import classes from "./MenuDrawer.module.scss";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import CloseIcon from "@mui/icons-material/Close";
-import { Navbar } from "react-bootstrap";
 
 export default function SwipeableTemporaryDrawer() {
   const [open, setOpen] = useState(false);
@@ -315,18 +308,15 @@ export default function SwipeableTemporaryDrawer() {
       >
         {list("left")}
       </Drawer>
-      {/* <Navbar.Toggle
-        aria-controls="basic-navbar-nav"
-        onClick={toggleDrawer("left", true)}
-      /> */}
 
       <IconButton
         color="primary"
         aria-label="upload picture"
         component="span"
         onClick={toggleDrawer("left", true)}
+        className={classes.menu_drawer_btn}
       >
-        <MenuIcon className={classes.close_icon} />
+        <MenuIcon className={classes.drawer_menu_icon} />
       </IconButton>
     </div>
   );

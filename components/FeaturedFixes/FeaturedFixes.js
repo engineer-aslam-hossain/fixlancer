@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import CommonCard from "../Card/Card";
 import { categories } from "../../dummy_data/dummy_fixes";
 import FixSlider from "../FixSlider/FixSlider";
+import MobileSlider from "../MobileSlider/MobileSlider";
 
 const FeaturedFixes = () => {
   return (
@@ -14,6 +15,7 @@ const FeaturedFixes = () => {
             <h2>Featured</h2>
           </div>
           <FixSlider fixes={categories} slide_to_show={4} />
+          <MobileSlider fixes={categories} slide_to_show={4} />
         </Row>
       </Container>
     </section>

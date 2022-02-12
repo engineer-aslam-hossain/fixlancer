@@ -50,7 +50,10 @@ const CommonCard = ({ fx, col }) => {
           </div>
         </div>
       </Card>
-      <div className={classes.mobile_card}>
+      <div
+        className={classes.mobile_card}
+        onClick={() => router.push("/usename/fix_name_or_title")}
+      >
         <div className={classes.mobile_card_top}>
           <div
             className={classes.mobile_card_img}
@@ -72,12 +75,11 @@ const CommonCard = ({ fx, col }) => {
         </div>
         <div className={classes.mobile_card_bottom}>
           <div className={classes.offer_by}>
-            <div className={classes.circle}></div>
-            <Link href="/username">
-              <a className="text-decoration-none">
-                <span>username23</span>
-              </a>
-            </Link>
+            <div
+              className={classes.circle}
+              style={{ backgroundImage: `url(/images/author.jpg)` }}
+            ></div>
+            <span>username23</span>
           </div>
           <div>
             <h6 className={classes.mobile_card_price}>&#x20A6;10,000</h6>

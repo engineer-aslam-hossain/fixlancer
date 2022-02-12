@@ -36,4 +36,15 @@
   .view_all {
     margin-top: 2rem;
   }
+  .fixCategory_section {
+    padding: 2rem 0;
+  }
+
+  .fix_cat_title h2 {
+    margin-bottom: 1rem;
+  }
+
+  .category_card_col {
+    margin-bottom: 1rem;
+  }
 }

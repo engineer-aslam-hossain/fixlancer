@@ -454,15 +454,7 @@
 }
 
 @media (max-width: 992px) {
-  .chat_body_col {
-    /* display: none; */
-  }
-
-  .mobile_chatbody_hide {
-    display: none;
-  }
-
-  .mobile_chat_col {
+  .empty_inbox {
     display: none;
   }
 
@@ -474,7 +466,19 @@
     display: none;
   }
 
+  .chat_box_header {
+    display: none;
+  }
+
   .mobile_messages_body {
     padding: 0 1rem;
+  }
+
+  .mobile_chatbody_hide {
+    display: block;
+  }
+
+  .mobile_chatbody_show {
+    display: none;
   }
 }

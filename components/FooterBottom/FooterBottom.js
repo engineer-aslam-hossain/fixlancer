@@ -15,7 +15,7 @@ const FooterBottom = () => {
                 alt="logo"
                 src="/images/logo2.png"
                 width={174}
-                height={64}
+                height={50}
               />
             </a>
           </Link>

@@ -488,8 +488,8 @@
   }
 
   .back_btn {
-    display: block;
-    position: absolute;
+    display: block !important;
+    position: absolute !important;
     left: 1rem;
     top: 1rem;
   }

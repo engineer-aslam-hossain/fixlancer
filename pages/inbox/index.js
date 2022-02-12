@@ -118,15 +118,13 @@ const Inbox = ({ person }) => {
                 <>
                   <Col lg="12" className={classes.appbar}>
                     <Col lg="8">
-                      <IconButton
-                        color="primary"
-                        aria-label="upload picture"
-                        component="span"
+                      <button
                         className={classes.back_btn}
                         onClick={() => router.push("/inbox")}
                       >
                         <ArrowBackIosIcon className={classes.arrow_back} />
-                      </IconButton>
+                      </button>
+
                       <div className={classes.selected_person}>
                         <h6>{person.username}</h6>
                         <div className={classes.status}>

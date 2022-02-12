@@ -381,7 +381,7 @@ const Dashboard = () => {
                       objectFit="fill"
                     />
                     <div className={classes.sales_details}>
-                      <p>onging sales</p>
+                      <p>Manage Orders</p>
                       <h5>4</h5>
                     </div>
                   </div>

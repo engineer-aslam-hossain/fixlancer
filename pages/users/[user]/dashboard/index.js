@@ -51,7 +51,7 @@ const Dashboard = () => {
                   <Image
                     src="/images/logo2.png"
                     width={174}
-                    height={64}
+                    height={50}
                     alt="Fixlancer"
                   />
                 </a>
@@ -381,7 +381,7 @@ const Dashboard = () => {
                       objectFit="fill"
                     />
                     <div className={classes.sales_details}>
-                      <p>Manage Orders</p>
+                      <p>onging Orders</p>
                       <h5>4</h5>
                     </div>
                   </div>
@@ -392,7 +392,7 @@ const Dashboard = () => {
                 <FixSlider fixes={categories} slide_to_show={3} />
                 <MobileSlider fixes={categories} slide_to_show={3} />
               </div>
-              <Row className="mb-5">
+              <Row className="mb-5 pe-0">
                 <h3 className={classes.title}>Featured</h3>
                 {categories.map((item, indx) => (
                   <CommonCard fx={item} key={indx} col="4" />

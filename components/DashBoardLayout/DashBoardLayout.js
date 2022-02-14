@@ -225,6 +225,7 @@ const DashBoardLayout = ({ children, appbar_title }) => {
               backgroundImage: `url(/images/logo2.png)`,
             }}
             className={classes.logo_div}
+            onClick={() => router.push("/")}
           ></div>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (

@@ -9,6 +9,7 @@ export const ContextProvider = ({ children }) => {
     email: "aslam@gmail.com",
   });
   const [searchInputValue, SetSearchInputValue] = useState("");
+  const [activeItem, setActiveItem] = useState("Overview");
 
   //   const token = Cookies.get("token");
 
@@ -43,6 +44,8 @@ export const ContextProvider = ({ children }) => {
         setLoggedInUser,
         searchInputValue,
         SetSearchInputValue,
+        activeItem,
+        setActiveItem,
       }}
     >
       {children}

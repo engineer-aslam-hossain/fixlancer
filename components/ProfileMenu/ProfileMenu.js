@@ -6,6 +6,7 @@ import Logout from "@mui/icons-material/Logout";
 import Avatar from "@mui/material/Avatar";
 import SettingsIcon from "@mui/icons-material/Settings";
 import classes from "./ProfileMenu.module.css";
+import GridViewIcon from "@mui/icons-material/GridView";
 
 import Image from "next/image";
 import { Fragment, useState } from "react";
@@ -86,6 +87,13 @@ export default function ProfileMenu({ dispatch }) {
           >
             <Avatar />
             Profile
+          </button>
+          <button
+            className={classes.logout}
+            onClick={() => router.push("/admin")}
+          >
+            <GridViewIcon />
+            Dashboard
           </button>
           <button
             className={classes.logout}

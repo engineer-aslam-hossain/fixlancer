@@ -152,17 +152,23 @@ const Admin = () => {
               <div className={classes.card_bottom_grid}>
                 <div className={classes.card_button_grid}>
                   <div className={classes.button_div}>
-                    <button>Approve</button>
+                    <button className={classes.approve}>Approve</button>
                     <button>Edit</button>
                   </div>
                   <div className={classes.button_div}>
-                    <button>Decline</button>
-                    <button>Delete</button>
+                    <button className={classes.delete}>Decline</button>
+                    <button className={classes.delete}>Delete</button>
                   </div>
                 </div>
                 <div className={classes.offer_info}>
-                  <p>1 Day delivery</p>
-                  <p>2 Offers</p>
+                  <p>
+                    <WatchLaterIcon className={classes.offer_info_icon} /> 1 Day
+                    delivery
+                  </p>
+                  <p>
+                    <BackupTableIcon className={classes.offer_info_icon} /> 2
+                    Offers
+                  </p>
                   <span>Pending</span>
                 </div>
               </div>
@@ -189,17 +195,23 @@ const Admin = () => {
               <div className={classes.card_bottom_grid}>
                 <div className={classes.card_button_grid}>
                   <div className={classes.button_div}>
-                    <button>Approve</button>
+                    <button className={classes.approve}>Approve</button>
                     <button>Edit</button>
                   </div>
                   <div className={classes.button_div}>
-                    <button>Decline</button>
-                    <button>Delete</button>
+                    <button className={classes.delete}>Decline</button>
+                    <button className={classes.delete}>Delete</button>
                   </div>
                 </div>
                 <div className={classes.offer_info}>
-                  <p>1 Day delivery</p>
-                  <p>2 Offers</p>
+                  <p>
+                    <WatchLaterIcon className={classes.offer_info_icon} /> 1 Day
+                    delivery
+                  </p>
+                  <p>
+                    <BackupTableIcon className={classes.offer_info_icon} /> 2
+                    Offers
+                  </p>
                   <span>Pending</span>
                 </div>
               </div>

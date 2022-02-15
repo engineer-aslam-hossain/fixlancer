@@ -93,7 +93,7 @@ export default function ProfileMenu({ dispatch }) {
             onClick={() => router.push("/admin")}
           >
             <GridViewIcon />
-            Dashboard
+            Admin
           </button>
           <button
             className={classes.logout}

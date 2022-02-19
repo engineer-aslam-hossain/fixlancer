@@ -118,72 +118,72 @@ const DashBoardLayout = ({ children, appbar_title }) => {
     {
       title: "Orders",
       icon: "/icons/shopping_bag.svg",
-      link: "/profile",
+      link: "/admin/orders",
     },
     {
       title: "Users",
       icon: "/icons/contacts.svg",
-      link: "/admin/profile",
+      link: "/admin/users",
     },
     {
       title: "Transactions",
       icon: "/icons/transaction.svg",
-      link: "/admin/profile",
+      link: "/admin/transactions",
     },
     {
       title: "Ratings",
       icon: "/icons/rating.svg",
-      link: "/admin/profile",
+      link: "/admin/ratings",
     },
     {
       title: "Job Request",
       icon: "/icons/agents.svg",
-      link: "/admin/profile",
+      link: "/admin/job-request",
     },
     {
       title: "Payment Gateway",
       icon: "/icons/credit_card.svg",
-      link: "/admin/profile",
+      link: "/admin/payment-gateway",
     },
     {
       title: "Prohibited Words",
       icon: "/icons/prohibited.svg",
-      link: "/admin/profile",
+      link: "/admin/prohibited-words",
     },
     {
       title: "Withdrawals",
       icon: "/icons/withdraw.svg",
-      link: "/admin/profile",
+      link: "/admin/withdrawals",
     },
     {
       title: "Wallet",
       icon: "/icons/wallet.svg",
-      link: "/admin/profile",
+      link: "/admin/wallet",
     },
     {
       title: "Messages",
       icon: "/icons/Group.svg",
-      link: "/admin/profile",
+      link: "/admin/messages",
     },
     {
       title: "Categories",
       icon: "/icons/maintenance.svg",
-      link: "/admin/profile",
+      link: "/admin/categories",
     },
     {
       title: "Notifications",
       icon: "/icons/notification.svg",
-      link: "/admin/profile",
+      link: "/admin",
     },
     {
       title: "Affiliate",
       icon: "/icons/affiliate_marketing.svg",
-      link: "/admin/profile",
+      link: "/admin",
     },
     {
       title: "Settings",
       icon: "/icons/settings.svg",
-      link: "/admin/profile",
+      link: "/admin/settings",
     },
   ];
 
@@ -208,12 +208,29 @@ const DashBoardLayout = ({ children, appbar_title }) => {
             <div>
               <h4 className={classes.appbar_title}>{appbar_title}</h4>
             </div>
-            {appbar_title !== "Dashboard" && (
-              <div className={classes.search_input_div}>
-                <SearchOutlinedIcon className={classes.search_icon} />
-                <input type="text" placeholder="Search" />
-              </div>
-            )}
+
+            {appbar_title !== "Dashboard" ? (
+              appbar_title !== "Job Request" ? (
+                appbar_title !== "Categories" ? (
+                  appbar_title !== "Admin Transaction History" ? (
+                    appbar_title !== "" ? (
+                      appbar_title !== "Ratings (username)" ? (
+                        appbar_title !== "Payment Gateway" ? (
+                          appbar_title !== "Messages" ? (
+                            <div className={classes.search_input_div}>
+                              <input type="text" placeholder="Search" />
+                              <SearchOutlinedIcon
+                                className={classes.search_icon}
+                              />
+                            </div>
+                          ) : null
+                        ) : null
+                      ) : null
+                    ) : null
+                  ) : null
+                ) : null
+              ) : null
+            ) : null}
           </div>
         </Toolbar>
       </AppBar>

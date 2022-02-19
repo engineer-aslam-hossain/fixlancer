@@ -390,7 +390,7 @@
 
   .download_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     grid-gap: 0.5rem;
 
     .downLoad_file {

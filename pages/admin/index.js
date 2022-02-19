@@ -315,6 +315,96 @@ const Admin = () => {
               />
             </Paper>
           </div>
+
+          <div className={classes.manage_card_grid}>
+            <div className={classes.mn_job_card}>
+              <div>
+                <h4>Job Request</h4>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Total</p>
+                <p>200</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Published</p>
+                <p>200</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Draft</p>
+                <p>20</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Pending</p>
+                <p>20</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Open</p>
+                <p>20</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Closed</p>
+                <p>20</p>
+              </div>
+            </div>
+            <div className={classes.mn_order_card}>
+              <div>
+                <h4>Orders</h4>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Total</p>
+                <p>200</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Completed</p>
+                <p>200</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Ongoing</p>
+                <p>20</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Delivered</p>
+                <p>20</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Cancelled</p>
+                <p>20</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Dispute</p>
+                <p>200</p>
+              </div>
+            </div>
+            <div className={classes.mn_user_card}>
+              <div>
+                <h4>Users</h4>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Total</p>
+                <p>200</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Admin</p>
+                <p>200</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Moderators</p>
+                <p>200</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Users</p>
+                <p>200</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Sellers</p>
+                <p>200</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <p>Online</p>
+                <p>200</p>
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
     </DashBoardLayout>

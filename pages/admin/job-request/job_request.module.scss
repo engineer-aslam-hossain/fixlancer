@@ -1,9 +1,9 @@
 .job_card_grid {
   margin-top: 2rem;
-  margin-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 2rem;
+  margin-bottom: 2rem;
 
   .job_card {
     background: #ffffff;
@@ -91,20 +91,30 @@
       }
 
       .offer_info {
-        button {
+        p {
           margin-bottom: 0;
           display: flex;
           align-items: center;
           font-size: 14px;
-          border: none;
-          background-color: transparent;
-          span {
-            margin: 0 0.2rem;
-            white-space: nowrap;
-          }
-          .offer_info_icon {
-            font-size: 1rem;
-          }
+        }
+
+        .pending {
+          font-size: 12px;
+          color: #e46713;
+        }
+        .published {
+          font-size: 12px;
+          color: #1cc88a;
+        }
+        .declined {
+          font-size: 12px;
+          color: #ff0000;
+        }
+
+        .offer_info_icon {
+          font-size: 1rem;
+          color: #343434;
+          margin-right: 0.5rem;
         }
       }
     }
@@ -118,7 +128,7 @@
 
   .button_div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
 
     button {
@@ -152,6 +162,7 @@
   .button_div_container {
     .button_div {
       grid-gap: 0.5rem;
+      grid-template-columns: auto;
       button {
         font-size: 12px;
         padding: 0.5rem 1rem;

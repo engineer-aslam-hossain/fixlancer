@@ -1,6 +1,5 @@
 .job_card_grid {
   margin-top: 2rem;
-  margin-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 2rem;
@@ -12,7 +11,6 @@
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 1.5rem;
-    cursor: pointer;
 
     .job_card_top {
       display: flex;
@@ -91,20 +89,30 @@
       }
 
       .offer_info {
-        button {
+        p {
           margin-bottom: 0;
           display: flex;
           align-items: center;
           font-size: 14px;
-          border: none;
-          background-color: transparent;
-          span {
-            margin: 0 0.2rem;
-            white-space: nowrap;
-          }
-          .offer_info_icon {
-            font-size: 1rem;
-          }
+        }
+
+        .pending {
+          font-size: 12px;
+          color: #e46713;
+        }
+        .published {
+          font-size: 12px;
+          color: #1cc88a;
+        }
+        .declined {
+          font-size: 12px;
+          color: #ff0000;
+        }
+
+        .offer_info_icon {
+          font-size: 1rem;
+          color: #343434;
+          margin-right: 0.5rem;
         }
       }
     }
@@ -118,7 +126,7 @@
 
   .button_div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
 
     button {
@@ -148,10 +156,156 @@
   text-transform: capitalize;
 }
 
+.withdraw_table_div {
+  margin-top: 2rem;
+}
+
+.banned_text {
+  width: 12rem;
+  font-size: 12px;
+}
+
+.username {
+  color: #2b60c8;
+  cursor: pointer;
+}
+
+.user_top {
+  margin-bottom: 2rem;
+
+  h4 {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    background: #f9f9f9;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 0.3rem 1rem;
+  }
+}
+
+.dialog_body {
+  min-width: 30rem;
+}
+
+.filter_card_body {
+  padding: 1rem 2rem;
+
+  h5 {
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  h6 {
+    margin: 1rem 0;
+  }
+}
+
+.close_icon_button {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+}
+
+.close_icon {
+  font-size: 2rem;
+}
+
+.filter_btn {
+  background: #1cc88a;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  padding: 0.6rem 3rem;
+  border: none;
+  text-transform: uppercase;
+  margin: 2rem;
+}
+
+.input_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 1.5rem;
+
+  input {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+    border-radius: 0;
+    padding: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dfe0eb;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  select {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+    border-radius: 0;
+    padding: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dfe0eb;
+    font-size: 14px;
+    color: grey;
+
+    option {
+      font-size: 14px;
+    }
+
+    .option {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+}
+
+.dot_item {
+  background: #e46713 !important;
+  border-radius: 6px;
+  color: white !important;
+  font-size: 14px;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.button_div {
+  margin: 1rem 0;
+  .cancel_btn {
+    border: 3px solid #f1f1f1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+  }
+
+  .submit_btn {
+    background: #1cc88a;
+    border: 3px solid #1cc88a;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 0.4rem 1rem;
+    color: white;
+  }
+}
+
 @media (max-width: 992px) {
   .button_div_container {
     .button_div {
       grid-gap: 0.5rem;
+      grid-template-columns: auto;
       button {
         font-size: 12px;
         padding: 0.5rem 1rem;

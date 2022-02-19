@@ -3,7 +3,7 @@ import DashBoardLayout from "../../../components/DashBoardLayout/DashBoardLayout
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import BackupTableIcon from "@mui/icons-material/BackupTable";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import classes from "./fixes.module.scss";
+import classes from "./job_request.module.scss";
 import { Fragment, useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
@@ -13,7 +13,6 @@ import { useRouter } from "next/router";
 const Fixes = () => {
   const [activeBtn, setActiveBtn] = useState("all");
   const [anchorEl, setAnchorEl] = useState(null);
-  const router = useRouter();
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -21,6 +20,8 @@ const Fixes = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const router = useRouter();
 
   const cardDatas = [
     {
@@ -31,6 +32,8 @@ const Fixes = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
       status: "published",
       days: 1,
+
+      offer: 2,
     },
     {
       name: "Sajawal",
@@ -40,6 +43,7 @@ const Fixes = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
       status: "published",
       days: 1,
+      offer: 2,
     },
     {
       name: "Sajawal",
@@ -49,6 +53,7 @@ const Fixes = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
       status: "published",
       days: 1,
+      offer: 2,
     },
     {
       name: "Sajawal",
@@ -56,8 +61,9 @@ const Fixes = () => {
       amount: "14,000",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
-      status: "draft",
+      status: "declined",
       days: 0,
+      offer: 2,
     },
     {
       name: "Sajawal",
@@ -65,8 +71,9 @@ const Fixes = () => {
       amount: "14,000",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
-      status: "draft",
+      status: "declined",
       days: 0,
+      offer: 2,
     },
     {
       name: "Sajawal",
@@ -74,8 +81,29 @@ const Fixes = () => {
       amount: "14,000",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
-      status: "draft",
+      status: "declined",
       days: 0,
+      offer: 2,
+    },
+    {
+      name: "Sajawal",
+      title: "I need a logo designer...",
+      amount: "14,000",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
+      status: "pending",
+      days: 0,
+      offer: 2,
+    },
+    {
+      name: "Sajawal",
+      title: "I need a logo designer...",
+      amount: "14,000",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...",
+      status: "pending",
+      days: 0,
+      offer: 2,
     },
   ];
 
@@ -88,7 +116,7 @@ const Fixes = () => {
   ];
 
   return (
-    <DashBoardLayout appbar_title="Fixes">
+    <DashBoardLayout appbar_title="Job Request">
       <section>
         <Container>
           <div className={classes.button_div_container}>
@@ -106,10 +134,16 @@ const Fixes = () => {
                 published (5)
               </button>
               <button
-                className={activeBtn === "draft" ? classes.active : null}
-                onClick={() => setActiveBtn("draft")}
+                className={activeBtn === "pending" ? classes.active : null}
+                onClick={() => setActiveBtn("pending")}
               >
-                Draft (3)
+                Pending (1)
+              </button>
+              <button
+                className={activeBtn === "declined" ? classes.active : null}
+                onClick={() => setActiveBtn("declined")}
+              >
+                Declined (0)
               </button>
             </div>
           </div>
@@ -119,14 +153,15 @@ const Fixes = () => {
                 {activeBtn === "all" ? (
                   <div
                     className={classes.job_card}
-                    key={indx}
-                    onClick={() => router.push("/username/fix-title")}
+                    onClick={() => {
+                      router.push("/job-request/job-request-details");
+                    }}
                   >
                     <div className={classes.job_card_top}>
                       <div className={classes.top_info}>
-                        <span>Sajawal</span>
-                        <p>I need a logo designer...</p>
-                        <span>&#x20A6;14,000</span>
+                        <span>{item.name}</span>
+                        <p>{item.title}</p>
+                        <span>{item.amount}</span>
                       </div>
                       <div
                         style={{
@@ -136,38 +171,45 @@ const Fixes = () => {
                       ></div>
                     </div>
                     <div className={classes.card_details}>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam...
-                      </p>
+                      <p>{item.description}</p>
                     </div>
                     <div className={classes.card_bottom_grid}>
                       <div className={classes.card_button_grid}>
-                        <div className={classes.button_div}>
-                          {item.status === "published" ? (
-                            <button className={classes.approve}>
-                              Published
-                            </button>
-                          ) : (
-                            <button className={classes.delete}>Draft</button>
-                          )}
-                        </div>
+                        {item.status !== "published" ? (
+                          <>
+                            <div className={classes.button_div}>
+                              <button className={classes.approve}>
+                                Approve
+                              </button>
+                              <button>Edit</button>
+                            </div>
+                            <div className={classes.button_div}>
+                              <button className={classes.delete}>
+                                Decline
+                              </button>
+                              <button className={classes.delete}>Delete</button>
+                            </div>
+                          </>
+                        ) : (
+                          <div className={classes.button_div}>
+                            <button className={classes.approve}>Delete</button>
+                          </div>
+                        )}
                       </div>
                       <div className={classes.offer_info}>
-                        <button onClick={handleClick}>
-                          {item.status === "published" && (
-                            <>
-                              <WatchLaterIcon
-                                className={classes.offer_info_icon}
-                              />
-                              <span>1 Day delivery</span>
-                            </>
-                          )}
-                          <KeyboardArrowDownIcon
+                        <p>
+                          <WatchLaterIcon className={classes.offer_info_icon} />
+                          {item.days} Day delivery
+                        </p>
+                        <p>
+                          <BackupTableIcon
                             className={classes.offer_info_icon}
                           />
-                        </button>
+                          {item.offer} Offers
+                        </p>
+                        <span className={classes[item.status]}>
+                          {item.status}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -176,14 +218,15 @@ const Fixes = () => {
                     {activeBtn === item.status && (
                       <div
                         className={classes.job_card}
-                        key={indx}
-                        onClick={() => router.push("/username/fix-title")}
+                        onClick={() => {
+                          router.push("/job-request/job-request-details");
+                        }}
                       >
                         <div className={classes.job_card_top}>
                           <div className={classes.top_info}>
-                            <span>Sajawal</span>
-                            <p>I need a logo designer...</p>
-                            <span>&#x20A6;14,000</span>
+                            <span>{item.name}</span>
+                            <p>{item.title}</p>
+                            <span>{item.amount}</span>
                           </div>
                           <div
                             style={{
@@ -193,40 +236,51 @@ const Fixes = () => {
                           ></div>
                         </div>
                         <div className={classes.card_details}>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam...
-                          </p>
+                          <p>{item.description}</p>
                         </div>
                         <div className={classes.card_bottom_grid}>
                           <div className={classes.card_button_grid}>
-                            <div className={classes.button_div}>
-                              {item.status === "published" ? (
+                            {item.status !== "published" ? (
+                              <>
+                                <div className={classes.button_div}>
+                                  <button className={classes.approve}>
+                                    Approve
+                                  </button>
+                                  <button>Edit</button>
+                                </div>
+                                <div className={classes.button_div}>
+                                  <button className={classes.delete}>
+                                    Decline
+                                  </button>
+                                  <button className={classes.delete}>
+                                    Delete
+                                  </button>
+                                </div>
+                              </>
+                            ) : (
+                              <div className={classes.button_div}>
                                 <button className={classes.approve}>
-                                  Published
+                                  Delete
                                 </button>
-                              ) : (
-                                <button className={classes.delete}>
-                                  Draft
-                                </button>
-                              )}
-                            </div>
+                              </div>
+                            )}
                           </div>
                           <div className={classes.offer_info}>
-                            <button onClick={handleClick}>
-                              {item.status === "published" && (
-                                <>
-                                  <WatchLaterIcon
-                                    className={classes.offer_info_icon}
-                                  />
-                                  <span>1 Day delivery</span>
-                                </>
-                              )}
-                              <KeyboardArrowDownIcon
+                            <p>
+                              <WatchLaterIcon
                                 className={classes.offer_info_icon}
                               />
-                            </button>
+                              {item.days} Day delivery
+                            </p>
+                            <p>
+                              <BackupTableIcon
+                                className={classes.offer_info_icon}
+                              />
+                              {item.offer} Offers
+                            </p>
+                            <span className={classes[item.status]}>
+                              {item.status}
+                            </span>
                           </div>
                         </div>
                       </div>

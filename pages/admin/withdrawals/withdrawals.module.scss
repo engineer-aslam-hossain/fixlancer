@@ -85,7 +85,9 @@
   .button_div_container {
     .button_div {
       grid-gap: 0.5rem;
-      grid-template-columns: auto;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
       button {
         font-size: 12px;
         padding: 0.5rem 1rem;

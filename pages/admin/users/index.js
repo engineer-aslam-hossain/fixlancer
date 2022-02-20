@@ -21,6 +21,7 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useRouter } from "next/router";
+import LoadMoreButton from "../../../components/LoadMoreButton/LoadMoreButton";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -261,6 +262,9 @@ const Fixes = () => {
                 onRowsPerPageChange={handleChangeRowsPerPage}
               />
             </Paper>
+          </div>
+          <div className="d-flex justify-content-center my-5">
+            <LoadMoreButton />
           </div>
           <Menu
             id="basic-menu"

@@ -12,7 +12,7 @@
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 1.5rem;
-    cursor: pointer;
+    // cursor: pointer;
 
     .job_card_top {
       display: flex;
@@ -62,6 +62,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: relative;
 
       .card_button_grid {
         display: grid;
@@ -146,6 +147,30 @@
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   text-transform: capitalize;
+}
+
+.card_cover {
+  position: relative;
+
+  .bottom_card_btn {
+    position: absolute;
+    z-index: 1000;
+    right: 1.5rem;
+    bottom: 2.2rem;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    span {
+      margin: 0 0.2rem;
+      white-space: nowrap;
+    }
+    .offer_info_icon {
+      font-size: 1rem;
+    }
+  }
 }
 
 @media (max-width: 992px) {

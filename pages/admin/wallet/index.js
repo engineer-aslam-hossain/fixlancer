@@ -6,6 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { useState } from "react";
+import LoadMoreButton from "../../../components/LoadMoreButton/LoadMoreButton";
 
 const Wallet = () => {
   const [age, setAge] = useState("");
@@ -494,6 +495,9 @@ const Wallet = () => {
                 </div>
               </div>
             </Col>
+            <div className="d-flex justify-content-center my-5">
+              <LoadMoreButton />
+            </div>
           </Row>
         </Container>
       </section>

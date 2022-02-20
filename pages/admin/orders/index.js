@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useRouter } from "next/router";
+import LoadMoreButton from "../../../components/LoadMoreButton/LoadMoreButton";
 
 const Fixes = () => {
   const [activeBtn, setActiveBtn] = useState("ongoing");
@@ -229,6 +230,9 @@ const Fixes = () => {
                 )}
               </Fragment>
             ))}
+          </div>
+          <div className="d-flex justify-content-center my-5">
+            <LoadMoreButton />
           </div>
           <Menu
             id="basic-menu"

@@ -11,6 +11,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { Paper } from "@mui/material";
 import { useRouter } from "next/router";
+import LoadMoreButton from "../../../components/LoadMoreButton/LoadMoreButton";
 
 const columns = ["username", "email", "transactions", ""];
 
@@ -148,6 +149,9 @@ const Transactions = () => {
                   onRowsPerPageChange={handleChangeRowsPerPage}
                 />
               </Paper>
+            </div>
+            <div className="d-flex justify-content-center my-5">
+              <LoadMoreButton />
             </div>
           </Row>
         </Container>

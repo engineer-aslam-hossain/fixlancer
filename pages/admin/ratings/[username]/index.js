@@ -11,6 +11,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { Paper } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
+import LoadMoreButton from "../../../../components/LoadMoreButton/LoadMoreButton";
 
 const columns = ["username", "rating", "feedback", "date", ""];
 
@@ -160,6 +161,9 @@ const UserRatings = () => {
                   onRowsPerPageChange={handleChangeRowsPerPage}
                 />
               </Paper>
+            </div>
+            <div className="d-flex justify-content-center my-5">
+              <LoadMoreButton />
             </div>
           </Row>
         </Container>

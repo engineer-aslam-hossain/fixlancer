@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useRouter } from "next/router";
+import LoadMoreButton from "../../../components/LoadMoreButton/LoadMoreButton";
 
 const Fixes = () => {
   const [activeBtn, setActiveBtn] = useState("all");
@@ -117,59 +118,61 @@ const Fixes = () => {
             {cardDatas.map((item, indx) => (
               <Fragment key={indx}>
                 {activeBtn === "all" ? (
-                  <div
-                    className={classes.job_card}
-                    key={indx}
-                    onClick={() => router.push("/username/fix-title")}
-                  >
-                    <div className={classes.job_card_top}>
-                      <div className={classes.top_info}>
-                        <span>Sajawal</span>
-                        <p>I need a logo designer...</p>
-                        <span>&#x20A6;14,000</span>
-                      </div>
-                      <div
-                        style={{
-                          backgroundImage: `url(/images/placeholder.png)`,
-                        }}
-                        className={classes.job_card_img}
-                      ></div>
-                    </div>
-                    <div className={classes.card_details}>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam...
-                      </p>
-                    </div>
-                    <div className={classes.card_bottom_grid}>
-                      <div className={classes.card_button_grid}>
-                        <div className={classes.button_div}>
-                          {item.status === "published" ? (
-                            <button className={classes.approve}>
-                              Published
-                            </button>
-                          ) : (
-                            <button className={classes.delete}>Draft</button>
-                          )}
+                  <div className={classes.card_cover}>
+                    <div
+                      className={classes.job_card}
+                      key={indx}
+                      onClick={() => router.push("/username/fix-title")}
+                    >
+                      <div className={classes.job_card_top}>
+                        <div className={classes.top_info}>
+                          <span>Sajawal</span>
+                          <p>I need a logo designer...</p>
+                          <span>&#x20A6;14,000</span>
                         </div>
+                        <div
+                          style={{
+                            backgroundImage: `url(/images/placeholder.png)`,
+                          }}
+                          className={classes.job_card_img}
+                        ></div>
                       </div>
-                      <div className={classes.offer_info}>
-                        <button onClick={handleClick}>
-                          {item.status === "published" && (
-                            <>
-                              <WatchLaterIcon
-                                className={classes.offer_info_icon}
-                              />
-                              <span>1 Day delivery</span>
-                            </>
-                          )}
-                          <KeyboardArrowDownIcon
-                            className={classes.offer_info_icon}
-                          />
-                        </button>
+                      <div className={classes.card_details}>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam...
+                        </p>
+                      </div>
+                      <div className={classes.card_bottom_grid}>
+                        <div className={classes.card_button_grid}>
+                          <div className={classes.button_div}>
+                            {item.status === "published" ? (
+                              <button className={classes.approve}>
+                                Published
+                              </button>
+                            ) : (
+                              <button className={classes.delete}>Draft</button>
+                            )}
+                          </div>
+                        </div>
+                        <div className={classes.offer_info}></div>
                       </div>
                     </div>
+                    <button
+                      onClick={handleClick}
+                      className={classes.bottom_card_btn}
+                    >
+                      {item.status === "published" && (
+                        <>
+                          <WatchLaterIcon className={classes.offer_info_icon} />
+                          <span>1 Day delivery</span>
+                        </>
+                      )}
+                      <KeyboardArrowDownIcon
+                        className={classes.offer_info_icon}
+                      />
+                    </button>
                   </div>
                 ) : (
                   <>
@@ -235,6 +238,9 @@ const Fixes = () => {
                 )}
               </Fragment>
             ))}
+          </div>
+          <div className="d-flex justify-content-center my-5">
+            <LoadMoreButton />
           </div>
           <Menu
             id="basic-menu"

@@ -10,6 +10,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { Paper } from "@mui/material";
+import LoadMoreButton from "../../../components/LoadMoreButton/LoadMoreButton";
 
 const columns = [
   "username",
@@ -263,6 +264,9 @@ const Withdrawals = () => {
                   onRowsPerPageChange={handleChangeRowsPerPage}
                 />
               </Paper>
+            </div>
+            <div className="d-flex justify-content-center my-5">
+              <LoadMoreButton />
             </div>
           </Row>
         </Container>

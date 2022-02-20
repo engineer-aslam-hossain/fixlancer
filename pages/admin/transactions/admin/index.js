@@ -14,6 +14,7 @@ import DatePicker from "@mui/lab/DatePicker";
 import MobileDatePicker from "@mui/lab/MobileDatePicker";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import Stack from "@mui/material/Stack";
+import LoadMoreButton from "../../../../components/LoadMoreButton/LoadMoreButton";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -63,7 +64,10 @@ const UserTransaction = () => {
                 <p>29 Jun 2021</p>
                 <p>+₦150.00</p>
               </div>
-            </Col>
+            </Col>{" "}
+            <div className="d-flex justify-content-center my-5">
+              <LoadMoreButton />
+            </div>
           </Row>
         </Container>
         <BootstrapDialog
